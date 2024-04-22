@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMaster.Master.cs" Inherits="TuttiFoody.Site1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMaster.Master.cs" Inherits="TuttiFoody.VISTA.Site1" %>
 
 <!DOCTYPE html>
 
