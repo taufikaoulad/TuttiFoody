@@ -68,7 +68,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CONTENT\CSS\PantallaPrincip.css" />
+    <Content Include="CONTENT\Imagenes\img1.jpg" />
+    <Content Include="CONTENT\Imagenes\img2.jpg" />
+    <Content Include="CONTENT\Imagenes\img3.jpg" />
+    <Content Include="CONTENT\Imagenes\img4.jpg" />
+    <Content Include="CONTENT\Imagenes\img5.jpg" />
+    <Content Include="CONTENT\Imagenes\img6.jpg" />
+    <Content Include="CONTENT\Imagenes\img7.jpg" />
+    <Content Include="CONTENT\Imagenes\usuario.png" />
+    <Content Include="CONTENT\JS\PantallaPrincip.js" />
     <Content Include="VISTA\WebForm1.aspx" />
+    <Content Include="VISTA\PantallaPrincipal.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +102,13 @@
     </Compile>
     <Compile Include="VISTA\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\PantallaPrincipal.aspx.cs">
+      <DependentUpon>PantallaPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VISTA\PantallaPrincipal.aspx.designer.cs">
+      <DependentUpon>PantallaPrincipal.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -115,9 +133,6 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CONTENT\CSS\" />
-    <Folder Include="CONTENT\Imagenes\" />
-    <Folder Include="CONTENT\JS\" />
     <Folder Include="MODEL\" />
   </ItemGroup>
   <PropertyGroup>
