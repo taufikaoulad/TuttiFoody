@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\tarda\\Desktop\\taufikRepository\\TuttiFoody\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{07D4B900-4F32-4AF2-A1E8-AF53D15D8542}|TuttiFoody\\TuttiFoody.csproj|c:\\users\\tarda\\desktop\\taufikrepository\\tuttifoody\\tuttifoody\\vista\\registrar.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{07D4B900-4F32-4AF2-A1E8-AF53D15D8542}|TuttiFoody\\TuttiFoody.csproj|solutionrelative:tuttifoody\\vista\\registrar.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Registrar.aspx",
+              "DocumentMoniker": "C:\\Users\\tarda\\Desktop\\taufikRepository\\TuttiFoody\\TuttiFoody\\VISTA\\Registrar.aspx",
+              "RelativeDocumentMoniker": "TuttiFoody\\VISTA\\Registrar.aspx",
+              "ToolTip": "C:\\Users\\tarda\\Desktop\\taufikRepository\\TuttiFoody\\TuttiFoody\\VISTA\\Registrar.aspx",
+              "RelativeToolTip": "TuttiFoody\\VISTA\\Registrar.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-04-24T13:26:41.371Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
