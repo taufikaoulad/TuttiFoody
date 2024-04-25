@@ -69,6 +69,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CONTENT\CSS\registrar.css" />
+    <Content Include="VISTA\IniciarSesion.aspx" />
+    <Content Include="VISTA\RecuperarContrasenya.aspx" />
     <Content Include="VISTA\Registrar.aspx" />
     <Content Include="VISTA\WebForm1.aspx" />
     <Content Include="Web.config" />
@@ -80,6 +82,20 @@
       <DependentUpon>DBConnect.dbml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VISTA\IniciarSesion.aspx.cs">
+      <DependentUpon>IniciarSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VISTA\IniciarSesion.aspx.designer.cs">
+      <DependentUpon>IniciarSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\RecuperarContrasenya.aspx.cs">
+      <DependentUpon>RecuperarContrasenya.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VISTA\RecuperarContrasenya.aspx.designer.cs">
+      <DependentUpon>RecuperarContrasenya.aspx</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\Registrar.aspx.cs">
       <DependentUpon>Registrar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -12,7 +12,7 @@
     <form id="form1" runat="server">
         <div class="container">
             <form action="" method="post">
-                <h2>Registrate</h2>
+                <h2>Regístrate</h2>
                 <div class="content">
                     <div class="input-box">
                         <label for="name">Nombre</label>
@@ -32,10 +32,11 @@
                     </div>
                 </div>
                 <div class ="alert">
+                    <p>¿Ya tienes una cuenta?<a href="IniciarSesion.aspx"> inicia sesión</a>.</p>
                     <p>Al registrarte estás de acuerdo con nuestros <a href="#">términos</a>, <a href="#">política de privacidad</a> y <a href="#">política de cookies</a>.</p>
                 </div>
                 <div class ="button-container">
-                    <button>Registrate</button>
+                    <button>Regístrate</button>
                 </div>
             </form>
         </div>

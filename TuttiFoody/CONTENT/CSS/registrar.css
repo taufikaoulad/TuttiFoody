@@ -81,27 +81,59 @@ h2 {
     .alert a:hover {
         font-weight: bold;
         text-decoration: underline;
-        color: #380036;
+        /*color: #580036;*/
     }
 
 .button-container {
     margin: 15px 0;
 }
 
-    .button-container button {
-        width: 100%;
-        margin-top: 10px;
-        padding: 10px;
-        display: block;
-        font-size: 20px;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        background-image: linear-gradient(to right, #9B3922, #F2613F);
-        cursor: pointer;
-        transition: 0.3s;
+.btn-code {
+    background-image: linear-gradient(to right, #4CCD99, #4CCD99);
+}
+
+.button-container button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #9B3922, #F2613F);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .button-container button:hover {
+        background-image: linear-gradient(to right,#F2613F, #9B3922);
     }
 
-        .button-container button:hover {
-            background-image: linear-gradient(to right,#F2613F, #9B3922);
+.codeBtn-container button {
+    background-image: linear-gradient(to right,#007F73, #4CCD99);
+}
+
+    .codeBtn-container button:hover {
+        background-image: linear-gradient(to right,#4CCD99, #007F73);
+    }
+
+    @media(max-width:600px){
+        .container{
+            min-width:280px;
         }
+        .content{
+            max-height:380px;
+            overflow:auto;
+        }
+        .input-box{
+            margin-bottom:12px;
+            width:100%;
+        }
+        .input-box:nth-child(2n){
+            justify-content:space-between;
+        }
+        .content::-webkit-scrollbar{
+            width:0;
+        }
+    }
