@@ -13,12 +13,28 @@
             width: 100%;
             padding-top: 50px;
             padding-left: 80px;
+            background-image: url(/CONTENT/Imagenes/fondo.png);
+            color:aliceblue;
+            font-family: sans-serif;
+
         }
 
         .margin-integrantes{
             margin-top: 150px;
         }
 
+        .cuadroMensaje{
+            width: 500px;
+            height:300px;
+        }
+
+        .espacioEnBlanco{
+            margin-bottom: 20px;
+        }
+
+        .centrarPagina{
+            margin: auto;
+        }
         
     </style>
 </head>
@@ -28,8 +44,9 @@
         <section class="body">
             <div class ="row">
                 <div>
-                    <h2 style = "padding-left: 500px;">Quienes somos</h2>
+                    <h2 class="text-center">Quienes somos</h2>
                 </div>
+            </div >
             <div class ="row">
                 <div class ="col">
                     <p><b>¡Hola y bienvenido a TUTTI FOODY! </b></p>
@@ -40,30 +57,64 @@
                     <p>En nuestro viaje hacia un mundo más saludable, <b>tú eres parte de la historia</b>. Únete a nosotros mientras construimos una comunidad dedicada a cambiar hábitos y hacer que cada bocado cuente. </p>
                     <p><b>¡Gracias por ser parte de esta emocionante aventura!</b></p>
                 </div>
-        </section>
+            </div >
+         </section>
+      </div >
         <section class="container">
             <div class ="row">
                
                 <h2 class ="col text-center">Equipo</h2>
-                </div>
+            </div>
             <div class="row">
                 <img class="col" src = "/CONTENT/Imagenes/Grupo.png" alt ="Foto de grupo" style="width: 500px; height: auto"/>
                 
                 <div class="col margin-integrantes">
-                    <p>-William</p>
+                    <p>-William: </p>
                     <p>-Andrei</p>
                     <p>-Taufik</p>
                     <p>-Soraya</p>
                 </div>
             </div>
         </section>
-               
-        </div >
+        <section class ="container">
             <div class ="row">
-                <h2 class="text-center"> Contacto</h2>
-
-
+                    <h2 class="text-center"> Contacto</h2>
             </div>
+            <div class="text-center">
+                <div >
+                    <div>
+                        <label id ="nombre">Tu nombre: </label>
+                    </div>
+                    <div>
+                        <input type="text" id="cuadroNombre" name ="cuadroNombre" />
+                    </div>
+                </div>
+                    <div class="espacioEnBlanco"></div>
+                    <div>
+                        <div>
+                            <label id="correoElectronico">Tu correo electrónico: </label>
+                        </div>
+                        <div>
+                            <input type="text" id="cuadroCorreoElectronico" name ="cuadroCorreoElectronico" />
+                        </div>
+                    </div>
+                    <div class="espacioEnBlanco"></div>
+                    <div>
+                        <div>
+                            <label id="mensaje">Tu mensaje: </label>
+                        </div>
+                        <div>
+                            <input type="text" class="cuadroMensaje" id="cuadroMensaje" name="mensaje"
+                        </div>
+                    </div>
+                    <div class="espacioEnBlanco"></div>
+                    <div>
+                        <button type="button">Enviar</button>
+                    </div>
+                </div>
+
+        </section>   
+
           
     </form>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
