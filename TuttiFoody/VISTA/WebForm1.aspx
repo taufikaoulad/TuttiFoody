@@ -9,7 +9,7 @@
 
 <body>
 
-<section class="form-register">
+<section id="miFormulario" class="form-register">
 
     <div id="ingresar_titulo">
         <h3>Titulo de la receta</h3>
@@ -52,7 +52,7 @@
         <textarea class="controls"  id="pasos_letra" placeholder="Los pasos a seguir son..."></textarea>
     </div>
 
-    <input class="botons" type="submit" value="Publicar receta">
+    <input id="boton_enviar" class="botons" type="submit" value="Publicar receta">
     
 </section>
 

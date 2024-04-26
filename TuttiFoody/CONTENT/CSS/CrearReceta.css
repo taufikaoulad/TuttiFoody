@@ -39,7 +39,7 @@ body {
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
-    border: 1px solid #1f53c5;
+    border: 1px solid #f1683a;
     font-family: 'calibri';
     font-size: 18px;
     color: white;
@@ -152,7 +152,7 @@ h3 {
 }
 
 #imagen::-webkit-file-upload-button {
-    background-color: #1f53c5; /* Cambia el color de fondo del botón */
+    background-color: #f1683a; /* Cambia el color de fondo del botón */
     color: white; /* Cambia el color del texto del botón */
     padding: 10px 15px; /* Ajusta el relleno del botón según sea necesario */
     border: none; /* Quita el borde del botón */
@@ -170,7 +170,7 @@ h3 {
 }
 
 #agregar_ingrediente {
-    background-color: #1f53c5; /* Cambia el color de fondo del botón */
+    background-color: #f1683a; /* Cambia el color de fondo del botón */
     color: white; /* Cambia el color del texto del botón */
     padding: 10px 15px; /* Ajusta el relleno del botón según sea necesario */
     border: none; /* Quita el borde del botón */
@@ -178,4 +178,9 @@ h3 {
     cursor: pointer;
     width: 100%;
     margin-top: 5px;
+}
+
+#boton_enviar 
+{
+    background-color: #f1683a;
 }

@@ -1,4 +1,5 @@
-﻿//--- PARA MOSTRAR IMAGEN SUBIDA ---
+﻿
+//--- PARA MOSTRAR IMAGEN SUBIDA ---
 function previewImage(event) {
     var input = event.target;
     var reader = new FileReader();
@@ -16,13 +17,13 @@ function previewImage(event) {
 // Obtener referencia al botón "Añadir nuevo ingrediente"
 const botonAgregarIngrediente = document.getElementById("agregar_ingrediente");
 
-// Escuchar el evento de clic en el botón "Añadir nuevo ingrediente"
-botonAgregarIngrediente.addEventListener("click", function () {
+botonAgregarIngrediente.addEventListener("click", function ()
+{
     agregarCuadroIngrediente(); // Llamar a la función para agregar un nuevo cuadro de ingredientes
 });
 
-// Función para agregar un nuevo cuadro de ingredientes
-function agregarCuadroIngrediente() {
+function agregarCuadroIngrediente()
+{
     const nuevoCuadro = document.createElement("div");
     nuevoCuadro.classList.add("cuadro_ingredientes"); // Agregar la clase correspondiente
     nuevoCuadro.innerHTML = `
@@ -41,3 +42,35 @@ function agregarCuadroIngrediente() {
     const recuadroIngredientes = document.getElementById("recuadro");
     recuadroIngredientes.appendChild(nuevoCuadro);
 }
+
+//--- VERIFICAR CAMPOS INTRODUCIDOS/ VACIOS ---
+
+const nombresInput = document.getElementById("nombres");
+const pasosInput = document.getElementById("pasos_letra");
+const descripcionInput = document.getElementById("descripcion_letra");
+
+function verificarCampo()
+{
+    const valor = nombresInput.value.trim();
+    const valor1 = nombresInput.value.trim();
+    const valor2 = nombresInput.value.trim();
+
+
+    if (valor === "" || valor1 === "" || valor2 === "")
+    {
+        alert("Por favor, completa el campo de correspondiente");
+        return false; 
+    }
+    return true;
+}
+
+// Ejemplo de cómo usar la función verificarCampo() en un formulario
+const formulario = document.getElementById("miFormulario");
+formulario.addEventListener("submit", function (event)
+{
+    // Evitar que el formulario se envíe si el campo está vacío
+    if (!verificarCampo())
+    {
+        event.preventDefault(); // Evitar el envío del formulario
+    }
+});
