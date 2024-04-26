@@ -81,6 +81,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBConnect.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DAL\UsuarioDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VISTA\IniciarSesion.aspx.cs">
       <DependentUpon>IniciarSesion.aspx</DependentUpon>

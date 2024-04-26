@@ -16,19 +16,19 @@
                 <div class="content">
                     <div class="input-box">
                         <label for="name">Nombre</label>
-                        <input type="text" placeholder="Escribe aquí tu nombre" name="name" required />
+                        <input id="txtName" type="text" placeholder="Escribe aquí tu nombre" name="name" required runat="server"/>
                     </div>
                     <div class="input-box">
                         <label for="email">Email</label>
-                        <input type="text" placeholder="Escribe aquí tu correo" name="email" required />
+                        <input id="txtEmail" type="text" placeholder="Escribe aquí tu correo" name="email" required runat="server"/>
                     </div>
                     <div class="input-box">
                         <label for="password">Contraseña</label>
-                        <input type="password" placeholder="Escribe aquí tu contraseña" name="password" required />
+                        <input id="txtPassword" type="password" placeholder="Escribe aquí tu contraseña" name="password" required runat="server"/>
                     </div>
                     <div class="input-box">
                         <label for="confirmPassword">Repite la contraseña</label>
-                        <input type="password" placeholder="Vuelve a escribir tu contraseña" name="password" required />
+                        <input id="txtConfirmPassword" type="password" placeholder="Vuelve a escribir tu contraseña" name="password" required runat="server"/>
                     </div>
                 </div>
                 <div class ="alert">
@@ -36,7 +36,7 @@
                     <p>Al registrarte estás de acuerdo con nuestros <a href="#">términos</a>, <a href="#">política de privacidad</a> y <a href="#">política de cookies</a>.</p>
                 </div>
                 <div class ="button-container">
-                    <button>Regístrate</button>
+                    <button id="btbRegistrar" runat="server">Regístrate</button>
                 </div>
             </form>
         </div>
