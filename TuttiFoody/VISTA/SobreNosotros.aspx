@@ -69,10 +69,14 @@
                 <img class="col" src = "/CONTENT/Imagenes/Grupo.png" alt ="Foto de grupo" style="width: 500px; height: auto"/>
                 
                 <div class="col margin-integrantes">
-                    <p>-William: </p>
-                    <p>-Andrei</p>
-                    <p>-Taufik</p>
-                    <p>-Soraya</p>
+                    <p><b>-William</b>: </p>
+                    <p><b>-Andrei</b>: Desde muy pequeño me ha atraído el mundo de la informática y es por eso que elegí hacer un grado medio de sistemas microinformáticos 
+                        y redes y continuar con un grado superior de desarrollo de aplicaciones multiplataformas. Ahora mismo estoy acabando un bootcamp de .NET para pulir más mis habilidades 
+                        y poder encontrar un empleo donde crecer profesionalmente</p>
+                    <p><b>-Taufik</b>: ¡Encantado! Soy Taufik un apasionado de la informática que ha completado sus estudios en Desarrollo de Aplicaciones Multiplataforma (DAM) en el Instituto Nicolau Copernico. 
+                        En este momento, estoy expandiendo mis conocimientos a través de un BootCamp de .Net con Fundación Esplai. Estoy comprometido con seguir creciendo profesionalmente y contribuir al mundo tecnológico 
+                        con mi experiencia y habilidades.</p>
+                    <p><b>-Soraya</b>:</p>
                 </div>
             </div>
         </section>
