@@ -71,6 +71,7 @@
     <Content Include="CONTENT\CSS\CrearReceta.css" />
     <Content Include="CONTENT\Imagenes\fondo.png" />
     <Content Include="CONTENT\Imagenes\subirImagen.png" />
+    <Content Include="CONTENT\JS\JSCrearReceta.js" />
     <Content Include="VISTA\WebForm1.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -119,7 +120,6 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CONTENT\JS\" />
     <Folder Include="MODEL\" />
   </ItemGroup>
   <PropertyGroup>

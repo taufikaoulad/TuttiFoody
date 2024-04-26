@@ -1,6 +1,6 @@
 ﻿@font-face {
     font-family: 'Bukhari Script';
-    src: url('Bukhari.ttf');
+    src: url('Bukhari Script.ttf');
     font-weight: bold;
     font-style: bold;
 }
@@ -12,7 +12,7 @@
 }
 
 body {
-    background-image: url('fondo.png');
+    background-image: url('../../CONTENT/Imagenes/fondo.png');
 }
 
 .form-register {
