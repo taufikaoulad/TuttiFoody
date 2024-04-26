@@ -28,8 +28,8 @@ namespace TuttiFoody.VISTA
         /// </summary>
         private void InsertarUsuario()
         {
-            //Primero comprueba si el nombre insertado ya existe en la base de datos
-            if (usuarioDAL.SelectByName(txtName.Value) == null)
+            //Primero comprueba si el nombre o correo insertado ya existe en la base de datos
+            if (usuarioDAL.SelectByName(txtName.Value) == null && usuarioDAL.SelectByEmail(txtEmail.Value) == null)
             {
                 // Si las contraseñas no coinciden no se creará el nuevo usuario
                 if (txtPassword.Value == txtConfirmPassword.Value)

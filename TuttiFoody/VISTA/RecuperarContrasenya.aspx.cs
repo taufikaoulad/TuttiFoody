@@ -38,8 +38,11 @@ namespace TuttiFoody.VISTA
                 if (int.Parse(txtCode.Text) == codigo )
                 {
                     errorMsg.InnerText = "BIEN";
-                   // Usuario usuario = usuarioDAL.SelectByName(txt.Value);
+                    // Usuario usuario = usuarioDAL.SelectByName(txt.Value);
+                    Usuario usuario = usuarioDAL.SelectByEmail(txtEmail.Text);
+                    usuario.Contraseña = txtPassword.Text;
 
+                    usuarioDAL.ExecuteUpdate();
                 }
             }
         }

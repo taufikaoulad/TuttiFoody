@@ -22,12 +22,32 @@ namespace TuttiFoody.DAL
                 throw;
             }
         }
+        public void ExecuteUpdate()
+        {
+            try
+            {
+                dc.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
 
         public Usuario SelectByName(string name)
         {
             var us = from user in dc.Usuario
                     where user.Nombre == name
                     select user;
+            return us.FirstOrDefault();
+        }
+
+        public Usuario SelectByEmail(string email)
+        {
+            var us = from user in dc.Usuario
+                     where user.Correo == email
+                     select user;
             return us.FirstOrDefault();
         }
 
