@@ -36,7 +36,8 @@
                     <p>Al registrarte estás de acuerdo con nuestros <a href="#">términos</a>, <a href="#">política de privacidad</a> y <a href="#">política de cookies</a>.</p>
                 </div>
                 <div class ="button-container">
-                    <button id="btbRegistrar" runat="server">Regístrate</button>
+                    <%--<button id="btnRegistrar" runat="server" >Regístrate</button>--%>
+                    <asp:Button ID="btnRegistrar" onclick="btnRegistrar_OnClick" runat="server" Text="Regístrate" />
                 </div>
             </form>
         </div>

@@ -92,7 +92,7 @@ h2 {
     background-image: linear-gradient(to right, #4CCD99, #4CCD99);
 }
 
-.button-container button {
+.button-container Button {
     width: 100%;
     margin-top: 10px;
     padding: 10px;
@@ -106,7 +106,7 @@ h2 {
     transition: 0.3s;
 }
 
-    .button-container button:hover {
+    .button-container Button:hover {
         background-image: linear-gradient(to right,#F2613F, #9B3922);
     }
 
@@ -114,7 +114,7 @@ h2 {
     background-image: linear-gradient(to right,#007F73, #4CCD99);
 }
 
-    .codeBtn-container button:hover {
+    .codeBtn-container Button:hover {
         background-image: linear-gradient(to right,#4CCD99, #007F73);
     }
 
