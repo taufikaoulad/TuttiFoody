@@ -16,6 +16,10 @@
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.9);
 }
 
+#errorMsg {
+    color: red;
+}
+
 h2 {
     font-size: 26px;
     font-weight: bold;
@@ -92,7 +96,7 @@ h2 {
     background-image: linear-gradient(to right, #4CCD99, #4CCD99);
 }
 
-.button-container Button {
+.button-container .btnCode {
     width: 100%;
     margin-top: 10px;
     padding: 10px;
@@ -106,34 +110,56 @@ h2 {
     transition: 0.3s;
 }
 
-    .button-container Button:hover {
-        background-image: linear-gradient(to right,#F2613F, #9B3922);
-    }
+.button-container .btnContinuar {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #f1683a, #f1683a);
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-.codeBtn-container button {
+.button-container .btnCode:hover {
+    background-image: linear-gradient(to right,#F2613F, #9B3922);
+}
+
+.button-container .btnContinuar:hover {
+    background-image: linear-gradient(to right,#f1683a, #f1683a);
+}
+
+.codeBtn-container .btnCode {
     background-image: linear-gradient(to right,#007F73, #4CCD99);
 }
 
-    .codeBtn-container Button:hover {
+    .codeBtn-container .btnCode:hover {
         background-image: linear-gradient(to right,#4CCD99, #007F73);
     }
 
-    @media(max-width:600px){
-        .container{
-            min-width:280px;
-        }
-        .content{
-            max-height:380px;
-            overflow:auto;
-        }
-        .input-box{
-            margin-bottom:12px;
-            width:100%;
-        }
-        .input-box:nth-child(2n){
-            justify-content:space-between;
-        }
-        .content::-webkit-scrollbar{
-            width:0;
-        }
+@media(max-width:600px) {
+    .container {
+        min-width: 280px;
     }
+
+    .content {
+        max-height: 380px;
+        overflow: auto;
+    }
+
+    .input-box {
+        margin-bottom: 12px;
+        width: 100%;
+    }
+
+        .input-box:nth-child(2n) {
+            justify-content: space-between;
+        }
+
+    .content::-webkit-scrollbar {
+        width: 0;
+    }
+}

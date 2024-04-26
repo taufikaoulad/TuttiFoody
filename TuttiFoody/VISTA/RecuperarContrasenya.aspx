@@ -16,29 +16,42 @@
                 <div class="content">
                     <div class="input-box">
                         <label for="password">Nueva contraseña</label>
-                        <input type="password" placeholder="Escribe aquí la nueva contraseña" name="password" required />
+                        <%--<input id="txtPassword" type="password" placeholder="Escribe aquí la nueva contraseña" name="password" required runat="server" />--%>
+                        <asp:TextBox ID="txtPassword" TextMode="Password" runat="server" AutoPostBack="false"></asp:TextBox>
+
                     </div>
                     <div class="input-box">
                         <label for="repeatPassword">Repite la contraseña</label>
-                        <input type="password" placeholder="Escribe otra vez la contraseña aquí" name="repeatPassword" required />
+                        <%--<input id="txtRepeatPassword" type="password" placeholder="Escribe otra vez la contraseña aquí" name="repeatPassword" required runat="server" />--%>
+                        <asp:TextBox ID="txtRepeatPassword" TextMode="Password" runat="server" AutoPostBack="false"></asp:TextBox>
+
                     </div>
                     <div class="input-box">
                         <label for="email">Correo</label>
-                        <input type="email" placeholder="Escribe aquí tu correo" name="email" required />
+                        <%--<input id="txtEmail" type="email" placeholder="Escribe aquí tu correo" name="email" required runat="server" />--%>
+                        <asp:TextBox ID="txtEmail" TextMode="Email" runat="server" AutoPostBack="false"></asp:TextBox>
+
                     </div>
                     <div class="input-box">
                         <label for="code">Código</label>
-                        <input type="text" placeholder="Escribe aquí el código recibido por correo" name="code" required />
+                        <%--<input id="txtCode" type="text" placeholder="Escribe aquí el código recibido por correo" name="code" runat="server" />--%>
+                        <asp:TextBox ID="txtCode" runat="server" AutoPostBack="false"></asp:TextBox>
+
                     </div>
                     <div class="button-container codeBtn-container">
-                        <button>Enviar código</button>
+                        <%--<button>Enviar código</button>--%>
+                        <asp:Button CssClass="btnCode" ID="btnCode" runat="server" OnClick="btnCode_OnClick" Text="Enviar código" />
+
                     </div>
                 </div>
-                <%--                <div class="alert">
-                    <p>¿No tienes una cuenta?<a href="Registrar.aspx">¡Regístrate!</a></p>
-                </div>--%>
+                <div class="alert">
+                    <p id="errorMsg" runat="server">
+                        HOLAA
+                        <%-- Mensaje de error --%>
+                    </p>
+                </div>
                 <div class="button-container">
-                    <button>Guardar nueva contraseña</button>
+                    <asp:Button CssClass="btnContinuar" ID="btnGuardar" OnClick="btnGuardar_OnClick" runat="server" Text="Guardar nueva contraseña" />
                 </div>
             </form>
         </div>

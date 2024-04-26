@@ -60,6 +60,15 @@ namespace TuttiFoody.VISTA
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtConfirmPassword;
 
         /// <summary>
+        /// Control errorMsg.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorMsg;
+
+        /// <summary>
         /// Control btnRegistrar.
         /// </summary>
         /// <remarks>

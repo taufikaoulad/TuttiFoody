@@ -32,12 +32,15 @@
                     </div>
                 </div>
                 <div class ="alert">
+                    <p id="errorMsg" runat="server">  
+                        <%-- Mensaje de error --%>
+                    </p>
                     <p>¿Ya tienes una cuenta?<a href="IniciarSesion.aspx"> inicia sesión</a>.</p>
                     <p>Al registrarte estás de acuerdo con nuestros <a href="#">términos</a>, <a href="#">política de privacidad</a> y <a href="#">política de cookies</a>.</p>
                 </div>
                 <div class ="button-container">
                     <%--<button id="btnRegistrar" runat="server" >Regístrate</button>--%>
-                    <asp:Button ID="btnRegistrar" onclick="btnRegistrar_OnClick" runat="server" Text="Regístrate" />
+                    <asp:Button CssClass="btnContinuar" ID="btnRegistrar" onclick="btnRegistrar_OnClick" runat="server" Text="Regístrate" />
                 </div>
             </form>
         </div>

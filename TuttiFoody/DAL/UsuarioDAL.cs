@@ -22,5 +22,23 @@ namespace TuttiFoody.DAL
                 throw;
             }
         }
+
+        public Usuario SelectByName(string name)
+        {
+            var us = from user in dc.Usuario
+                    where user.Nombre == name
+                    select user;
+            return us.FirstOrDefault();
+        }
+
+        //public employees SelectByID(int id)
+        //{
+        //    var data =
+        //               from emp in dc.employees
+        //               where emp.employee_id == id
+        //               select emp;
+
+        //    return data.FirstOrDefault();
+        //}
     }
 }
