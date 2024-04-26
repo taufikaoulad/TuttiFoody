@@ -69,6 +69,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CONTENT\CSS\PantallaPrincip.css" />
+    <Content Include="CONTENT\CSS\Alimento.css" />
+    <Content Include="CONTENT\Imagenes\fondo.jpg" />
+    <Content Include="CONTENT\Imagenes\img.jpg" />
     <Content Include="CONTENT\Imagenes\img1.jpg" />
     <Content Include="CONTENT\Imagenes\img2.jpg" />
     <Content Include="CONTENT\Imagenes\img3.jpg" />
@@ -76,13 +79,18 @@
     <Content Include="CONTENT\Imagenes\img5.jpg" />
     <Content Include="CONTENT\Imagenes\img6.jpg" />
     <Content Include="CONTENT\Imagenes\img7.jpg" />
+    <Content Include="CONTENT\Imagenes\imgNotFound.png" />
+    <Content Include="CONTENT\Imagenes\Lentejas.jpg" />
     <Content Include="CONTENT\Imagenes\usuario.png" />
+    <Content Include="CONTENT\JS\Alimento.js" />
     <Content Include="CONTENT\JS\PantallaPrincip.js" />
     <Content Include="VISTA\WebForm1.aspx" />
     <Content Include="VISTA\PantallaPrincipal.aspx" />
+    <Content Include="VISTA\Alimentos.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\AlimentoBD.cs" />
     <Compile Include="DAL\DBConnect.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,6 +117,13 @@
     </Compile>
     <Compile Include="VISTA\PantallaPrincipal.aspx.designer.cs">
       <DependentUpon>PantallaPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\Alimentos.aspx.cs">
+      <DependentUpon>Alimentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VISTA\Alimentos.aspx.designer.cs">
+      <DependentUpon>Alimentos.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

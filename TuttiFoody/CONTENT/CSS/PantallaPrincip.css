@@ -13,6 +13,10 @@ a {
     text-decoration: none;
 }
 
+button a {
+    color: rgb(255, 0, 0);
+}
+
 header {
     width: auto;
     max-width: 100%;
