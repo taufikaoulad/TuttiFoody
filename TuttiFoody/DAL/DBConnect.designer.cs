@@ -47,7 +47,7 @@ namespace TuttiFoody.DAL
     partial void DeleteUsuario(Usuario instance);
         #endregion
 
-        public DBConnectDataContext() : base(global::System.Configuration.ConfigurationManager.ConnectionStrings["BaseDeDatosGrupoSWAT"].ConnectionString, mappingSource)
+        public DBConnectDataContext() : base(global::System.Configuration.ConfigurationManager.ConnectionStrings["BaseDeDatosGrupoSWATConnectionString"].ConnectionString, mappingSource)
         {
             OnCreated();
         }
