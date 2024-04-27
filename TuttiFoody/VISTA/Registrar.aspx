@@ -16,19 +16,19 @@
                 <div class="content">
                     <div class="input-box">
                         <label for="name">Nombre</label>
-                        <input id="txtName" type="text" placeholder="Escribe aquí tu nombre" name="name" required runat="server"/>
+                        <input class="controler" id="txtName" type="text" placeholder="Escribe aquí tu nombre" name="name" required runat="server"/>
                     </div>
                     <div class="input-box">
                         <label for="email">Email</label>
-                        <input id="txtEmail" type="text" placeholder="Escribe aquí tu correo" name="email" required runat="server"/>
+                        <input class="controler" id="txtEmail" type="text" placeholder="Escribe aquí tu correo" name="email" required runat="server"/>
                     </div>
                     <div class="input-box">
                         <label for="password">Contraseña</label>
-                        <input id="txtPassword" type="password" placeholder="Escribe aquí tu contraseña" name="password" required runat="server"/>
+                        <input class="controler" id="txtPassword" type="password" placeholder="Escribe aquí tu contraseña" name="password" required runat="server"/>
                     </div>
                     <div class="input-box">
                         <label for="confirmPassword">Repite la contraseña</label>
-                        <input id="txtConfirmPassword" type="password" placeholder="Vuelve a escribir tu contraseña" name="password" required runat="server"/>
+                        <input class="controler" id="txtConfirmPassword" type="password" placeholder="Vuelve a escribir tu contraseña" name="password" required runat="server"/>
                     </div>
                 </div>
                 <div class ="alert">

@@ -125,6 +125,7 @@
       <LastGenOutput>DBConnect.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="CONTENT\CSS\Bukhari Script.ttf" />
     <None Include="DAL\DBConnect.dbml.layout">
       <DependentUpon>DBConnect.dbml</DependentUpon>
     </None>

@@ -17,11 +17,11 @@
                 <div class="content">
                     <div class="input-box">
                         <label for="name">Nombre</label>
-                        <input id="txtName" runat="server" type="text" placeholder="Escribe aquí tu nombre" name="name" required />
+                        <input class="controler" id="txtName" runat="server" type="text" placeholder="Escribe aquí tu nombre" name="name" required />
                     </div>
                     <div class="input-box">
                         <label for="password">Contraseña</label>
-                        <input id="txtPassword" runat="server" type="password" placeholder="Escribe aquí tu contraseña" name="password" required />
+                        <input class="controler" id="txtPassword" runat="server" type="password" placeholder="Escribe aquí tu contraseña" name="password" required />
                     </div>
                 </div>
                 <div class="alert">

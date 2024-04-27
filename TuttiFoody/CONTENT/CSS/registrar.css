@@ -1,4 +1,19 @@
-﻿body {
+﻿/*Añadido por william*/
+@font-face {
+    font-family: 'Bukhari Script';
+    src: url('../../CONTENT/CSS/Bukhari Script.ttf');
+    font-weight: bold;
+    font-style: bold;
+}
+
+.controler {
+    background: #24303c;
+    border: 1px solid #1f53c5;
+    color: white;
+}
+
+/*-----*/
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,6 +28,7 @@
     border-radius: 10px;
     overflow: hidden;
     background: rgba(0,0,0,0.7);
+    background: #121820; /*/Añadido por william/*/
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.9);
 }
 
@@ -27,6 +43,7 @@ h2 {
     color: #fff;
     padding-bottom: 8px;
     border-bottom: 1px solid silver;
+    font-family: 'Bukhari Script'; /*/Añadido por william/*/
 }
 
 .content {
@@ -37,6 +54,7 @@ h2 {
 }
 
 .input-box {
+    font-family: 'calibri'; /*/Añadido por william/*/
     display: flex;
     flex-wrap: wrap;
     width: 48%;
@@ -61,6 +79,7 @@ h2 {
     border-radius: 5px;
     border: 1px solid #ccc;
     outline: none;
+    border: 1px solid #f1683a /*/Añadido por william/*/
 }
 
     .input-box input:is(:focus,:valid) {
