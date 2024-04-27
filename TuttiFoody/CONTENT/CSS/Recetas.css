@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; 
+    width: 100%;
     justify-content: flex-start;
 }
 
@@ -27,6 +27,10 @@ body {
     background-size: cover;
 }
 
+.separador {
+    margin-top: 110px;
+}
+
 .card {
     width: 836px;
     height: 272.8px;
@@ -38,59 +42,43 @@ body {
     transition: 0.1s;
     transform: scale(0.8);
     margin-top: -25px;
-    background-color: fff;
 }
 
-.card:hover {
-    transform: scale(0.98);
-    box-shadow: 0 5px 20px #595959;
-}
+    .card:hover {
+        transform: scale(0.98);
+        box-shadow: 0 5px 20px #595959;
+    }
 
-.card .img-card {
-    width: 35.2%;
-    height: 100%;
-    background-size: cover;
-}
+    .card .img-card {
+        width: 35.2%;
+        height: 100%;
+        background-size: cover;
+    }
 
-.card .content {
-    width: 74.8%; 
-    height: 100%;
-    display: grid;
-    grid-template-rows: 60px;
-    padding: 15px 20px;
-}
+    .card .content {
+        width: 74.8%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 60px;
+        padding: 15px 20px;
+    }
 
-.card .content .title {
-    display: flex;
-    justify-content: space-between;
-}
+        .card .content .title {
+            display: flex;
+            justify-content: space-between;
+        }
 
-.card .content .title .calorias {
+.calorias {
     display: flex;
     gap: 8px;
-    margin-top: 8px;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 900;
 }
 
 .card .content .title h3 {
     font-size: 40px;
     color: #f1683a;
-}
-
-.card .content .title p {
-    font-size: 17.6px; 
-    font-weight: bolder;
-}
-
-.txtPropiedad {
-    font-size: 16.5px; 
-    font-weight: bolder;
-}
-
-.card .content .propiedad {
-    font-size: 14.08px; 
-    margin-top: 15px;
-    line-height: 2;
-    font-weight: 800;
 }
 
 .card .content .descripcion p {
@@ -103,14 +91,13 @@ body {
 
 .sticky {
     width: 100%;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
     padding: 10px;
     z-index: 1;
     margin-bottom: 28px;
     background-image: url("/CONTENT/Imagenes/fondo.jpg");
-    box-shadow: 0 5px 5px #595959;
+    box-shadow: 0 7px 8px #595959;
 }
 
 h2 {
@@ -119,4 +106,25 @@ h2 {
     color: #ff8363;
     margin: 0 auto;
     width: 60%;
+}
+
+.ContenedorTempo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.separacion {
+    display: flex;
+    gap: 12px;
+    margin-right: 20px;
+    align-items: center;
+    font-size: 28px;
+    line-height: 2;
+    font-weight: 800;
+    gap: 10px;
+}
+
+img {
+    width: 50px;
+    height: 50px;
 }

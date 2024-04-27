@@ -25,21 +25,34 @@
     <Type Name="Propiedad">
       <Column Name="IdPropiedad" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
       <Association Name="Propiedad_AlimentoPropiedad" Member="AlimentoPropiedad" ThisKey="IdPropiedad" OtherKey="FKPropiedad" Type="AlimentoPropiedad" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usuario" Member="Usuario">
+    <Type Name="Usuario">
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Usuario_Receta" Member="Receta" ThisKey="IdUsuario" OtherKey="FKUsuario" Type="Receta" />
+      <Association Name="Usuario_RecetaUsuario" Member="RecetaUsuario" ThisKey="IdUsuario" OtherKey="FKUsuario" Type="RecetaUsuario" />
+      <Association Name="Usuario_RecetaFavorita" Member="RecetaFavorita" ThisKey="IdUsuario" OtherKey="FKUsuario" Type="RecetaFavorita" />
     </Type>
   </Table>
   <Table Name="dbo.Receta" Member="Receta">
     <Type Name="Receta">
       <Column Name="IdReceta" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="PasosASeguir" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="PasosASeguir" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
       <Column Name="Tiempo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="FKUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CaloriasTotales" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="ArchivoImagen" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
       <Association Name="Receta_RecetaAlimento" Member="RecetaAlimento" ThisKey="IdReceta" OtherKey="FKReceta" Type="RecetaAlimento" />
-      <Association Name="Receta_RecetaFavorita" Member="RecetaFavorita" ThisKey="IdReceta" OtherKey="FKReceta" Type="RecetaFavorita" />
       <Association Name="Receta_RecetaUsuario" Member="RecetaUsuario" ThisKey="IdReceta" OtherKey="FKReceta" Type="RecetaUsuario" />
+      <Association Name="Receta_RecetaFavorita" Member="RecetaFavorita" ThisKey="IdReceta" OtherKey="FKReceta" Type="RecetaFavorita" />
       <Association Name="Usuario_Receta" Member="Usuario" ThisKey="FKUsuario" OtherKey="IdUsuario" Type="Usuario" IsForeignKey="true" />
     </Type>
   </Table>
@@ -52,14 +65,6 @@
       <Association Name="Receta_RecetaAlimento" Member="Receta" ThisKey="FKReceta" OtherKey="IdReceta" Type="Receta" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.RecetaFavorita" Member="RecetaFavorita">
-    <Type Name="RecetaFavorita">
-      <Column Name="FKReceta" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="FKUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Receta_RecetaFavorita" Member="Receta" ThisKey="FKReceta" OtherKey="IdReceta" Type="Receta" IsForeignKey="true" />
-      <Association Name="Usuario_RecetaFavorita" Member="Usuario" ThisKey="FKUsuario" OtherKey="IdUsuario" Type="Usuario" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.RecetaUsuario" Member="RecetaUsuario">
     <Type Name="RecetaUsuario">
       <Column Name="FKReceta" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -68,22 +73,19 @@
       <Association Name="Usuario_RecetaUsuario" Member="Usuario" ThisKey="FKUsuario" OtherKey="IdUsuario" Type="Usuario" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.RecetaFavorita" Member="RecetaFavorita">
+    <Type Name="RecetaFavorita">
+      <Column Name="FKReceta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FKUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Receta_RecetaFavorita" Member="Receta" ThisKey="FKReceta" OtherKey="IdReceta" Type="Receta" IsForeignKey="true" />
+      <Association Name="Usuario_RecetaFavorita" Member="Usuario" ThisKey="FKUsuario" OtherKey="IdUsuario" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.TipoAlimento" Member="TipoAlimento">
     <Type Name="TipoAlimento">
       <Column Name="IdTipoAlimento" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="TipoAlimento_Alimento" Member="Alimento" ThisKey="IdTipoAlimento" OtherKey="FKTipoAlimento" Type="Alimento" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Usuario" Member="Usuario">
-    <Type Name="Usuario">
-      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Correo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Contraseña" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="Usuario_Receta" Member="Receta" ThisKey="IdUsuario" OtherKey="FKUsuario" Type="Receta" />
-      <Association Name="Usuario_RecetaFavorita" Member="RecetaFavorita" ThisKey="IdUsuario" OtherKey="FKUsuario" Type="RecetaFavorita" />
-      <Association Name="Usuario_RecetaUsuario" Member="RecetaUsuario" ThisKey="IdUsuario" OtherKey="FKUsuario" Type="RecetaUsuario" />
     </Type>
   </Table>
 </Database>

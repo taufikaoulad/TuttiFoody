@@ -14,7 +14,7 @@
             <a id='logo' href="">Tutti Foody</a>
             <a href="/VISTA/PantallaPrincipal.aspx">Principal</a>
             <a href="/VISTA/Alimentos.aspx">Alimentos</a>
-            <a href="">Recetas</a>
+            <a href="/VISTA/Recetas.aspx">Recetas</a>
             <a href="">About us</a>
             <div>
                 <img src="/CONTENT/Imagenes/usuario.png" alt="perfil"/>
