@@ -72,6 +72,7 @@
     <Content Include="CONTENT\Imagenes\fondo.png" />
     <Content Include="CONTENT\Imagenes\subirImagen.png" />
     <Content Include="CONTENT\JS\JSCrearReceta.js" />
+    <Content Include="VISTA\CrearReceta.html" />
     <Content Include="VISTA\WebForm1.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
