@@ -27,22 +27,48 @@ namespace TuttiFoody.VISTA
         {
             GenerarCodigo();
             EnviarCodigo();
+
         }
 
 
         protected void btnGuardar_OnClick(object sender, EventArgs e)
         {
-            if (txtPassword.Text == txtRepeatPassword.Text)
+            if (txtPassword.Visible == false)
             {
                 codigo = (int)Session["codigoSesion"];
-                if (int.Parse(txtCode.Text) == codigo )
+                if (txtCode.Text != null)
                 {
-                    errorMsg.InnerText = "BIEN";
+                    if (int.Parse(txtCode.Text) == codigo)
+                    {
+                        lbCode.Visible = false;
+                        lbEmail.Visible = false;
+                        txtEmail.Visible = false;
+                        txtCode.Visible = false;
+                        btnCode.Visible = false;
+                        lbPass.Visible = true;
+                        lbRepPass.Visible = true;
+                        txtRepeatPassword.Visible = true;
+                        txtPassword.Visible = true;
+                        btnGuardar.Text = "Guardar nueva contraseña";
+                    }
+                    else
+                    {
+                        errorMsg.InnerText = "Código de verificación incorrecto.";
+                    }
+
+                }
+            }
+            else
+            {
+                if (txtPassword.Text == txtRepeatPassword.Text)
+                {
+                    //errorMsg.InnerText = "BIEN";
                     // Usuario usuario = usuarioDAL.SelectByName(txt.Value);
                     Usuario usuario = usuarioDAL.SelectByEmail(txtEmail.Text);
                     usuario.Contraseña = txtPassword.Text;
 
                     usuarioDAL.ExecuteUpdate();
+                    Response.Redirect("IniciarSesion.aspx");
                 }
             }
         }
@@ -52,7 +78,7 @@ namespace TuttiFoody.VISTA
             message.From = new MailAddress(fromMail);
             message.Subject = "TUTTI FOODY CONFIRMATION CODE";
             message.To.Add(new MailAddress(txtEmail.Text));
-            message.Body = "Esta es una prueba. TUTTI FOODY CODE:" + codigo;
+            message.Body = "Esta es una prueba. TUTTI FOODY VERIFICATION CODE: \b" + codigo;
 
             var smtpClient = new SmtpClient("smtp.gmail.com")
             {

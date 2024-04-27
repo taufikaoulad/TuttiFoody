@@ -29,27 +29,28 @@ namespace TuttiFoody.VISTA
         private void InsertarUsuario()
         {
             //Primero comprueba si el nombre o correo insertado ya existe en la base de datos
-            if (usuarioDAL.SelectByName(txtName.Value) == null && usuarioDAL.SelectByEmail(txtEmail.Value) == null)
+            if (usuarioDAL.SelectByName(txtName.Value) == null)
             {
-                // Si las contraseñas no coinciden no se creará el nuevo usuario
-                if (txtPassword.Value == txtConfirmPassword.Value)
+                if (usuarioDAL.SelectByEmail(txtEmail.Value) == null)
                 {
-                    Usuario usuario = new Usuario();
-                    usuario.Nombre = txtName.Value;
-                    usuario.Correo = txtEmail.Value;
-                    usuario.Contraseña = txtPassword.Value;
-                    usuarioDAL.InsertUsuario(usuario);
-                    Response.Redirect("IniciarSesion.aspx");
+                    // Si las contraseñas no coinciden no se creará el nuevo usuario
+                    if (txtPassword.Value == txtConfirmPassword.Value)
+                    {
+                        Usuario usuario = new Usuario();
+                        usuario.Nombre = txtName.Value;
+                        usuario.Correo = txtEmail.Value;
+                        usuario.Contraseña = txtPassword.Value;
+                        usuarioDAL.InsertUsuario(usuario);
+                        Response.Redirect("IniciarSesion.aspx");
+                    }
+                    else
+                        errorMsg.InnerText = "Las contraseñas no coinciden.";
                 }
                 else
-                {
-                    errorMsg.InnerText = "Las contraseñas no coinciden.";
-                }
+                    errorMsg.InnerText = "El correo ya está en uso.";
             }
             else
-            {
                 errorMsg.InnerText = "El nombre ya está en uso.";
-            }
             //Response.Redirect("RecuperarContrasenya.aspx");
         }
 
