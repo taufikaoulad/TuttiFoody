@@ -82,6 +82,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBConnect.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DAL\IngredientesBD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VISTA\CrearReceta.aspx.cs">
       <DependentUpon>CrearReceta.aspx</DependentUpon>
