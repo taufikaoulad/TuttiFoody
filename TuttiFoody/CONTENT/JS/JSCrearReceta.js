@@ -63,8 +63,6 @@ function verificarCampo()
     }
     return true;
 }
-
-// Ejemplo de cómo usar la función verificarCampo() en un formulario
 const formulario = document.getElementById("miFormulario");
 formulario.addEventListener("submit", function (event)
 {
@@ -74,3 +72,31 @@ formulario.addEventListener("submit", function (event)
         event.preventDefault(); // Evitar el envío del formulario
     }
 });
+
+
+//--- CARGAR LOS NOMBRES DE LOS ALIMENTOS LA LISTA ---
+
+function cargarNombresAlimentos() {
+    // Realizar una petición al servidor para obtener los nombres de los alimentos
+    fetch('D:\\PROYECTOSFINALES\\new1\\TuttiFoody\\DAL\\IngredientesDAL.cs') // Esta ruta debería coincidir con la ruta de tu backend que devuelve los nombres de los alimentos
+        .then(response => response.json())
+        .then(data =>
+        {
+            const select = document.getElementById('objetos');
+            // Limpiar las opciones actuales del select
+            select.innerHTML = '';
+            // Agregar las nuevas opciones al select
+            data.forEach(nombre =>
+            {
+                const option = document.createElement('option');
+                option.value = nombre;
+                option.textContent = nombre;
+                select.appendChild(option);
+            });
+        })
+        .catch(error => console.error('Error al cargar los nombres de los alimentos:', error));
+}
+
+// Llamar a la función para cargar los nombres de los alimentos cuando se cargue la página
+window.addEventListener('DOMContentLoaded', cargarNombresAlimentos);
+

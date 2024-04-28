@@ -139,6 +139,11 @@ body {
     text-size-adjust: 10px;
 }
 
+h1 {
+    font-family: 'Bukhari Script';
+    color:white;
+}
+
 h3 {
     font-family: 'Bukhari Script';
 }
