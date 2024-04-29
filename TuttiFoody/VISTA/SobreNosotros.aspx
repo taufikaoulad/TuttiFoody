@@ -93,7 +93,7 @@
                         <label id ="nombre">Tu nombre: </label>
                     </div>
                     <div>
-                        <input type="text" id="cuadroNombre" name ="cuadroNombre" />
+                        <asp:TextBox ID="cuadroNombre" runat="server"></asp:TextBox>
                     </div>
                 </div>
                     <div class="espacioEnBlanco"></div>
@@ -102,7 +102,7 @@
                             <label id="correoElectronico">Tu correo electrónico: </label>
                         </div>
                         <div>
-                            <input type="text" id="cuadroCorreoElectronico" name ="cuadroCorreoElectronico" />
+                             <asp:TextBox ID="cuadroCorreoElectronico" runat="server"></asp:TextBox>
                         </div>
                     </div>
                     <div class="espacioEnBlanco"></div>
@@ -111,12 +111,12 @@
                             <label id="mensaje">Tu mensaje: </label>
                         </div>
                         <div>
-                            <input type="text" class="cuadroMensaje" id="cuadroMensaje" name="mensaje"
+                            <asp:TextBox CssClass="cuadroMensaje" ID="txtMensaje" runat="server" TextMode="MultiLine" Rows="20" Columns="50"></asp:TextBox>
                         </div>
                     </div>
                     <div class="espacioEnBlanco"></div>
                     <div>
-                        <button type="button">Enviar</button>
+                        <asp:button runat="server" ID="btnEnviar"  type="button" Text="Enviar" OnClick="btnEnviar_Click"></asp:button>
                     </div>
                 </div>
 
