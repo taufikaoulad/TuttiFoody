@@ -50,7 +50,7 @@
             height: 100%;
         }
         .equipo .imgPerfil {
-            width: 30%;
+            width: 40%;
             height: 100%;
         }
         
