@@ -13,10 +13,7 @@
     <section id="miFormulario" class="form-register">
 
     <div id="ingresar_titulo">
-        <h1>Sopa de pollo</h1>
-        <h3>Titulo de la receta</h3>
-        <input class="controls" type="text" name="nombres" id="nombres" placeholder="Mi receta se llama...">
-
+        <h1 id="TituloReceta">Titulo de la receta</h1>
     </div>
 
     <div id="apartado_doble">
@@ -27,35 +24,25 @@
         </div>
     
         <div id="ingresar_ingredientes">
-            <h3>Ingredientes</h3>
+            <h1>Ingredientes</h1>
             <div id="recuadro">
                 <div id="cuadro_ingrdientes">
-                    <select class="controls" id="objetos">
-                        <option value="objeto1">Objeto 1</option>
-                        <option value="objeto2">Objeto 2</option>
-                        <option value="objeto3">Objeto 3</option>
-                    </select>
-                    <h2 id="X_text"> X </h2>
-                    <textarea class="controls" id="cantidad_objetos" placeholder="Cantidad"></textarea>
+                    <h4>•Tomate X 5</h4>
                 </div>
             </div>
-            <!-- Botón para agregar otro cuadro de ingredientes -->
-            <button id="agregar_ingrediente" type="button">Añadir nuevo ingrediente</button>
         </div>
     </div>
     
 
     <div id="ingresar_descripcion">
-        <h3>Descripcion</h3>
-        <textarea class="controls" id="descripcion_letra" placeholder="La recete es..."></textarea>
-    </div>
+        <h1>Descripcion</h1>
+        <h4>Passosososos</h4>
+        </div>
 
     <div id="ingresar_pasos">
-        <h3>Pasos de la receta</h3>
-        <textarea class="controls"  id="pasos_letra" placeholder="Los pasos a seguir son..."></textarea>
+        <h1>Pasos de la receta</h1>
+        <h4>Passosososos</h4>
     </div>
-
-    <input id="boton_enviar" class="botons" type="submit" value="Publicar receta">
     
 </section>
 

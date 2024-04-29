@@ -14,18 +14,17 @@ function previewImage(event) {
 
 
 //--- AÑADIR NUEVO INGREDIENTE ---
-// Obtener referencia al botón "Añadir nuevo ingrediente"
 const botonAgregarIngrediente = document.getElementById("agregar_ingrediente");
 
 botonAgregarIngrediente.addEventListener("click", function ()
 {
-    agregarCuadroIngrediente(); // Llamar a la función para agregar un nuevo cuadro de ingredientes
+    agregarCuadroIngrediente();
 });
 
 function agregarCuadroIngrediente()
 {
     const nuevoCuadro = document.createElement("div");
-    nuevoCuadro.classList.add("cuadro_ingredientes"); // Agregar la clase correspondiente
+    nuevoCuadro.classList.add("cuadro_ingredientes"); 
     nuevoCuadro.innerHTML = `
         <div id="cuadro_ingrdientes" class="cuadro_ingrediente">
             <select class="controls" id="objetos">
@@ -38,7 +37,6 @@ function agregarCuadroIngrediente()
         </div>
     `;
 
-    // Agregar el nuevo cuadro de ingredientes al recuadro de ingredientes
     const recuadroIngredientes = document.getElementById("recuadro");
     recuadroIngredientes.appendChild(nuevoCuadro);
 }
@@ -76,9 +74,10 @@ formulario.addEventListener("submit", function (event)
 
 //--- CARGAR LOS NOMBRES DE LOS ALIMENTOS LA LISTA ---
 
-function cargarNombresAlimentos() {
-    // Realizar una petición al servidor para obtener los nombres de los alimentos
-    fetch('D:\\PROYECTOSFINALES\\new1\\TuttiFoody\\DAL\\IngredientesDAL.cs') // Esta ruta debería coincidir con la ruta de tu backend que devuelve los nombres de los alimentos
+
+function cargarNombresAlimentos()
+{
+    fetch('../TuttiFoody/DAL/IngredientesDAL.cs')
         .then(response => response.json())
         .then(data =>
         {
@@ -97,6 +96,5 @@ function cargarNombresAlimentos() {
         .catch(error => console.error('Error al cargar los nombres de los alimentos:', error));
 }
 
-// Llamar a la función para cargar los nombres de los alimentos cuando se cargue la página
 window.addEventListener('DOMContentLoaded', cargarNombresAlimentos);
 
