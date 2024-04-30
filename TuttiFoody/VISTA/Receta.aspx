@@ -22,7 +22,7 @@
             <div id="imagen-preview"></div>
             <input type="file" id="imagen" name="imagen" accept="image/*" onchange="previewImage(event)">
         </div>
-    
+
         <div id="ingresar_ingredientes">
             <h1>Ingredientes</h1>
             <div id="recuadro">
