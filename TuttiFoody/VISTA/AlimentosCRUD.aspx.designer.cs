@@ -11,7 +11,7 @@ namespace TuttiFoody.VISTA
 {
 
 
-    public partial class Alimentos
+    public partial class WebForm3
     {
 
         /// <summary>
@@ -24,84 +24,84 @@ namespace TuttiFoody.VISTA
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control inputBusqueda.
+        /// Control txtNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox inputBusqueda;
+        protected global::System.Web.UI.WebControls.TextBox txtNombre;
 
         /// <summary>
-        /// Control btnBuscar.
+        /// Control txtDescripcion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnBuscar;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtDescripcion;
 
         /// <summary>
-        /// Control repLegumbres.
+        /// Control archivoImagen.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater repLegumbres;
+        protected global::System.Web.UI.WebControls.FileUpload archivoImagen;
 
         /// <summary>
-        /// Control repVerduras.
+        /// Control calorias.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater repVerduras;
+        protected global::System.Web.UI.WebControls.TextBox calorias;
 
         /// <summary>
-        /// Control repCarnes.
+        /// Control cbxTipoAlim.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater repCarnes;
+        protected global::System.Web.UI.WebControls.DropDownList cbxTipoAlim;
 
         /// <summary>
-        /// Control repLacteos.
+        /// Control listAlimentos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater repLacteos;
+        protected global::System.Web.UI.WebControls.ListBox listAlimentos;
 
         /// <summary>
-        /// Control repFrutas.
+        /// Control insertar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater repFrutas;
+        protected global::System.Web.UI.WebControls.Button insertar;
 
         /// <summary>
-        /// Control repCereales.
+        /// Control modificar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater repCereales;
+        protected global::System.Web.UI.WebControls.Button modificar;
 
         /// <summary>
-        /// Control repAceites.
+        /// Control eliminar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater repAceites;
+        protected global::System.Web.UI.WebControls.Button eliminar;
     }
 }

@@ -9,13 +9,6 @@ namespace TuttiFoody.DAL
     {
         DBConnect db = new DBConnect("Server=85.208.20.69,54321;Database=BaseDeDatosGrupoSWAT;User Id=sa;Password=Sql#123456789;");
 
-        /*public IQueryable<Receta> Select()
-        {
-            var data = from rec in db.Receta
-                       select rec;
-            return data;
-        }*/
-
         public IQueryable<dynamic> Select()
         {
             var data = from rec in db.Receta
@@ -28,6 +21,20 @@ namespace TuttiFoody.DAL
                            ArchivoImagen = rec.ArchivoImagen ?? "/Content/Imagenes/imgNotFound.png"
                        };
             return data;
-        }   
+        }
+
+        public IQueryable<dynamic> SelectBusqueda(string nombre)
+        {
+            var data = Select().ToList();
+
+            // Filtramos los datos para que el dato filtrado salga primero
+            var searchData = data.Where(r => r.NombreR.Contains(nombre)).ToList();
+            var remainingData = data.Except(searchData).ToList();
+
+            // Unimos los resultados
+            var margedData = searchData.Concat(remainingData);
+
+            return margedData.AsQueryable();
+        }
     }
 }

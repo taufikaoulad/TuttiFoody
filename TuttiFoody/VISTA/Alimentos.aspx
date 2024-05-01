@@ -9,11 +9,22 @@
     <title>Alimentos</title>
     <!-- CSS de alimentos -->
     <link rel="stylesheet" href="~/CONTENT/CSS/Alimento.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet"/>
 </head>
 <body>
+    <form id="form1" runat="server">
+        <div class="buscador">
+            <asp:TextBox class="input" ID="inputBusqueda" runat="server" type="text" placeholder="Buscar"></asp:TextBox>
+            <button class="btn" ID="btnBuscar" runat="server" OnServerClick="btnBuscar_Click">
+                <i class="fa fa-search"></i>
+            </button>
+            
+        </div>
+    </form>
+
     <div class="container">
          <!-- separacion -->
          <div class="sticky">

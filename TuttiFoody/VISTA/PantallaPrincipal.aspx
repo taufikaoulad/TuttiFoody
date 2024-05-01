@@ -16,6 +16,7 @@
             <a href="/VISTA/Alimentos.aspx">Alimentos</a>
             <a href="/VISTA/Recetas.aspx">Recetas</a>
             <a href="">About us</a>
+            <a href="/VISTA/AlimentosCRUD.aspx">CRUD</a>
             <div>
                 <img src="/CONTENT/Imagenes/usuario.png" alt="perfil"/>
             </div>  

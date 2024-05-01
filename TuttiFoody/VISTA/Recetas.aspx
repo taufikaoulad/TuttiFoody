@@ -7,9 +7,10 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Document</title>
+    <title>Recetas</title>
     <!-- CSS de Recetas -->
     <link rel="stylesheet" href="../CONTENT/CSS/Recetas.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet"/>
@@ -17,7 +18,16 @@
 </head>
 <body>
     <div class="container">
-         
+         <form id="form1" runat="server">
+            <div class="buscador">
+                <asp:TextBox class="input" ID="inputBusqueda" runat="server" type="text" placeholder="Buscar"></asp:TextBox>
+                <button class="btn" ID="btnBuscar" runat="server" OnServerClick="btnBuscar_Click">
+                    <i class="fa fa-search"></i>
+                </button>
+        
+            </div>
+        </form>
+
          <div class="sticky">
              <h2 id="legumbres">Recetas</h2>
          </div>

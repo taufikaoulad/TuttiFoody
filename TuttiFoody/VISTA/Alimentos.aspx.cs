@@ -38,5 +38,65 @@ namespace TuttiFoody.VISTA
                 repAceites.DataBind();
             }
         }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string nombre = inputBusqueda.Text;
+
+            nombre = char.ToUpper(nombre[0]) + nombre.Substring(1);
+
+            AlimentoBD alimentoBD = new AlimentoBD();
+            int tipoAlimento = alimentoBD.SelectTipoAlimento(nombre); 
+
+            switch (tipoAlimento)
+            {
+                case 1:
+                    repLegumbres.DataSource = alimentoBD.SelectBusqueda(nombre, 1);
+                    repLegumbres.DataBind();
+                    // Ejecutar una función JavaScript después de que la página se haya cargado completamente
+                    ClientScript.RegisterStartupScript(this.GetType(), "RedirectScript", "window.onload = " +
+                        "function(){ window.location.href = '/VISTA/Alimentos.aspx#legumbres'; };", true);
+                    break;
+                case 2:
+                    repVerduras.DataSource = alimentoBD.SelectBusqueda(nombre, 2);
+                    repVerduras.DataBind();
+                    ClientScript.RegisterStartupScript(this.GetType(), "RedirectScript", "window.onload = " +
+                        "function(){ window.location.href = '/VISTA/Alimentos.aspx#verdurasHortalizas'; };", true);
+                    break;
+                case 3:
+                    repCarnes.DataSource = alimentoBD.SelectBusqueda(nombre, 3);
+                    repCarnes.DataBind();
+                    ClientScript.RegisterStartupScript(this.GetType(), "RedirectScript", "window.onload = " +
+                        "function(){ window.location.href = '/VISTA/Alimentos.aspx#carnesPescados'; };", true);
+                    break;
+                case 4:
+                    repCarnes.DataSource = alimentoBD.SelectBusqueda(nombre, 4);
+                    repCarnes.DataBind();
+                    ClientScript.RegisterStartupScript(this.GetType(), "RedirectScript", "window.onload = " +
+                        "function(){ window.location.href = '/VISTA/Alimentos.aspx#lacteos'; };", true);
+                    break;
+                case 5:
+                    repCarnes.DataSource = alimentoBD.SelectBusqueda(nombre, 5);
+                    repCarnes.DataBind();
+                    ClientScript.RegisterStartupScript(this.GetType(), "RedirectScript", "window.onload = " +
+                        "function(){ window.location.href = '/VISTA/Alimentos.aspx#frutas'; };", true);
+                    break;
+                case 6:
+                    repCarnes.DataSource = alimentoBD.SelectBusqueda(nombre, 6);
+                    repCarnes.DataBind();
+                    ClientScript.RegisterStartupScript(this.GetType(), "RedirectScript", "window.onload = " +
+                        "function(){ window.location.href = '/VISTA/Alimentos.aspx#cereales'; };", true);
+                    break;
+                case 7:
+                    repCarnes.DataSource = alimentoBD.SelectBusqueda(nombre, 7);
+                    repCarnes.DataBind();
+                    ClientScript.RegisterStartupScript(this.GetType(), "RedirectScript", "window.onload = " +
+                        "function(){ window.location.href = '/VISTA/Alimentos.aspx#aceitesGrasas'; };", true);
+                    break;
+                default:
+                    //hacer el default 
+                    break;
+            }
+        }
     }
 }
