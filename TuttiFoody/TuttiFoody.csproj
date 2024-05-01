@@ -68,7 +68,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CONTENT\CSS\popupStyle.css" />
     <Content Include="CONTENT\CSS\registrar.css" />
     <Content Include="VISTA\IniciarSesion.aspx" />
     <Content Include="VISTA\IniciarSesionM.aspx" />
