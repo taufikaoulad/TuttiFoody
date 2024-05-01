@@ -86,24 +86,12 @@ body {
     overflow-y: auto;
 }
 
-#cuadro_ingrdientes {
-    display: flex;
-    width: 90;
-    height: 50px;
-    margin-left: 10px;
-    margin-right: 10px;
-    /* background: #0080ff; */
-
-    align-items: center; /* Alinear verticalmente los elementos */
-    gap: 10px; /* Espacio entre los elementos */
-    padding: 20px;
-}
 
 #ingresar_foto {
     text-align: center;
     width: 55%;
     height: 100%;
-    background: #24303c;
+    /*background: #24303c;*/
     border-radius: 10px;
 }
 
@@ -116,23 +104,6 @@ body {
     margin-bottom: 10px;
 }
 
-#objetos {
-    width: 200px;
-    margin-top: 20px;
-}
-
-#X_text {
-    margin: 0 10px;
-    margin-top: 5px;
-}
-
-#cantidad_objetos {
-    width: 90px;
-    height: 45px;
-    resize: none;
-    overflow-y: hidden;
-    margin-top: 20px;
-}
 
 #añadir_ingrediente {
     text-align: left;
@@ -170,9 +141,23 @@ h3 {
         background-color: #1a4177; /* Cambia el color de fondo del botón al pasar el cursor sobre él */
     }
 
-#ingresar_descripcion {
+#ingresar_descripcion 
+{
     margin-top: 20px;
 }
+
+    #ingresar_descripcion h4 {
+        font-weight: lighter;
+        word-wrap: break-word; /* Permite que el texto se divida en múltiples líneas */
+    }
+
+#ingresar_pasos {
+    margin-top: 20px;
+}
+    #ingresar_pasos h4 {
+        word-wrap: break-word;
+        font-weight: lighter; 
+    }
 
 #agregar_ingrediente {
     background-color: #f1683a; /* Cambia el color de fondo del botón */
@@ -188,4 +173,33 @@ h3 {
 #boton_enviar 
 {
     background-color: #f1683a;
+}
+
+.imagen-fija 
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 520px;
+    height: 300px;
+    height: auto;
+    border-radius:10px;
+}
+
+div[name="cuadroIngredientes"] 
+{
+    margin-top:20px;
+    display: flex;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* background: #0080ff; */
+
+    align-items: center; /* Alinear verticalmente los elementos */
+    gap: 10px; /* Espacio entre los elementos */
+    padding: 20px;
+}
+
+h2[name="X_text"] {
+    margin: 0 10px;
+    margin-bottom: 10px;
 }

@@ -33,6 +33,15 @@ namespace TuttiFoody.VISTA
         protected global::System.Web.UI.WebControls.TextBox NombreDeReceta;
 
         /// <summary>
+        /// Control listaAlimentos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl listaAlimentos;
+
+        /// <summary>
         /// Control recuadro.
         /// </summary>
         /// <remarks>
@@ -42,22 +51,31 @@ namespace TuttiFoody.VISTA
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl recuadro;
 
         /// <summary>
-        /// Control objetos.
+        /// Control ingrediente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList objetos;
+        protected global::System.Web.UI.WebControls.DropDownList ingrediente;
 
         /// <summary>
-        /// Control cantidad_objetos.
+        /// Control cantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cantidad_objetos;
+        protected global::System.Web.UI.WebControls.TextBox cantidad;
+
+        /// <summary>
+        /// Control a.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox a;
 
         /// <summary>
         /// Control agregar_ingrediente.

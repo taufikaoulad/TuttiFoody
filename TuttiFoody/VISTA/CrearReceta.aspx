@@ -18,22 +18,27 @@
                 <div id="ingresar_foto">
                     <div id="imagen-preview"></div>
                     <input type="file" id="imagen" name="imagen" accept="image/*" onchange="previewImage(event)">
+                    <!--<ul id="listaAlimentos" runat="server"></ul>-->
+
                 </div>
 
                 <div id="ingresar_ingredientes">
                     <h3>Ingredientes</h3>
                     <div id="recuadro" runat="server">
-                        <div class="cuadro_ingrediente" id="cuadro_ingrdientes">
-                            <asp:DropDownList ID="objetos" runat="server" CssClass="controls">
-                                <asp:ListItem Text="Objeto 1" Value="objeto1" />
-                                <asp:ListItem Text="Objeto 2" Value="objeto2" />
-                                <asp:ListItem Text="Objeto 3" Value="objeto3" />
+
+                        <div id="cuadro_ingrediente" name="cuadroIngredientes">
+
+                            <!-- INGREDIENTES Y CANTIDADES  -->
+                            <asp:DropDownList ID="ingrediente" runat="server" CssClass="controls">
                             </asp:DropDownList>
-                            <h2 id="X_text"> X </h2>
-                            <asp:TextBox ID="cantidad_objetos" runat="server" CssClass="controls" placeholder="Cantidad"></asp:TextBox>
+                            <h2 name="X_text"> X </h2>
+                            <asp:TextBox ID="cantidad" runat="server" CssClass="controls" placeholder="Cantidad"></asp:TextBox>
+                        
                         </div>
+
                     </div>
                     <!-- Botón para agregar otro cuadro de ingredientes -->
+                    <asp:TextBox ID="a" runat="server" CssClass="controls" placeholder="Num ingredientes"></asp:TextBox>
                     <asp:Button ID="agregar_ingrediente" runat="server" Text="Añadir nuevo ingrediente" OnClick="agregarIngrediente_Click" />
                 </div>
 

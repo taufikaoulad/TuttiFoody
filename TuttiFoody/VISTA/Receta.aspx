@@ -17,10 +17,8 @@
     </div>
 
     <div id="apartado_doble">
-        
         <div id="ingresar_foto">
-            <div id="imagen-preview"></div>
-            <input type="file" id="imagen" name="imagen" accept="image/*" onchange="previewImage(event)">
+            <img src="../../CONTENT/Imagenes/sopaV2.png" class="imagen-fija" alt="Descripción de la imagen">
         </div>
 
         <div id="ingresar_ingredientes">
@@ -36,12 +34,16 @@
 
     <div id="ingresar_descripcion">
         <h1>Descripcion</h1>
-        <h4>Passosososos</h4>
-        </div>
+        <h4>
+            El caldo de pollo (denominado a veces como sopa de pollo o caldo de gallina) es una sopa.1​ A menudo se sirve con trozos de carne o con granos de arroz o cebada, pasta, zanahoria, papa amarilla, apio, cebolla blanca, etc.2​ Se considera también un remedio curativo y reconfortante contra la gripe y catarros en general.
+        </h4>
+    </div>
 
     <div id="ingresar_pasos">
         <h1>Pasos de la receta</h1>
-        <h4>Passosososos</h4>
+        <h4>
+            El caldo de pollo (denominado a veces como sopa de pollo o caldo de gallina) es una sopa.1​ A menudo se sirve con trozos de carne o con granos de arroz o cebada, pasta, zanahoria, papa amarilla, apio, cebolla blanca, etc.2​ Se considera también un remedio curativo y reconfortante contra la gripe y catarros en general.El caldo de pollo (denominado a veces como sopa de pollo o caldo de gallina) es una sopa.1​ A menudo se sirve con trozos de carne o con granos de arroz o cebada, pasta, zanahoria, papa amarilla, apio, cebolla blanca, etc.2​ Se considera también un remedio curativo y reconfortante contra la gripe y catarros en general.El caldo de pollo (denominado a veces como sopa de pollo o caldo de gallina) es una sopa.1​ A menudo se sirve con trozos de carne o con granos de arroz o cebada, pasta, zanahoria, papa amarilla, apio, cebolla blanca, etc.2​ Se considera también un remedio curativo y reconfortante contra la gripe y catarros en general.El caldo de pollo (denominado a veces como sopa de pollo o caldo de gallina) es una sopa.1​ A menudo se sirve con trozos de carne o con granos de arroz o cebada, pasta, zanahoria, papa amarilla, apio, cebolla blanca, etc.2​ Se considera también un remedio curativo y reconfortante contra la gripe y catarros en general.
+        </h4>
     </div>
     
 </section>
