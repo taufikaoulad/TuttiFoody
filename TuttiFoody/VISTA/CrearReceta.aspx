@@ -26,20 +26,90 @@
                     <h3>Ingredientes</h3>
                     <div id="recuadro" runat="server">
 
-                        <div id="cuadro_ingrediente" name="cuadroIngredientes">
+                        <div id="cuadro_ingrediente_0" name="cuadroIngredientes">
 
                             <!-- INGREDIENTES Y CANTIDADES  -->
-                            <asp:DropDownList ID="ingrediente" runat="server" CssClass="controls">
+                            <asp:DropDownList ID="ingrediente_0" runat="server" CssClass="controls">
                             </asp:DropDownList>
                             <h2 name="X_text"> X </h2>
-                            <asp:TextBox ID="cantidad" runat="server" CssClass="controls" placeholder="Cantidad"></asp:TextBox>
+                            <asp:TextBox  ID="cantidad_0" runat="server" CssClass="controls" placeholder="Cantidad"></asp:TextBox>
                         
                         </div>
 
+                        <div id="cuadro_ingrediente_1" name="cuadroIngredientes">
+
+                            <asp:DropDownList ID="ingrediente_1" runat="server" CssClass="controls">
+                            </asp:DropDownList>
+                            <h2 name="X_text"> X </h2>
+                            <asp:TextBox  ID="cantidad_1" runat="server" CssClass="controls" placeholder="Cantidad"></asp:TextBox>
+
+                        </div>
+
+                        <div id="cuadro_ingrediente_2" name="cuadroIngredientes">
+
+                            <asp:DropDownList ID="ingrediente_2" runat="server" CssClass="controls">
+                            </asp:DropDownList>
+                            <h2 name="X_text"> X </h2>
+                            <asp:TextBox  ID="cantidad_2" runat="server" CssClass="controls" placeholder="Cantidad"></asp:TextBox>
+
+                        </div>
+
+                        <div id="cuadro_ingrediente_3" name="cuadroIngredientes">
+
+                            <asp:DropDownList ID="ingrediente_3" runat="server" CssClass="controls">
+                            </asp:DropDownList>
+                            <h2 name="X_text"> X </h2>
+                            <asp:TextBox  ID="cantidad_3" runat="server" CssClass="controls" placeholder="Cantidad"></asp:TextBox>
+
+                        </div>
+
+                        <div id="cuadro_ingrediente_4" name="cuadroIngredientes">
+
+                            <asp:DropDownList ID="ingrediente_4" runat="server" CssClass="controls">
+                            </asp:DropDownList>
+                            <h2 name="X_text"> X </h2>
+                            <asp:TextBox  ID="cantidad_4" runat="server" CssClass="controls" placeholder="Cantidad"></asp:TextBox>
+
+                        </div>
+
+                        <div id="cuadro_ingrediente_5" name="cuadroIngredientes">
+
+                            <asp:DropDownList ID="ingrediente_5" runat="server" CssClass="controls">
+                            </asp:DropDownList>
+                            <h2 name="X_text"> X </h2>
+                            <asp:TextBox  ID="cantidad_5" runat="server" CssClass="controls" placeholder="Cantidad"></asp:TextBox>
+
+                        </div>
+
+                        <div id="cuadro_ingrediente_6" name="cuadroIngredientes">
+
+                            <asp:DropDownList ID="ingrediente_6" runat="server" CssClass="controls">
+                            </asp:DropDownList>
+                            <h2 name="X_text"> X </h2>
+                            <asp:TextBox  ID="cantidad_6" runat="server" CssClass="controls" placeholder="Cantidad"></asp:TextBox>
+
+                        </div>
+
+                        <div id="cuadro_ingrediente_7" name="cuadroIngredientes">
+
+                            <asp:DropDownList ID="ingrediente_7" runat="server" CssClass="controls">
+                            </asp:DropDownList>
+                            <h2 name="X_text"> X </h2>
+                            <asp:TextBox  ID="cantidad_7" runat="server" CssClass="controls" placeholder="Cantidad"></asp:TextBox>
+
+                        </div>
+
+                        <div id="cuadro_ingrediente_8" name="cuadroIngredientes">
+
+                            <asp:DropDownList ID="ingrediente_8" runat="server" CssClass="controls">
+                            </asp:DropDownList>
+                            <h2 name="X_text"> X </h2>
+                            <asp:TextBox  ID="cantidad_8" runat="server" CssClass="controls" placeholder="Cantidad"></asp:TextBox>
+
+                        </div>
+
                     </div>
-                    <!-- Botón para agregar otro cuadro de ingredientes -->
-                    <asp:TextBox ID="a" runat="server" CssClass="controls" placeholder="Num ingredientes"></asp:TextBox>
-                    <asp:Button ID="agregar_ingrediente" runat="server" Text="Añadir nuevo ingrediente" OnClick="agregarIngrediente_Click" />
+
                 </div>
 
                 <!-- 

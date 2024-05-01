@@ -28,20 +28,27 @@ namespace TuttiFoody.VISTA
                         connection.Open();
                         SqlDataReader reader = command.ExecuteReader();
 
-                        // Recorre los resultados de la consulta y agrega cada nombre de alimento como un nuevo elemento a la lista desplegable y a la lista HTML
+                        // Agregar el elemento de "Seleccione un ingrediente" a cada lista desplegable
+                        for (int i = 0; i <= 8; i++) // Ajusta según la cantidad de listas desplegables que tengas
+                        {
+                            DropDownList ddl = (DropDownList)FindControl($"ingrediente_{i}");
+                            ListItem ddlItem = new ListItem("Ingrediente...", "");
+                            ddl.Items.Add(ddlItem);
+                        }
+
+                        // Recorre los resultados de la consulta y agrega cada nombre de alimento como un nuevo elemento a las listas desplegables
                         while (reader.Read())
                         {
                             // Obtener el nombre del alimento de la fila actual
                             string nombreAlimento = reader["Nombre"].ToString();
 
-                            // Agregar el nombre del alimento como un nuevo elemento de lista HTML
-                            System.Web.UI.HtmlControls.HtmlGenericControl listItem = new System.Web.UI.HtmlControls.HtmlGenericControl("li");
-                            listItem.InnerText = nombreAlimento;
-                            listaAlimentos.Controls.Add(listItem);
-
-                            // Agregar el nombre del alimento como un nuevo elemento a la lista desplegable
-                            ListItem ddlItem = new ListItem(nombreAlimento);
-                            ingrediente.Items.Add(ddlItem);
+                            // Agregar el nombre del alimento como un nuevo elemento a todas las listas desplegables
+                            for (int i = 0; i <= 8; i++) // Ajusta según la cantidad de listas desplegables que tengas
+                            {
+                                DropDownList ddl = (DropDownList)FindControl($"ingrediente_{i}");
+                                ListItem ddlItem = new ListItem(nombreAlimento);
+                                ddl.Items.Add(ddlItem);
+                            }
                         }
                         reader.Close();
                     }
@@ -52,55 +59,7 @@ namespace TuttiFoody.VISTA
                 }
             }
         }
-
-
-        protected void agregarIngrediente_Click(object sender, EventArgs e)
-        {
-            int numIngredientes;
-            if (int.TryParse(a.Text, out numIngredientes))
-            {
-                for (int i = 0; i < numIngredientes; i++)
-                {
-                    // Crear el nuevo cuadro de ingredientes
-                    HtmlGenericControl nuevoCuadro = new HtmlGenericControl("div");
-                    nuevoCuadro.Attributes["class"] = "cuadro_ingrediente";
-                    nuevoCuadro.Attributes["name"] = "cuadroIngredientes";
-
-                    // Crear y configurar los elementos internos del nuevo cuadro
-                    DropDownList nuevoIngrediente = new DropDownList();
-                    nuevoIngrediente.ID = "ingrediente_" + (i + 1);
-                    nuevoIngrediente.CssClass = "controls";
-                    // Agregar opciones al DropDownList
-                    nuevoIngrediente.Items.Add(new ListItem("Opción 1", "valor1"));
-                    nuevoIngrediente.Items.Add(new ListItem("Opción 2", "valor2"));
-                    // Otros ajustes del DropDownList si los necesitas
-
-                    Label nuevoXText = new Label();
-                    nuevoXText.Text = " X ";
-                    nuevoXText.Attributes["name"] = "X_text";
-
-                    TextBox nuevaCantidad = new TextBox();
-                    nuevaCantidad.ID = "cantidad_" + (i + 1);
-                    nuevaCantidad.CssClass = "controls";
-                    nuevaCantidad.Attributes["placeholder"] = "Cantidad";
-                    // Otros ajustes del TextBox si los necesitas
-
-                    // Agregar los elementos al nuevo cuadro
-                    nuevoCuadro.Controls.Add(nuevoIngrediente);
-                    nuevoCuadro.Controls.Add(nuevoXText);
-                    nuevoCuadro.Controls.Add(nuevaCantidad);
-
-                    // Agregar el nuevo cuadro al recuadro existente
-                    recuadro.Controls.Add(nuevoCuadro);
-                }
-            }
-            else
-            {
-                // Manejar el caso en que el usuario no haya ingresado un número válido
-                // Por ejemplo, mostrar un mensaje de error al usuario
-            }
-        }
-
-
     }
+
+
 }
