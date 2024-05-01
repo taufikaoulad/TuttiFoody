@@ -8,14 +8,13 @@ using TuttiFoody.DAL;
 
 namespace TuttiFoody.VISTA
 {
-    public partial class IniciarSesion : System.Web.UI.Page
+    public partial class IniciarSesionM : Page
     {
         UsuarioDAL usuarioDAL = new UsuarioDAL();
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
         protected void btnIniciaSesion_OnClick(object sender, EventArgs e)
         {
             comprobarCredenciales();

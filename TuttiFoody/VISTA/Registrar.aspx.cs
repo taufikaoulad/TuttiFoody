@@ -8,7 +8,7 @@ using TuttiFoody.DAL;
 
 namespace TuttiFoody.VISTA
 {
-    public partial class Registrar : Page
+    public partial class RegistrarM : Page
     {
         UsuarioDAL usuarioDAL = new UsuarioDAL();
         protected void Page_Load(object sender, EventArgs e)
@@ -53,6 +53,5 @@ namespace TuttiFoody.VISTA
                 errorMsg.InnerText = "El nombre ya está en uso.";
             //Response.Redirect("RecuperarContrasenya.aspx");
         }
-
     }
 }

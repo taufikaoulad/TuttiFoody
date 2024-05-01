@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Net.Mail;
+using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Xml.Linq;
 using TuttiFoody.DAL;
 
 namespace TuttiFoody.VISTA
 {
-    public partial class RecuperarContrasenya : System.Web.UI.Page
+    public partial class RecuperarContrasenyaM : System.Web.UI.Page
     {
+
         string fromMail = "tuttifoodydepartment@gmail.com";
         string fromPassword = "xqumqhbyarahblzn";
         int codigo = 0;

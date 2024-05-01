@@ -11,7 +11,7 @@ namespace TuttiFoody.VISTA
 {
 
 
-    public partial class RecuperarContrasenya
+    public partial class RecuperarContrasenyaM
     {
 
         /// <summary>

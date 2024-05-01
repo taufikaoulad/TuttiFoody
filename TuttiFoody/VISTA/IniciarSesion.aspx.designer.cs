@@ -11,7 +11,7 @@ namespace TuttiFoody.VISTA
 {
 
 
-    public partial class IniciarSesion
+    public partial class IniciarSesionM
     {
 
         /// <summary>

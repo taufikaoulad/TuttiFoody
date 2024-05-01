@@ -11,7 +11,7 @@ namespace TuttiFoody.VISTA
 {
 
 
-    public partial class Registrar
+    public partial class RegistrarM
     {
 
         /// <summary>
