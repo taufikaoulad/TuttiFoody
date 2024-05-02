@@ -69,7 +69,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CONTENT\Imagenes\Grupo.png" />
-    <Content Include="CONTENT\CSS\SobreNosotros.css" />
     <Content Include="VISTA\WebForm1.aspx" />
     <Content Include="VISTA\SobreNosotros.aspx" />
     <Content Include="Web.config" />

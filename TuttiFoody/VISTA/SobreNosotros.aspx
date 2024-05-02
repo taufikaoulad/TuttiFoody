@@ -89,24 +89,25 @@
             </div >
          </section>
       </div >
+      <div class="espacioEnBlanco"></div>
         <section class="container">
-            <div class="espacioEnBlanco"></div>
             <div class ="row">
-               
                 <h2 class ="col text-center">EQUIPO</h2>
             </div>
             <div class="espacioEnBlanco"></div>
-            <div class="row card">
-                <div class="equipo">
-                    
+                <div class="row card">
+                    <div class="equipo">
+                        
                         <div class = "imgPerfil">
                             <img src  = "/CONTENT/Imagenes/andrei.jpg" alt ="Andrei" style="width: 150px; height: auto; margin-top: 0px;"/>
                         </div>
                         <div class = "contenido">
+                            <div class="col" >
                             <h5><b>&nbsp;<a href="https://www.linkedin.com/in/andrei-marin-dev/" target="_blank"><img src = "/CONTENT/Imagenes/linkedin.png" alt ="linkedin" style="width: 32px; height: 28px"/></a>&nbsp; Andrei:</b></h5>
                             <p>Desde muy pequeño me ha atraído el mundo de la informática y es por eso que elegí hacer un grado medio de sistemas microinformáticos 
                                 y redes y continuar con un grado superior de desarrollo de aplicaciones multiplataformas. Ahora mismo estoy acabando un bootcamp de .NET para pulir más mis habilidades 
                                 y poder encontrar un empleo donde crecer profesionalmente.</p>
+                             </div>
                         </div>
                     </div>
               </div>
@@ -157,7 +158,7 @@
                
              </div>
         </section>
-    <div class="espacioEnBlanco"></div>
+        <div class="espacioEnBlanco"></div>
 
         <section class ="container">
             <div class ="row">
