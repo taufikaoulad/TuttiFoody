@@ -112,25 +112,6 @@
 
                 </div>
 
-                <!-- 
-                <div id="ingresar_ingredientes">
-                    <h3>Ingredientes</h3>
-                    <div id="recuadro">
-                        <div id="cuadro_ingrdientes">
-                            <select class="controls" id="objetos">
-                                <option value="objeto1">Objeto 1</option>
-                                <option value="objeto2">Objeto 2</option>
-                                <option value="objeto3">Objeto 3</option>
-                            </select>
-                            <h2 id="X_text"> X </h2>
-                            <textarea class="controls" id="cantidad_objetos" placeholder="Cantidad"></textarea>
-                        </div>
-                    </div>
-                    <!-- Botón para agregar otro cuadro de ingredientes 
-                    <button id="agregar_ingrediente" type="button">Añadir nuevo ingrediente</button>
-                </div>
-                -->
-
             </div>
             <div id="ingresar_descripcion">
                 <h3>Descripcion</h3>
