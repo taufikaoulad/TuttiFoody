@@ -31,7 +31,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
+            /*display: flex;*/
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -46,6 +46,10 @@
             background: #121820; /*/Añadido por william/*/
             overflow: hidden;
             display: flex;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .sidebar {
@@ -167,7 +171,6 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form id="form1" runat="server">
         <div class="card">
             <div class="sidebar">
                 <asp:LinkButton CssClass="a" ID="lnkEditarPerfil" runat="server" OnClick="ShowContent">Editar perfil</asp:LinkButton>
@@ -252,7 +255,6 @@
                 </div>
             </div>
         </div>
-    </form>
     <script>
         //function showContent(contentId) {
         //    var content = document.getElementById(contentId);

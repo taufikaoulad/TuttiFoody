@@ -11,17 +11,8 @@ namespace TuttiFoody.VISTA
 {
 
 
-    public partial class WebForm3
+    public partial class AlimentosCRUDM
     {
-
-        /// <summary>
-        /// Control form1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// Control txtNombre.
@@ -78,30 +69,30 @@ namespace TuttiFoody.VISTA
         protected global::System.Web.UI.WebControls.ListBox listAlimentos;
 
         /// <summary>
-        /// Control insertar.
+        /// Control insertar1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button insertar;
+        protected global::System.Web.UI.WebControls.Button insertar1;
 
         /// <summary>
-        /// Control modificar.
+        /// Control modificar1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button modificar;
+        protected global::System.Web.UI.WebControls.Button modificar1;
 
         /// <summary>
-        /// Control eliminar.
+        /// Control eliminar1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button eliminar;
+        protected global::System.Web.UI.WebControls.Button eliminar1;
     }
 }

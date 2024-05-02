@@ -9,17 +9,18 @@
 }
 
 .container {
-    display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     justify-content: flex-start;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 2%;
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
     background-image: url("/CONTENT/Imagenes/fondo.jpg");
     background-repeat: no-repeat;
@@ -132,26 +133,26 @@ p {
     margin-left: 15px;
 }
 
-#insertar {
+.insertar1 {
     background-color: #309bff; /* Azul */
 }
 
-#modificar {
+.modificar1 {
     background-color: #6aff53; /* Verde */
 }
 
-#eliminar {
+.eliminar1 {
     background-color: #ff5c4d; /* Rojo */
 }
 
-#insertar:hover {
+.insertar1:hover {
     background-color: #2600ff; /* Color de resaltado */
 }
 
-#modificar:hover {
+.modificar1:hover {
     background-color: #19bc00; /* Color de resaltado */
 }
 
-#eliminar:hover {
+.eliminar1:hover {
     background-color: #ff0000; /* Color de resaltado */
 }

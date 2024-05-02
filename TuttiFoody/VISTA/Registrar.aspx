@@ -4,9 +4,7 @@
     <link rel="stylesheet" href="../CONTENT/CSS/registrar.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form id="form1" runat="server">
         <div class="container">
-            <form action="" method="post">
                 <h2>Regístrate</h2>
                 <div class="content">
                     <div class="input-box">
@@ -37,7 +35,5 @@
                     <%--<button id="btnRegistrar" runat="server" >Regístrate</button>--%>
                     <asp:Button CssClass="btnContinuar" ID="btnRegistrar" OnClick="btnRegistrar_OnClick" runat="server" Text="Regístrate" />
                 </div>
-            </form>
         </div>
-    </form>
 </asp:Content>

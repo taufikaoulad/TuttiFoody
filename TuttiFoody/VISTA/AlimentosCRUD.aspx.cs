@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
-using System.Web.Routing;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using TuttiFoody.DAL;
 
 namespace TuttiFoody.VISTA
 {
-    public partial class WebForm3 : System.Web.UI.Page
+    public partial class AlimentosCRUDM : System.Web.UI.Page
     {
         TipoAlimentoBD tipoAlimentoBD = new TipoAlimentoBD();
         AlimentoBD alimentoBD = new AlimentoBD();
@@ -118,7 +117,7 @@ namespace TuttiFoody.VISTA
 
                 string rutaCompleta = Server.MapPath(alim.ArchivoImagen);
                 archivoImagen.SaveAs(rutaCompleta);
-            } 
+            }
             else
             {
                 //Conservamos la foto existentee si no se ha subido ninguna foto

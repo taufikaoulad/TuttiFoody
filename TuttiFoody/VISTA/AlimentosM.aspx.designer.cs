@@ -11,61 +11,88 @@ namespace TuttiFoody.VISTA
 {
 
 
-    public partial class RegistrarM
+    public partial class AlimentosM
     {
 
         /// <summary>
-        /// Control txtName.
+        /// Control inputBusqueda.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtName;
+        protected global::System.Web.UI.WebControls.TextBox inputBusqueda;
 
         /// <summary>
-        /// Control txtEmail.
+        /// Control btnBuscar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtEmail;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnBuscar;
 
         /// <summary>
-        /// Control txtPassword.
+        /// Control repLegumbres.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtPassword;
+        protected global::System.Web.UI.WebControls.Repeater repLegumbres;
 
         /// <summary>
-        /// Control txtConfirmPassword.
+        /// Control repVerduras.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtConfirmPassword;
+        protected global::System.Web.UI.WebControls.Repeater repVerduras;
 
         /// <summary>
-        /// Control errorMsg.
+        /// Control repCarnes.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorMsg;
+        protected global::System.Web.UI.WebControls.Repeater repCarnes;
 
         /// <summary>
-        /// Control btnRegistrar.
+        /// Control repLacteos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRegistrar;
+        protected global::System.Web.UI.WebControls.Repeater repLacteos;
+
+        /// <summary>
+        /// Control repFrutas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater repFrutas;
+
+        /// <summary>
+        /// Control repCereales.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater repCereales;
+
+        /// <summary>
+        /// Control repAceites.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater repAceites;
     }
 }

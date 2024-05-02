@@ -4,7 +4,6 @@
     <link rel="stylesheet" href="../CONTENT/CSS/registrar.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form id="form1" runat="server">
         <div class="container">
             <h2>Cambiar contraseña</h2>
             <div class="content">
@@ -47,5 +46,4 @@
                 <asp:Button CssClass="btnContinuar" ID="btnGuardar" OnClick="btnGuardar_OnClick" runat="server" Text="Continuar" />
             </div>
         </div>
-    </form>
 </asp:Content>

@@ -9,17 +9,18 @@
 }
 
 .container {
-    display: flex;
+    /*display: flex;*/
     flex-direction: column;
     align-items: center;
     width: 100%; 
     justify-content: flex-start;
+    
 }
 
 body {
-    display: flex;
+/*    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;*/
     min-height: 100vh;
     background-image: url("/CONTENT/Imagenes/fondo.jpg");
     background-repeat: no-repeat;
