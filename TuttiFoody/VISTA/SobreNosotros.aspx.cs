@@ -13,6 +13,7 @@ namespace TuttiFoody.VISTA
 {
     public partial class WebForm2 : System.Web.UI.Page
     {
+        //Cuenta tuttiFoody
         string fromMail = "tuttifoodydepartment@gmail.com";
         string fromPassword = "xqumqhbyarahblzn";
         protected void Page_Load(object sender, EventArgs e)
@@ -20,10 +21,13 @@ namespace TuttiFoody.VISTA
 
         }
 
+        //Boton enviar del apartado contacto
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
             EnviarContacto(cuadroCorreoElectronico.Text, txtMensaje.Text, "Mensaje de " + cuadroNombre.Text);
         }
+
+        //Datos espacio contacto
         private void EnviarContacto(String toMail, String body, String subject)
         {
             MailMessage message = new MailMessage();
