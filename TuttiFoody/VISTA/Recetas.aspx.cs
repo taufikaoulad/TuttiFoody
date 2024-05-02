@@ -8,7 +8,7 @@ using TuttiFoody.DAL;
 
 namespace TuttiFoody.VISTA
 {
-    public partial class Recetas : System.Web.UI.Page
+    public partial class WebForm3 : System.Web.UI.Page
     {
         RecetasBD recetasBD = null;
         protected void Page_Load(object sender, EventArgs e)

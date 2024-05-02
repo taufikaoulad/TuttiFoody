@@ -93,7 +93,7 @@
     <Content Include="CONTENT\JS\PantallaPrincip.js" />
     <Content Include="CONTENT\CSS\registrar.css" />
     <Content Include="VISTA\AlimentosCRUD.aspx" />
-    <Content Include="VISTA\AlimentosM.aspx" />
+    <Content Include="VISTA\Alimentos.aspx" />
     <Content Include="VISTA\IniciarSesion.aspx" />
     <Content Include="VISTA\Perfil.aspx" />
     <Content Include="VISTA\RecuperarContrasenya.aspx" />
@@ -105,7 +105,6 @@
     <Content Include="VISTA\Registrar.aspx" />
     <Content Include="VISTA\WebForm1.aspx" />
     <Content Include="VISTA\PantallaPrincipal.aspx" />
-    <Content Include="VISTA\Alimentos.aspx" />
     <Content Include="VISTA\Recetas.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -127,12 +126,12 @@
     <Compile Include="VISTA\AlimentosCRUD.aspx.designer.cs">
       <DependentUpon>AlimentosCRUD.aspx</DependentUpon>
     </Compile>
-    <Compile Include="VISTA\AlimentosM.aspx.cs">
-      <DependentUpon>AlimentosM.aspx</DependentUpon>
+    <Compile Include="VISTA\Alimentos.aspx.cs">
+      <DependentUpon>Alimentos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="VISTA\AlimentosM.aspx.designer.cs">
-      <DependentUpon>AlimentosM.aspx</DependentUpon>
+    <Compile Include="VISTA\Alimentos.aspx.designer.cs">
+      <DependentUpon>Alimentos.aspx</DependentUpon>
     </Compile>
     <Compile Include="VISTA\IniciarSesion.aspx.cs">
       <DependentUpon>IniciarSesion.aspx</DependentUpon>
@@ -189,13 +188,6 @@
     </Compile>
     <Compile Include="VISTA\PantallaPrincipal.aspx.designer.cs">
       <DependentUpon>PantallaPrincipal.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="VISTA\Alimentos.aspx.cs">
-      <DependentUpon>Alimentos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="VISTA\Alimentos.aspx.designer.cs">
-      <DependentUpon>Alimentos.aspx</DependentUpon>
     </Compile>
     <Compile Include="VISTA\Recetas.aspx.cs">
       <DependentUpon>Recetas.aspx</DependentUpon>

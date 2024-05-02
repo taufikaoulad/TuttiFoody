@@ -17,9 +17,9 @@
 }
 
 body {
-    display: flex;
+    /*display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;*/
     min-height: 100vh;
     background-image: url("/CONTENT/Imagenes/fondo.jpg");
     background-repeat: no-repeat; 
@@ -33,9 +33,9 @@ body {
 .buscador {
     position: absolute;
     left: 98%;
-    top: 5.5%;
+    top: 12.5%;
     transform: translate(-100%, -50%);
-    z-index: 2;
+    z-index: 1001;
     position: fixed;
 }
 
@@ -98,7 +98,7 @@ i {
 /*Carta*/
 
 .separador {
-    margin-top: 110px;
+    margin-top: 85px;
 }
 
 .card {
@@ -159,15 +159,19 @@ i {
     margin-top: 12px;
 }
 
+p{
+    color: #000000;
+}
+
 .sticky {
     width: 100%;
-    position: fixed;
-    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px; /* Ajustando la posición para que empiece después del menú */
     padding: 10px;
-    z-index: 1;
-    margin-bottom: 28px;
+    z-index: 900; /* Asegurando que los títulos pegajosos estén por debajo del menú */
     background-image: url("/CONTENT/Imagenes/fondo.jpg");
-    box-shadow: 0 7px 8px #595959;
+    box-shadow: 0 5px 5px #595959;
 }
 
 h2 {

@@ -8,7 +8,7 @@ using TuttiFoody.DAL;
 
 namespace TuttiFoody.VISTA
 {
-    public partial class Alimentos : System.Web.UI.Page
+    public partial class AlimentosM : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -46,7 +46,7 @@ namespace TuttiFoody.VISTA
             nombre = char.ToUpper(nombre[0]) + nombre.Substring(1);
 
             AlimentoBD alimentoBD = new AlimentoBD();
-            int tipoAlimento = alimentoBD.SelectTipoAlimento(nombre); 
+            int tipoAlimento = alimentoBD.SelectTipoAlimento(nombre);
 
             switch (tipoAlimento)
             {
