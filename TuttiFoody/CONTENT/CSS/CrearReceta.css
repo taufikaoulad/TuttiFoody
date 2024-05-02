@@ -203,3 +203,38 @@ h2[name="X_text"] {
     margin: 0 10px;
     margin-bottom: 10px;
 }
+
+#titulo_tiempo
+{
+    display:flex;
+    gap:10px;
+}
+
+#Tiempo
+{
+    width:20%;
+}
+
+#ingresar_titulo {
+    display: flex;
+    gap: 10px;
+}
+
+#recuadroIng {
+    margin-top:10px;
+    background: #24303c;
+    border-radius: 10px;
+    height: 190px;
+    width: 400px;
+    overflow-y: auto;
+}
+
+#apartado_dobleB {
+    display: flex;
+    gap: 10px;
+}
+
+#kcalRecuadro {
+    display: flex;
+    gap: 2px;
+}

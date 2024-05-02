@@ -12,7 +12,10 @@
         <section id="miFormulario" class="form-register">
             <div id="ingresar_titulo">
                 <h3>Titulo de la receta</h3>
-                <asp:TextBox ID="NombreDeReceta" CssClass="controls" runat="server" Placeholder="Mi receta se llama..." />
+                <div id="titulo_tiempo">
+                    <asp:TextBox ID="NombreDeReceta" CssClass="controls" runat="server" Placeholder="Mi receta se llama..." />
+                    <asp:TextBox ID="Tiempo"  CssClass="controls" runat="server" Placeholder="Tiempo receta" />
+                </div>
             </div>
             <div id="apartado_doble">
                 <div id="ingresar_foto">
@@ -121,7 +124,9 @@
                 <h3>Pasos de la receta</h3>
                 <asp:TextBox ID="pasos_letra" CssClass="controls" runat="server" TextMode="MultiLine" placeholder="Los pasos a seguir son..."></asp:TextBox>
             </div>
+
             <input id="boton_enviar" class="botons" type="submit" value="Publicar receta" />
+
         </section>
     </form>
     <script src="../../CONTENT/JS/JSCrearReceta.js"></script>
