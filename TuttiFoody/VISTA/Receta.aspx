@@ -27,12 +27,10 @@
                 <div id="ingresar_ingredientes">
                     <h1>Ingredientes</h1>
                     <div id="recuadroIng">
-                        <div id="cuadro_ingrdientes">
                             <asp:Label ID="lblIngrediente1" runat="server" Text="•Tomate X 5"></asp:Label>
                             <asp:Label ID="lblIngrediente2" runat="server" Text="•Tomate X 5"></asp:Label>
                             <asp:Label ID="lblIngrediente3" runat="server" Text="•Tomate X 5"></asp:Label>
                             <asp:Label ID="lblIngrediente4" runat="server" Text="•Tomate X 5"></asp:Label>
-                        </div>
                     </div>
                 </div>
             </div>
