@@ -16,7 +16,6 @@
             background-image: url(/CONTENT/Imagenes/fondo.png);
             color:aliceblue;
             font-family: sans-serif;
-
         }
 
         .margin-integrantes{
@@ -29,7 +28,7 @@
         }
 
         .espacioEnBlanco{
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .centrarPagina{
@@ -41,6 +40,16 @@
             margin-bottom: 20px;
         }
 
+        .card{
+            background-color: #9b9b9b;
+            border-radius: 10px;
+            padding:10px;
+            color: #000000;
+            top: 2px;
+            left: 51px;
+            
+        }
+
         .equipo h4{
             font-size: 40px;
         }
@@ -50,8 +59,9 @@
             height: 100%;
         }
         .equipo .imgPerfil {
-            width: 23%;
+            width: 22%;
             height: 100%;
+            
         }
         
     </style>
@@ -62,8 +72,9 @@
         <section>
             <div class ="row">
                 <div>
-                    <h2 class="text-center">Quienes somos</h2>
+                    <h2 class="text-center">QUIENES SOMOS</h2>
                 </div>
+                <div class="espacioEnBlanco"></div>
             </div >
             <div class ="row">
                 <div class ="col">
@@ -79,73 +90,80 @@
          </section>
       </div >
         <section class="container">
+            <div class="espacioEnBlanco"></div>
             <div class ="row">
                
-                <h2 class ="col text-center">Equipo</h2>
+                <h2 class ="col text-center">EQUIPO</h2>
             </div>
-            <div class="row">
+            <div class="espacioEnBlanco"></div>
+            <div class="row card">
                 <div class="equipo">
-                    <div class = "imgPerfil">
-                         <img src  = "/CONTENT/Imagenes/andrei.jpg" alt ="Andrei" style="width: 150px; height: auto; margin-top: 0px;"/>
+                    
+                        <div class = "imgPerfil">
+                            <img src  = "/CONTENT/Imagenes/andrei.jpg" alt ="Andrei" style="width: 150px; height: auto; margin-top: 0px;"/>
+                        </div>
+                        <div class = "contenido">
+                            <h5><b>&nbsp;<a href="https://www.linkedin.com/in/andrei-marin-dev/" target="_blank"><img src = "/CONTENT/Imagenes/linkedin.png" alt ="linkedin" style="width: 32px; height: 28px"/></a>&nbsp; Andrei:</b></h5>
+                            <p>Desde muy pequeño me ha atraído el mundo de la informática y es por eso que elegí hacer un grado medio de sistemas microinformáticos 
+                                y redes y continuar con un grado superior de desarrollo de aplicaciones multiplataformas. Ahora mismo estoy acabando un bootcamp de .NET para pulir más mis habilidades 
+                                y poder encontrar un empleo donde crecer profesionalmente.</p>
+                        </div>
                     </div>
-                       
-                    <div class = "contenido">
-                        <h5><b>Andrei:</b></h5>
-                        <p>Desde muy pequeño me ha atraído el mundo de la informática y es por eso que elegí hacer un grado medio de sistemas microinformáticos 
-                            y redes y continuar con un grado superior de desarrollo de aplicaciones multiplataformas. Ahora mismo estoy acabando un bootcamp de .NET para pulir más mis habilidades 
-                            y poder encontrar un empleo donde crecer profesionalmente.</p>
-                    </div>
-                    </div>
-                </div>
-
-             <div class ="row">
+              </div>
+            <div class="espacioEnBlanco"></div>
+             <div class ="row card">
                 <div class="equipo">
-                    <div class = "imgPerfil">
-                        <img src = "/CONTENT/Imagenes/Soraya.jpg" alt ="Soraya" style="width: 150px; height: auto"/>
-                    </div>  
-
-                    <div class = "contenido">
-                        <h5><b>Soraya:</b></h5> 
+                    
+                        <div class = "imgPerfil">
+                            <img src = "/CONTENT/Imagenes/Soraya.jpg" alt ="Soraya" style="width: 150px; height: auto"/>
+                        </div>  
+                        <div class = "contenido">
+                        <h5><b>&nbsp;<a href="https://www.linkedin.com/in/soraya-calvera-7b2148128" target="_blank"><img src = "/CONTENT/Imagenes/linkedin.png" alt ="linkedin" style="width: 32px; height: 28px"/></a>&nbsp; Soraya:</b></h5> 
                         <p>Empecé a descubrir el mundo de la programación en el grado de Telecomunicaciones y me embarque en la aventura de realizar un bootcamp de .Net para ampliar
                     mis conocimientos y consolidarlos. </p>
+                        </div>
                     </div>
-                    </div>
+                
                </div>
-
-              <div class ="row">
+            <div class="espacioEnBlanco"></div>
+              <div class ="row card">
                 <div class="equipo">
-                    <div class = "imgPerfil">
-                    <img src = "/CONTENT/Imagenes/taufik.jpg" alt ="Taufik" style="width: 150px; height: auto"/>
-                    </div>
-                    <div class = "contenido">
-                        <h5><b>Taufik:</b></h5> 
+                    
+                        <div class = "imgPerfil">
+                            <img src = "/CONTENT/Imagenes/taufik.jpg" alt ="Taufik" style="width: 150px; height: auto"/>
+                        </div>
+                        <div class = "contenido">
+                        <h5><b>&nbsp;<a href="https://www.linkedin.com/in/taufik-aoulad/" target="_blank"><img src = "/CONTENT/Imagenes/linkedin.png" alt ="linkedin" style="width: 32px; height: 28px"/></a>&nbsp; Taufik:</b></h5> 
                         <p>¡Encantado! Soy Taufik un apasionado de la informática que ha completado sus estudios en Desarrollo de Aplicaciones Multiplataforma (DAM) en el Instituto Nicolau Copernico. 
-                    En este momento, estoy expandiendo mis conocimientos a través de un BootCamp de .Net con Fundación Esplai. Estoy comprometido con seguir creciendo profesionalmente y contribuir al mundo tecnológico 
-                    con mi experiencia y habilidades.</p>
+                        En este momento, estoy expandiendo mis conocimientos a través de un BootCamp de .Net con Fundación Esplai. Estoy comprometido con seguir creciendo profesionalmente y contribuir al mundo tecnológico 
+                        con mi experiencia y habilidades.</p>
+                        </div>
+                    </div>
+                
                 </div>
-                </div>
-             </div>
-                <div class ="row">
+            <div class="espacioEnBlanco"></div>
+                <div class ="row card">
                 <div class="equipo">
+                    
                     <div class = "imgPerfil">
                     <img src = "/CONTENT/Imagenes/william.jpg" alt ="William" style="width: 150px; height: auto"/>
                     </div>
                     <div class = "contenido">
-                    <h5><b>William:</b> </h5>
-                    <p>¡Hola a todos! Después de terminar mi grado superior en creación de videojuegos, estaba ansioso por comenzar mi carrera en la industria. Durante mis estudios, me dediqué en cuerpo y alma a aprender 
+                    <h5><b>&nbsp;<a href="https://www.linkedin.com/in/william-pe%C3%B1a/" target="_blank"><img src = "/CONTENT/Imagenes/linkedin.png" alt ="linkedin" style="width: 32px; height: 28px"/></a>&nbsp; William:</b> </h5>
+                        <p>¡Hola a todos! Después de terminar mi grado superior en creación de videojuegos, estaba ansioso por comenzar mi carrera en la industria. Durante mis estudios, me dediqué en cuerpo y alma a aprender 
                     todo lo posible sobre diseño, programación y arte de videojuegos, y trabajé en varios proyectos que me permitieron desarrollar y refinar mis habilidades.</p>
                 </div>
                 </div>
-             </div>
-
-                
                
-            </div>
+             </div>
         </section>
+    <div class="espacioEnBlanco"></div>
+
         <section class ="container">
             <div class ="row">
-                    <h2 class="text-center"> Contacto</h2>
+                    <h2 class="text-center"> CONTACTO</h2>
             </div>
+            <div class="espacioEnBlanco"></div>
             <div class="text-center">
                 <div >
                     <div>
