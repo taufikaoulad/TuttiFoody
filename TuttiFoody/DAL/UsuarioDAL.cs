@@ -22,6 +22,19 @@ namespace TuttiFoody.DAL
                 throw;
             }
         }
+
+        public void RemoveUsuario(Usuario u)
+        {
+            try
+            {
+                dc.Usuario.DeleteOnSubmit(u);
+                dc.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         public void ExecuteUpdate()
         {
             try

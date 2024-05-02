@@ -28,7 +28,8 @@ namespace TuttiFoody.VISTA
                 if (usuario.Contraseña == txtPassword.Value)
                 {
                     errorMsg.InnerText = "BIEEEEEN";
-
+                    Session["usuarioObj"] = usuario.Nombre;
+                    Response.Redirect("Perfil.aspx");
                 }
                 else
                 {

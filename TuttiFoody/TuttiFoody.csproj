@@ -70,6 +70,7 @@
   <ItemGroup>
     <Content Include="CONTENT\CSS\registrar.css" />
     <Content Include="VISTA\IniciarSesion.aspx" />
+    <Content Include="VISTA\Perfil.aspx" />
     <Content Include="VISTA\RecuperarContrasenya.aspx" />
     <Content Include="CONTENT\CSS\CrearReceta.css" />
     <Content Include="CONTENT\Imagenes\fondo.png" />
@@ -94,6 +95,13 @@
     </Compile>
     <Compile Include="VISTA\IniciarSesion.aspx.designer.cs">
       <DependentUpon>IniciarSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\Perfil.aspx.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VISTA\Perfil.aspx.designer.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
     </Compile>
     <Compile Include="VISTA\RecuperarContrasenya.aspx.cs">
       <DependentUpon>RecuperarContrasenya.aspx</DependentUpon>
