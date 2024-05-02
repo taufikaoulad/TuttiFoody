@@ -109,13 +109,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\AlimentoBD.cs" />
-    <Compile Include="DAL\TipoAlimentoBD.cs" />
-    <Compile Include="DAL\RecetasBD.cs" />
     <Compile Include="DAL\DBConnect.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DBConnect.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DAL\TipoAlimentoBD.cs" />
+    <Compile Include="DAL\RecetasBD.cs" />
     <Compile Include="DAL\UsuarioDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VISTA\IniciarSesion.aspx.cs">
@@ -197,12 +197,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CONTENT\CSS\Bukhari Script.ttf" />
     <Content Include="DAL\DBConnect.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DBConnect.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="CONTENT\CSS\Bukhari Script.ttf" />
     <None Include="DAL\DBConnect.dbml.layout">
       <DependentUpon>DBConnect.dbml</DependentUpon>
     </None>

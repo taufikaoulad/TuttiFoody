@@ -17,9 +17,12 @@
             <a href="/VISTA/Recetas.aspx">Recetas</a>
             <a href="">About us</a>
             <a href="/VISTA/AlimentosCRUD.aspx">CRUD</a>
-            <div>
-                <img src="/CONTENT/Imagenes/usuario.png" alt="perfil"/>
-            </div>  
+            <form id="form1" runat="server">
+                <div>
+                    <asp:LinkButton runat="server" OnClick="Unnamed_Click"><img src="/CONTENT/Imagenes/usuario.png" alt="perfil" /></asp:LinkButton>
+                </div>
+            </form>
+            
         </nav>
     </header>
 

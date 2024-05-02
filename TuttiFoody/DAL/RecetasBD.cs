@@ -7,7 +7,7 @@ namespace TuttiFoody.DAL
 {
     public class RecetasBD
     {
-        DBConnect db = new DBConnect("Server=85.208.20.69,54321;Database=BaseDeDatosGrupoSWAT;User Id=sa;Password=Sql#123456789;");
+        DBConnectDataContext db = new DBConnectDataContext();
 
         public IQueryable<dynamic> Select()
         {
