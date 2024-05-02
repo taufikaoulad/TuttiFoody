@@ -19,27 +19,22 @@ namespace TuttiFoody.VISTA
         {
             if (!IsPostBack)
             {
-                // Crear una instancia de RecetaDB
                 RecetaDB recetaDB = new RecetaDB();
 
                 // Obtener la receta con ID 1
                 RecetaS receta = recetaDB.ObtenerRecetaPorId(1);
 
 
-                // Verificar si se encontró la receta
                 if (receta != null)
                 {
-                    // Mostrar los detalles de la receta en la página
                     TituloReceta.Text = receta.Nombre;
                     DescripcionReceta.Text = receta.Descripcion;
                     PasosReceta.Text = receta.PasosASeguir;
                     TiempoReceta.Text = receta.Tiempo;
-                    CaloriasReceta.Text = receta.CaloriasTotales.ToString(); // Asumiendo que CaloriasTotales es un entero en la clase Receta
-                    // Otros campos de la receta...
+                    CaloriasReceta.Text = receta.CaloriasTotales.ToString();
                 }
                 else
                 {
-                    // Manejar el caso en que no se encuentre la receta
                     TituloReceta.Text = "Receta no encontrada";
                 }
             }
