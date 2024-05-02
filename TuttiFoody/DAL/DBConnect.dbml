@@ -1,15 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BaseDeDatosGrupoSWAT" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BaseDeDatosGrupoSWAT" Class="DBConnectDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Table Name="dbo.Alimento" Member="Alimento">
     <Type Name="Alimento">
       <Column Name="IdAlimento" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Descripcion" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+
+      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+
       <Column Name="ArchivoImagen" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
       <Column Name="FKTipoAlimento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Calorias" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
       <Association Name="Alimento_AlimentoPropiedad" Member="AlimentoPropiedad" ThisKey="IdAlimento" OtherKey="FKAlimento" Type="AlimentoPropiedad" />
       <Association Name="Alimento_RecetaAlimento" Member="RecetaAlimento" ThisKey="IdAlimento" OtherKey="FKAlimento" Type="RecetaAlimento" />
       <Association Name="TipoAlimento_Alimento" Member="TipoAlimento" ThisKey="FKTipoAlimento" OtherKey="IdTipoAlimento" Type="TipoAlimento" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TipoAlimento" Member="TipoAlimento">
+    <Type Name="TipoAlimento">
+      <Column Name="IdTipoAlimento" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="TipoAlimento_Alimento" Member="Alimento" ThisKey="IdTipoAlimento" OtherKey="FKTipoAlimento" Type="Alimento" />
     </Type>
   </Table>
   <Table Name="dbo.AlimentoPropiedad" Member="AlimentoPropiedad">
@@ -38,6 +48,7 @@
       <Column Name="FKUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="CaloriasTotales" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
       <Column Name="ArchivoImagen" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+
       <Association Name="Receta_RecetaAlimento" Member="RecetaAlimento" ThisKey="IdReceta" OtherKey="FKReceta" Type="RecetaAlimento" />
       <Association Name="Receta_RecetaFavorita" Member="RecetaFavorita" ThisKey="IdReceta" OtherKey="FKReceta" Type="RecetaFavorita" />
       <Association Name="Receta_RecetaUsuario" Member="RecetaUsuario" ThisKey="IdReceta" OtherKey="FKReceta" Type="RecetaUsuario" />
@@ -76,6 +87,7 @@
       <Association Name="TipoAlimento_Alimento" Member="Alimento" ThisKey="IdTipoAlimento" OtherKey="FKTipoAlimento" Type="Alimento" />
     </Type>
   </Table>
+
   <Table Name="dbo.Usuario" Member="Usuario">
     <Type Name="Usuario">
       <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

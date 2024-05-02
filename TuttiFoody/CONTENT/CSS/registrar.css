@@ -1,0 +1,192 @@
+﻿/*Añadido por william*/
+@font-face {
+    font-family: 'Bukhari Script';
+    src: url('../../CONTENT/CSS/Bukhari Script.ttf');
+    font-weight: bold;
+    font-style: bold;
+}
+
+.controler {
+    background: #24303c;
+    border: 1px solid #1f53c5;
+    color: white;
+}
+
+/*-----*/
+.form1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(#380036, #0CBABA);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(#380036, #0CBABA);
+}
+
+.container {
+    max-width: 650px;
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.7);
+    background: #121820; /*/Añadido por william/*/
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.9);
+}
+
+#errorMsg {
+    color: red;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    padding-bottom: 8px;
+    border-bottom: 1px solid silver;
+    font-family: 'Bukhari Script'; /*/Añadido por william/*/
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.input-box {
+    font-family: 'calibri'; /*/Añadido por william/*/
+    display: flex;
+    flex-wrap: wrap;
+    width: 48%;
+    padding-bottom: 15px;
+}
+
+..input-box:nth-child(2n) {
+    justify-content: end;
+}
+
+.input-box label {
+    width: 95%;
+    color: #fff;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.input-box input {
+    height: 40px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    border: 1px solid #f1683a /*/Añadido por william/*/
+}
+
+    .input-box input:is(:focus,:valid) {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+
+.alert p {
+    font-size: 14px;
+    font-style: italic;
+    color: #fff;
+    margin: 5px 0;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+.alert a {
+    font-weight: bold;
+    text-decoration: none;
+    color: skyblue;
+}
+
+    .alert a:hover {
+        font-weight: bold;
+        text-decoration: underline;
+        /*color: #580036;*/
+    }
+
+.button-container {
+    margin: 15px 0;
+}
+
+.btn-code {
+    background-image: linear-gradient(to right, #4CCD99, #4CCD99);
+}
+
+.button-container .btnCode {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #9B3922, #F2613F);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-container .btnContinuar {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #f1683a, #f1683a);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-container .btnCode:hover {
+    background-image: linear-gradient(to right,#F2613F, #9B3922);
+}
+
+.button-container .btnContinuar:hover {
+    background-image: linear-gradient(to right,#f1683a, #f1683a);
+}
+
+.codeBtn-container .btnCode {
+    background-image: linear-gradient(to right,#007F73, #4CCD99);
+}
+
+    .codeBtn-container .btnCode:hover {
+        background-image: linear-gradient(to right,#4CCD99, #007F73);
+    }
+
+@media(max-width:600px) {
+    .container {
+        min-width: 280px;
+    }
+
+    .content {
+        max-height: 380px;
+        overflow: auto;
+    }
+
+    .input-box {
+        margin-bottom: 12px;
+        width: 100%;
+    }
+
+        .input-box:nth-child(2n) {
+            justify-content: space-between;
+        }
+
+    .content::-webkit-scrollbar {
+        width: 0;
+    }
+}

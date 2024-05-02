@@ -90,6 +90,16 @@
     <Content Include="CONTENT\JS\Alimento.js" />
     <Content Include="CONTENT\JS\Recetas.js" />
     <Content Include="CONTENT\JS\PantallaPrincip.js" />
+    <Content Include="CONTENT\CSS\registrar.css" />
+    <Content Include="VISTA\IniciarSesion.aspx" />
+    <Content Include="VISTA\Perfil.aspx" />
+    <Content Include="VISTA\RecuperarContrasenya.aspx" />
+    <Content Include="CONTENT\CSS\CrearReceta.css" />
+    <Content Include="CONTENT\Imagenes\fondo.png" />
+    <Content Include="CONTENT\Imagenes\subirImagen.png" />
+    <Content Include="CONTENT\JS\JSCrearReceta.js" />
+    <Content Include="VISTA\CrearReceta.aspx" />
+    <Content Include="VISTA\Registrar.aspx" />
     <Content Include="VISTA\WebForm1.aspx" />
     <Content Include="VISTA\PantallaPrincipal.aspx" />
     <Content Include="VISTA\Alimentos.aspx" />
@@ -106,7 +116,43 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBConnect.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DAL\UsuarioDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VISTA\IniciarSesion.aspx.cs">
+      <DependentUpon>IniciarSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VISTA\IniciarSesion.aspx.designer.cs">
+      <DependentUpon>IniciarSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\Perfil.aspx.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VISTA\Perfil.aspx.designer.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\RecuperarContrasenya.aspx.cs">
+      <DependentUpon>RecuperarContrasenya.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VISTA\RecuperarContrasenya.aspx.designer.cs">
+      <DependentUpon>RecuperarContrasenya.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\CrearReceta.aspx.cs">
+      <DependentUpon>CrearReceta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VISTA\CrearReceta.aspx.designer.cs">
+      <DependentUpon>CrearReceta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\Registrar.aspx.cs">
+      <DependentUpon>Registrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VISTA\Registrar.aspx.designer.cs">
+      <DependentUpon>Registrar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\SiteMaster.Master.cs">
       <DependentUpon>SiteMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -156,6 +202,7 @@
       <LastGenOutput>DBConnect.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="CONTENT\CSS\Bukhari Script.ttf" />
     <None Include="DAL\DBConnect.dbml.layout">
       <DependentUpon>DBConnect.dbml</DependentUpon>
     </None>

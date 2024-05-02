@@ -4,30 +4,19 @@
 
 <html>
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" href="../CONTENT/CSS/registrar.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link rel="stylesheet" href="~/CONTENT/CSS/PantallaPrincip.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <header>
-                <nav>
-                    <a id='logo' href="">Tutti Foody</a>
-                    <a href="/VISTA/PantallaPrincipal.aspx">Principal</a>
-                    <a href="/VISTA/Alimentos.aspx">Alimentos</a>
-                    <a href="/VISTA/Recetas.aspx">Recetas</a>
-                    <a href="">About us</a>
-                    <div>
-                        <img src="/CONTENT/Imagenes/usuario.png" alt="perfil" />
-                    </div>
-                </nav>
-            </header>
+
+    <%--<form id="form1" runat="server">--%>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-        </div>
-    </form>
+    <%--</form>--%>
 </body>
 </html>
