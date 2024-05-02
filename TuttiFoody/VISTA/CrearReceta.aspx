@@ -125,7 +125,7 @@
                 <asp:TextBox ID="pasos_letra" CssClass="controls" runat="server" TextMode="MultiLine" placeholder="Los pasos a seguir son..."></asp:TextBox>
             </div>
 
-            <input id="boton_enviar" class="botons" type="submit" value="Publicar receta" />
+            <asp:Button ID="boton_enviar" runat="server" OnClick="boton_enviar_Click" Text="Publicar receta" CssClass="botons" />
 
         </section>
     </form>
