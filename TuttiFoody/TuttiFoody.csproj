@@ -68,6 +68,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CONTENT\CSS\PantallaPrincip.css" />
+    <Content Include="CONTENT\CSS\Alimento.css" />
+    <Content Include="CONTENT\CSS\Recetas.css" />
+    <Content Include="CONTENT\CSS\AlimentoCRUD.css" />
+    <Content Include="CONTENT\Imagenes\cuscus.jpg" />
+    <Content Include="CONTENT\Imagenes\fondo.jpg" />
+    <Content Include="CONTENT\Imagenes\fresa.jpg" />
+    <Content Include="CONTENT\Imagenes\img.jpg" />
+    <Content Include="CONTENT\Imagenes\img1.jpg" />
+    <Content Include="CONTENT\Imagenes\img2.jpg" />
+    <Content Include="CONTENT\Imagenes\img3.jpg" />
+    <Content Include="CONTENT\Imagenes\img4.jpg" />
+    <Content Include="CONTENT\Imagenes\img5.jpg" />
+    <Content Include="CONTENT\Imagenes\img6.jpg" />
+    <Content Include="CONTENT\Imagenes\img7.jpg" />
+    <Content Include="CONTENT\Imagenes\imgNotFound.png" />
+    <Content Include="CONTENT\Imagenes\Lentejas.jpg" />
+    <Content Include="CONTENT\Imagenes\tiempo.png" />
+    <Content Include="CONTENT\Imagenes\usuario.png" />
+    <Content Include="CONTENT\JS\Alimento.js" />
+    <Content Include="CONTENT\JS\Recetas.js" />
+    <Content Include="CONTENT\JS\PantallaPrincip.js" />
     <Content Include="CONTENT\CSS\registrar.css" />
     <Content Include="VISTA\IniciarSesion.aspx" />
     <Content Include="VISTA\Perfil.aspx" />
@@ -79,9 +101,16 @@
     <Content Include="VISTA\CrearReceta.aspx" />
     <Content Include="VISTA\Registrar.aspx" />
     <Content Include="VISTA\WebForm1.aspx" />
+    <Content Include="VISTA\PantallaPrincipal.aspx" />
+    <Content Include="VISTA\Alimentos.aspx" />
+    <Content Include="VISTA\Recetas.aspx" />
+    <Content Include="VISTA\AlimentosCRUD.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\AlimentoBD.cs" />
+    <Compile Include="DAL\TipoAlimentoBD.cs" />
+    <Compile Include="DAL\RecetasBD.cs" />
     <Compile Include="DAL\DBConnect.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -137,6 +166,34 @@
     </Compile>
     <Compile Include="VISTA\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\PantallaPrincipal.aspx.cs">
+      <DependentUpon>PantallaPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VISTA\PantallaPrincipal.aspx.designer.cs">
+      <DependentUpon>PantallaPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\Alimentos.aspx.cs">
+      <DependentUpon>Alimentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VISTA\Alimentos.aspx.designer.cs">
+      <DependentUpon>Alimentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\Recetas.aspx.cs">
+      <DependentUpon>Recetas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VISTA\Recetas.aspx.designer.cs">
+      <DependentUpon>Recetas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\AlimentosCRUD.aspx.cs">
+      <DependentUpon>AlimentosCRUD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VISTA\AlimentosCRUD.aspx.designer.cs">
+      <DependentUpon>AlimentosCRUD.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

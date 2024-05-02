@@ -4,7 +4,9 @@
       <Column Name="IdAlimento" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Descripcion" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+
       <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+
       <Column Name="ArchivoImagen" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
       <Column Name="FKTipoAlimento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Calorias" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
@@ -40,10 +42,13 @@
     <Type Name="Receta">
       <Column Name="IdReceta" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="PasosASeguir" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="PasosASeguir" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
       <Column Name="Tiempo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="FKUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CaloriasTotales" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="ArchivoImagen" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+
       <Association Name="Receta_RecetaAlimento" Member="RecetaAlimento" ThisKey="IdReceta" OtherKey="FKReceta" Type="RecetaAlimento" />
       <Association Name="Receta_RecetaFavorita" Member="RecetaFavorita" ThisKey="IdReceta" OtherKey="FKReceta" Type="RecetaFavorita" />
       <Association Name="Receta_RecetaUsuario" Member="RecetaUsuario" ThisKey="IdReceta" OtherKey="FKReceta" Type="RecetaUsuario" />
@@ -75,6 +80,14 @@
       <Association Name="Usuario_RecetaUsuario" Member="Usuario" ThisKey="FKUsuario" OtherKey="IdUsuario" Type="Usuario" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.TipoAlimento" Member="TipoAlimento">
+    <Type Name="TipoAlimento">
+      <Column Name="IdTipoAlimento" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="TipoAlimento_Alimento" Member="Alimento" ThisKey="IdTipoAlimento" OtherKey="FKTipoAlimento" Type="Alimento" />
+    </Type>
+  </Table>
+
   <Table Name="dbo.Usuario" Member="Usuario">
     <Type Name="Usuario">
       <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

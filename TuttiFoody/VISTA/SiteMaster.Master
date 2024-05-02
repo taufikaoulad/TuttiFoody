@@ -4,13 +4,16 @@
 
 <html>
 <head runat="server">
+
     <link rel="stylesheet" href="../CONTENT/CSS/registrar.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <link rel="stylesheet" href="~/CONTENT/CSS/PantallaPrincip.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
+
     <%--<form id="form1" runat="server">--%>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>

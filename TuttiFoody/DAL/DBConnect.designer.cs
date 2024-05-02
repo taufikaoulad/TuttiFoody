@@ -23,7 +23,9 @@ namespace TuttiFoody.DAL
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="BaseDeDatosGrupoSWAT")]
+
 	public partial class DBConnectDataContext : System.Data.Linq.DataContext
+
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -33,6 +35,7 @@ namespace TuttiFoody.DAL
     partial void InsertAlimento(Alimento instance);
     partial void UpdateAlimento(Alimento instance);
     partial void DeleteAlimento(Alimento instance);
+
     partial void InsertTipoAlimento(TipoAlimento instance);
     partial void UpdateTipoAlimento(TipoAlimento instance);
     partial void DeleteTipoAlimento(TipoAlimento instance);
@@ -42,9 +45,17 @@ namespace TuttiFoody.DAL
     partial void InsertReceta(Receta instance);
     partial void UpdateReceta(Receta instance);
     partial void DeleteReceta(Receta instance);
+    partial void InsertTipoAlimento(TipoAlimento instance);
+    partial void UpdateTipoAlimento(TipoAlimento instance);
+    partial void DeleteTipoAlimento(TipoAlimento instance);
+    
     partial void InsertUsuario(Usuario instance);
     partial void UpdateUsuario(Usuario instance);
     partial void DeleteUsuario(Usuario instance);
+    #endregion
+		
+		public DBConnect(string connection) : 
+
         #endregion
 
         public DBConnectDataContext() : base(global::System.Configuration.ConfigurationManager.ConnectionStrings["BaseDeDatosGrupoSWATConnectionString"].ConnectionString, mappingSource)
@@ -57,19 +68,21 @@ namespace TuttiFoody.DAL
 		{
 			OnCreated();
 		}
-		
+
 		public DBConnectDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
+
 		public DBConnectDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
+
 		public DBConnectDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
@@ -100,6 +113,43 @@ namespace TuttiFoody.DAL
 			}
 		}
 		
+		public System.Data.Linq.Table<Receta> Receta
+		{
+			get
+			{
+				return this.GetTable<Receta>();
+			}
+		}
+		
+		public System.Data.Linq.Table<RecetaAlimento> RecetaAlimento
+		{
+			get
+			{
+				return this.GetTable<RecetaAlimento>();
+			}
+		}
+		
+		public System.Data.Linq.Table<RecetaFavorita> RecetaFavorita
+		{
+			get
+			{
+				return this.GetTable<RecetaFavorita>();
+			}
+		}
+		
+		public System.Data.Linq.Table<RecetaUsuario> RecetaUsuario
+		{
+			get
+			{
+				return this.GetTable<RecetaUsuario>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TipoAlimento> TipoAlimento
+		{
+			get
+			{
+				return this.GetTable<TipoAlimento>();
 		public System.Data.Linq.Table<Propiedad> Propiedad
 		{
 			get
@@ -161,8 +211,6 @@ namespace TuttiFoody.DAL
 		
 		private string _Descripcion;
 		
-		private System.Data.Linq.Binary _Imagen;
-		
 		private string _ArchivoImagen;
 		
 		private int _FKTipoAlimento;
@@ -181,8 +229,6 @@ namespace TuttiFoody.DAL
     partial void OnNombreChanged();
     partial void OnDescripcionChanging(string value);
     partial void OnDescripcionChanged();
-    partial void OnImagenChanging(System.Data.Linq.Binary value);
-    partial void OnImagenChanged();
     partial void OnArchivoImagenChanging(string value);
     partial void OnArchivoImagenChanged();
     partial void OnFKTipoAlimentoChanging(int value);
@@ -253,26 +299,6 @@ namespace TuttiFoody.DAL
 					this._Descripcion = value;
 					this.SendPropertyChanged("Descripcion");
 					this.OnDescripcionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Imagen", DbType="VarBinary(MAX)", UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary Imagen
-		{
-			get
-			{
-				return this._Imagen;
-			}
-			set
-			{
-				if ((this._Imagen != value))
-				{
-					this.OnImagenChanging(value);
-					this.SendPropertyChanging();
-					this._Imagen = value;
-					this.SendPropertyChanged("Imagen");
-					this.OnImagenChanged();
 				}
 			}
 		}
@@ -683,6 +709,10 @@ namespace TuttiFoody.DAL
 		
 		private int _FKUsuario;
 		
+		private System.Nullable<decimal> _CaloriasTotales;
+		
+		private string _ArchivoImagen;
+
 		private EntityRef<Usuario> _Usuario;
 		
     #region Definiciones de métodos de extensibilidad
@@ -701,6 +731,11 @@ namespace TuttiFoody.DAL
     partial void OnTiempoChanged();
     partial void OnFKUsuarioChanging(int value);
     partial void OnFKUsuarioChanged();
+    partial void OnCaloriasTotalesChanging(System.Nullable<decimal> value);
+    partial void OnCaloriasTotalesChanged();
+    partial void OnArchivoImagenChanging(string value);
+    partial void OnArchivoImagenChanged();
+
     #endregion
 		
 		public Receta()
@@ -749,7 +784,8 @@ namespace TuttiFoody.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="VarChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="VarChar(400)")]
+
 		public string Descripcion
 		{
 			get
@@ -769,7 +805,8 @@ namespace TuttiFoody.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PasosASeguir", DbType="VarChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PasosASeguir", DbType="VarChar(1000)")]
+
 		public string PasosASeguir
 		{
 			get
@@ -806,6 +843,7 @@ namespace TuttiFoody.DAL
 					this.SendPropertyChanged("Tiempo");
 					this.OnTiempoChanged();
 				}
+
 			}
 		}
 		
@@ -829,6 +867,104 @@ namespace TuttiFoody.DAL
 					this._FKUsuario = value;
 					this.SendPropertyChanged("FKUsuario");
 					this.OnFKUsuarioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuario_Receta", Storage="_Usuario", ThisKey="FKUsuario", OtherKey="IdUsuario", IsForeignKey=true)]
+		public Usuario Usuario
+		{
+			get
+			{
+				return this._Usuario.Entity;
+			}
+			set
+			{
+				Usuario previousValue = this._Usuario.Entity;
+				if (((previousValue != value) 
+							|| (this._Usuario.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Usuario.Entity = null;
+						previousValue.Receta.Remove(this);
+					}
+					this._Usuario.Entity = value;
+					if ((value != null))
+					{
+						value.Receta.Add(this);
+						this._FKUsuario = value.IdUsuario;
+					}
+					else
+					{
+						this._FKUsuario = default(int);
+					}
+					this.SendPropertyChanged("Usuario");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FKUsuario", DbType="Int NOT NULL")]
+		public int FKUsuario
+		{
+			get
+			{
+				return this._FKUsuario;
+			}
+			set
+			{
+				if ((this._FKUsuario != value))
+				{
+					if (this._Usuario.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnFKUsuarioChanging(value);
+					this.SendPropertyChanging();
+					this._FKUsuario = value;
+					this.SendPropertyChanged("FKUsuario");
+					this.OnFKUsuarioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CaloriasTotales", DbType="Decimal(5,2)")]
+		public System.Nullable<decimal> CaloriasTotales
+		{
+			get
+			{
+				return this._CaloriasTotales;
+			}
+			set
+			{
+				if ((this._CaloriasTotales != value))
+				{
+					this.OnCaloriasTotalesChanging(value);
+					this.SendPropertyChanging();
+					this._CaloriasTotales = value;
+					this.SendPropertyChanged("CaloriasTotales");
+					this.OnCaloriasTotalesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ArchivoImagen", DbType="VarChar(200)")]
+		public string ArchivoImagen
+		{
+			get
+			{
+				return this._ArchivoImagen;
+			}
+			set
+			{
+				if ((this._ArchivoImagen != value))
+				{
+					this.OnArchivoImagenChanging(value);
+					this.SendPropertyChanging();
+					this._ArchivoImagen = value;
+					this.SendPropertyChanged("ArchivoImagen");
+					this.OnArchivoImagenChanged();
 				}
 			}
 		}
@@ -943,6 +1079,7 @@ namespace TuttiFoody.DAL
 			}
 			set
 			{
+
 				if ((this._Cantidad != value))
 				{
 					this._Cantidad = value;
@@ -1003,6 +1140,7 @@ namespace TuttiFoody.DAL
 		private System.Nullable<int> _FKReceta;
 		
 		private System.Nullable<int> _FKUsuario;
+
 		
 		public RecetaUsuario()
 		{
@@ -1038,6 +1176,159 @@ namespace TuttiFoody.DAL
 					this._FKUsuario = value;
 				}
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TipoAlimento")]
+	public partial class TipoAlimento : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Usuario")]
+	public partial class Usuario : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _IdTipoAlimento;
+		
+		private EntitySet<Alimento> _Alimento;
+		private int _IdUsuario;
+		
+		private string _Nombre;
+		
+		private string _Correo;
+		
+		private string _Contraseña;
+		
+		private EntitySet<Receta> _Receta;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdTipoAlimentoChanging(int value);
+    partial void OnIdTipoAlimentoChanged();
+    #endregion
+		
+		public TipoAlimento()
+		{
+			this._Alimento = new EntitySet<Alimento>(new Action<Alimento>(this.attach_Alimento), new Action<Alimento>(this.detach_Alimento));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdTipoAlimento", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int IdTipoAlimento
+		{
+			get
+			{
+				return this._IdTipoAlimento;
+			}
+			set
+			{
+				if ((this._IdTipoAlimento != value))
+				{
+					this.OnIdTipoAlimentoChanging(value);
+					this.SendPropertyChanging();
+					this._IdTipoAlimento = value;
+					this.SendPropertyChanged("IdTipoAlimento");
+					this.OnIdTipoAlimentoChanged();
+    partial void OnIdUsuarioChanging(int value);
+    partial void OnIdUsuarioChanged();
+    partial void OnNombreChanging(string value);
+    partial void OnNombreChanged();
+    partial void OnCorreoChanging(string value);
+    partial void OnCorreoChanged();
+    partial void OnContraseñaChanging(string value);
+    partial void OnContraseñaChanged();
+    #endregion
+		
+		public Usuario()
+		{
+			this._Receta = new EntitySet<Receta>(new Action<Receta>(this.attach_Receta), new Action<Receta>(this.detach_Receta));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdUsuario", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int IdUsuario
+		{
+			get
+			{
+				return this._IdUsuario;
+			}
+			set
+			{
+				if ((this._IdUsuario != value))
+				{
+					this.OnIdUsuarioChanging(value);
+					this.SendPropertyChanging();
+					this._IdUsuario = value;
+					this.SendPropertyChanged("IdUsuario");
+					this.OnIdUsuarioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(50)")]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this.OnNombreChanging(value);
+					this.SendPropertyChanging();
+					this._Nombre = value;
+					this.SendPropertyChanged("Nombre");
+					this.OnNombreChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TipoAlimento_Alimento", Storage="_Alimento", ThisKey="IdTipoAlimento", OtherKey="FKTipoAlimento")]
+		public EntitySet<Alimento> Alimento
+		{
+			get
+			{
+				return this._Alimento;
+			}
+			set
+			{
+				this._Alimento.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Alimento(Alimento entity)
+		{
+			this.SendPropertyChanging();
+			entity.TipoAlimento = this;
+		}
+		
+		private void detach_Alimento(Alimento entity)
+		{
+			this.SendPropertyChanging();
+			entity.TipoAlimento = null;
 		}
 	}
 	
@@ -1154,11 +1445,60 @@ namespace TuttiFoody.DAL
 					this.SendPropertyChanged("Contraseña");
 					this.OnContraseñaChanged();
 				}
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Correo", DbType="VarChar(50)")]
+		public string Correo
+		{
+			get
+			{
+				return this._Correo;
+			}
+			set
+			{
+				if ((this._Correo != value))
+				{
+					this.OnCorreoChanging(value);
+					this.SendPropertyChanging();
+					this._Correo = value;
+					this.SendPropertyChanged("Correo");
+					this.OnCorreoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contraseña", DbType="VarChar(50)")]
+		public string Contraseña
+		{
+			get
+			{
+				return this._Contraseña;
+			}
+			set
+			{
+				if ((this._Contraseña != value))
+				{
+					this.OnContraseñaChanging(value);
+					this.SendPropertyChanging();
+					this._Contraseña = value;
+					this.SendPropertyChanged("Contraseña");
+					this.OnContraseñaChanged();
+				}
 			}
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuario_Receta", Storage="_Receta", ThisKey="IdUsuario", OtherKey="FKUsuario")]
 		public EntitySet<Receta> Receta
+		{
+			get
+			{
+				return this._Receta;
+			}
+			set
+			{
+				this._Receta.Assign(value);
+			}
+		}
+		
+		[global::System.Dataa> Receta
 		{
 			get
 			{
