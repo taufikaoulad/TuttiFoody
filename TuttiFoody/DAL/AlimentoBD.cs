@@ -15,7 +15,6 @@ namespace TuttiFoody.DAL
             var data = from alim in db.Alimento
                        select alim;
                        
-
             return data;
         }
 
