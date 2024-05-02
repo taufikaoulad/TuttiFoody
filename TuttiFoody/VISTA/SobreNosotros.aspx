@@ -38,7 +38,7 @@
 
         .equipo{
             display: flex;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .equipo h4{
@@ -50,7 +50,7 @@
             height: 100%;
         }
         .equipo .imgPerfil {
-            width: 40%;
+            width: 23%;
             height: 100%;
         }
         
@@ -86,37 +86,58 @@
             <div class="row">
                 <div class="equipo">
                     <div class = "imgPerfil">
-                         <img src  = "/CONTENT/Imagenes/andrei.jpg" alt ="Andrei" style="width: 150px; height: auto"/>
+                         <img src  = "/CONTENT/Imagenes/andrei.jpg" alt ="Andrei" style="width: 150px; height: auto; margin-top: 0px;"/>
                     </div>
                        
                     <div class = "contenido">
-                        <h4><b>Andrei</b></h4>
+                        <h5><b>Andrei:</b></h5>
                         <p>Desde muy pequeño me ha atraído el mundo de la informática y es por eso que elegí hacer un grado medio de sistemas microinformáticos 
                             y redes y continuar con un grado superior de desarrollo de aplicaciones multiplataformas. Ahora mismo estoy acabando un bootcamp de .NET para pulir más mis habilidades 
-                            y poder encontrar un empleo donde crecer profesionalmente</p>
-
+                            y poder encontrar un empleo donde crecer profesionalmente.</p>
                     </div>
-                        
                     </div>
-                    
-
                 </div>
-                <div class ="row">
-                    <img src = "/CONTENT/Imagenes/Soraya.jpg" alt ="Soraya" style="width: 150px; height: auto"/>
-                    <p><b>-Soraya</b>: Empecé a descubrir el mundo de la programación en el grado de Telecomunicaciones y me embarque en la aventura de realizar un bootcamp de .Net para ampliar
+
+             <div class ="row">
+                <div class="equipo">
+                    <div class = "imgPerfil">
+                        <img src = "/CONTENT/Imagenes/Soraya.jpg" alt ="Soraya" style="width: 150px; height: auto"/>
+                    </div>  
+
+                    <div class = "contenido">
+                        <h5><b>Soraya:</b></h5> 
+                        <p>Empecé a descubrir el mundo de la programación en el grado de Telecomunicaciones y me embarque en la aventura de realizar un bootcamp de .Net para ampliar
                     mis conocimientos y consolidarlos. </p>
-                </div>
-                <div class ="row">
+                    </div>
+                    </div>
+               </div>
+
+              <div class ="row">
+                <div class="equipo">
+                    <div class = "imgPerfil">
                     <img src = "/CONTENT/Imagenes/taufik.jpg" alt ="Taufik" style="width: 150px; height: auto"/>
-                    <p><b>-Taufik</b>: ¡Encantado! Soy Taufik un apasionado de la informática que ha completado sus estudios en Desarrollo de Aplicaciones Multiplataforma (DAM) en el Instituto Nicolau Copernico. 
+                    </div>
+                    <div class = "contenido">
+                        <h5><b>Taufik:</b></h5> 
+                        <p>¡Encantado! Soy Taufik un apasionado de la informática que ha completado sus estudios en Desarrollo de Aplicaciones Multiplataforma (DAM) en el Instituto Nicolau Copernico. 
                     En este momento, estoy expandiendo mis conocimientos a través de un BootCamp de .Net con Fundación Esplai. Estoy comprometido con seguir creciendo profesionalmente y contribuir al mundo tecnológico 
                     con mi experiencia y habilidades.</p>
                 </div>
-                <div class ="row">
-                    <img src = "/CONTENT/Imagenes/william.jpg" alt ="William" style="width: 150px; height: auto"/>
-                    <p><b>-William</b>: ¡Hola a todos! Después de terminar mi grado superior en creación de videojuegos, estaba ansioso por comenzar mi carrera en la industria. Durante mis estudios, me dediqué en cuerpo y alma a aprender 
-                    todo lo posible sobre diseño, programación y arte de videojuegos, y trabajé en varios proyectos que me permitieron desarrollar y refinar mis habilidades </p>
                 </div>
+             </div>
+                <div class ="row">
+                <div class="equipo">
+                    <div class = "imgPerfil">
+                    <img src = "/CONTENT/Imagenes/william.jpg" alt ="William" style="width: 150px; height: auto"/>
+                    </div>
+                    <div class = "contenido">
+                    <h5><b>William:</b> </h5>
+                    <p>¡Hola a todos! Después de terminar mi grado superior en creación de videojuegos, estaba ansioso por comenzar mi carrera en la industria. Durante mis estudios, me dediqué en cuerpo y alma a aprender 
+                    todo lo posible sobre diseño, programación y arte de videojuegos, y trabajé en varios proyectos que me permitieron desarrollar y refinar mis habilidades.</p>
+                </div>
+                </div>
+             </div>
+
                 
                
             </div>
