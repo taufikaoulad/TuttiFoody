@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Receta.aspx.cs" Inherits="TuttiFoody.VISTA.Receta" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Recetas.aspx.cs" Inherits="TuttiFoody.VISTA.Receta" %>
 
 <!DOCTYPE html>
 
@@ -26,7 +26,7 @@
 
                 <div id="ingresar_ingredientes">
                     <h1>Ingredientes</h1>
-                    <div id="recuadroIng">
+                    <div id="recuadroIng" style="display: block;">
                             <asp:Label ID="lblIngrediente1" runat="server" Text="•Tomate X 5"></asp:Label>
                             <asp:Label ID="lblIngrediente2" runat="server" Text="•Tomate X 5"></asp:Label>
                             <asp:Label ID="lblIngrediente3" runat="server" Text="•Tomate X 5"></asp:Label>

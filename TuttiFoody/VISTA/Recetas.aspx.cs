@@ -22,7 +22,7 @@ namespace TuttiFoody.VISTA
                 RecetaDB recetaDB = new RecetaDB();
 
                 // Obtener la receta con ID 1
-                RecetaS receta = recetaDB.ObtenerRecetaPorId(1);
+                DAL.Receta receta = recetaDB.ObtenerRecetaPorId(1);
 
 
                 if (receta != null)

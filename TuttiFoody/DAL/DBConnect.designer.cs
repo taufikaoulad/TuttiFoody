@@ -39,9 +39,9 @@ namespace TuttiFoody.DAL
     partial void InsertPropiedad(Propiedad instance);
     partial void UpdatePropiedad(Propiedad instance);
     partial void DeletePropiedad(Propiedad instance);
-    partial void InsertReceta(RecetaS instance);
-    partial void UpdateReceta(RecetaS instance);
-    partial void DeleteReceta(RecetaS instance);
+    partial void InsertReceta(Receta instance);
+    partial void UpdateReceta(Receta instance);
+    partial void DeleteReceta(Receta instance);
     partial void InsertTipoAlimento(TipoAlimento instance);
     partial void UpdateTipoAlimento(TipoAlimento instance);
     partial void DeleteTipoAlimento(TipoAlimento instance);
@@ -103,11 +103,11 @@ namespace TuttiFoody.DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<RecetaS> Receta
+		public System.Data.Linq.Table<Receta> Receta
 		{
 			get
 			{
-				return this.GetTable<RecetaS>();
+				return this.GetTable<Receta>();
 			}
 		}
 		
@@ -405,7 +405,7 @@ namespace TuttiFoody.DAL
 		
 		private string _Contraseña;
 		
-		private EntitySet<RecetaS> _Receta;
+		private EntitySet<Receta> _Receta;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
@@ -423,7 +423,7 @@ namespace TuttiFoody.DAL
 		
 		public Usuario()
 		{
-			this._Receta = new EntitySet<RecetaS>(new Action<RecetaS>(this.attach_Receta), new Action<RecetaS>(this.detach_Receta));
+			this._Receta = new EntitySet<Receta>(new Action<Receta>(this.attach_Receta), new Action<Receta>(this.detach_Receta));
 			OnCreated();
 		}
 		
@@ -508,7 +508,7 @@ namespace TuttiFoody.DAL
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuario_Receta", Storage="_Receta", ThisKey="IdUsuario", OtherKey="FKUsuario")]
-		public EntitySet<RecetaS> Receta
+		public EntitySet<Receta> Receta
 		{
 			get
 			{
@@ -540,13 +540,13 @@ namespace TuttiFoody.DAL
 			}
 		}
 		
-		private void attach_Receta(RecetaS entity)
+		private void attach_Receta(Receta entity)
 		{
 			this.SendPropertyChanging();
 			entity.Usuario = this;
 		}
 		
-		private void detach_Receta(RecetaS entity)
+		private void detach_Receta(Receta entity)
 		{
 			this.SendPropertyChanging();
 			entity.Usuario = null;
@@ -709,7 +709,7 @@ namespace TuttiFoody.DAL
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Receta")]
-	public partial class RecetaS : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class Receta : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -754,7 +754,7 @@ namespace TuttiFoody.DAL
     partial void OnArchivoImagenChanged();
     #endregion
 		
-		public RecetaS()
+		public Receta()
 		{
 			this._Usuario = default(EntityRef<Usuario>);
 			OnCreated();

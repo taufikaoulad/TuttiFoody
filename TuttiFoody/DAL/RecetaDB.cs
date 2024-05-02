@@ -1,54 +1,55 @@
 ﻿using System;
-using System.Data.SqlClient;
+using System.Linq;
+using TuttiFoody.VISTA;
 
 namespace TuttiFoody.DAL
 {
     public class RecetaDB
     {
-        // Cadena de conexión a la base de datos (debes reemplazarla con tu propia cadena de conexión)
-        private string connectionString = "Server=85.208.20.69,54321;Database=BaseDeDatosGrupoSWAT;User Id=sa;Password=Sql#123456789;";
-
-        public RecetaS ObtenerRecetaPorId(int idReceta)
+        public Receta ObtenerRecetaPorId(int idReceta)
         {
-            RecetaS receta = null;
+            Receta receta = null;
 
-            string query = "SELECT IdReceta, Nombre, Descripcion, PasosASeguir, Tiempo, CaloriasTotales, ArchivoImagen " +
-                           "FROM Receta " +
-                           "WHERE IdReceta = @IdReceta";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@IdReceta", idReceta);
-
-                try
+                using (DBConnectDataContext dc = new DBConnectDataContext("Server=85.208.20.69,54321;Database=BaseDeDatosGrupoSWAT;User Id=sa;Password=Sql#123456789;"))
                 {
-                    connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
+                    // Obtener datos de la receta
+                    var recetaQuery = from r in dc.Receta
+                                      where r.IdReceta == idReceta
+                                      select r;
 
-                    if (reader.Read())
+                    var recetaEncontrada = recetaQuery.FirstOrDefault();
+
+                    if (recetaEncontrada != null)
                     {
-                        receta = new RecetaS();
-                        receta.IdReceta = Convert.ToInt32(reader["IdReceta"]);
-                        receta.Nombre = reader["Nombre"].ToString();
-                        receta.Descripcion = reader["Descripcion"].ToString();
-                        receta.PasosASeguir = reader["PasosASeguir"].ToString();
-                        receta.Tiempo = reader["Tiempo"].ToString();
-                        receta.CaloriasTotales = Convert.ToInt32(reader["CaloriasTotales"]);
-                        receta.ArchivoImagen = reader["ArchivoImagen"].ToString();
+                        receta = new Receta();
+                        receta.IdReceta = recetaEncontrada.IdReceta;
+                        receta.Nombre = recetaEncontrada.Nombre;
+                        receta.Descripcion = recetaEncontrada.Descripcion;
+                        receta.PasosASeguir = recetaEncontrada.PasosASeguir;
+                        receta.Tiempo = recetaEncontrada.Tiempo;
+                        receta.CaloriasTotales = recetaEncontrada.CaloriasTotales;
+                        receta.ArchivoImagen = recetaEncontrada.ArchivoImagen;
                     }
 
-                    reader.Close();
+                    // Cambia la declaración de la consulta LINQ a una variable "var"
+                    var alimentosQuery = from ra in dc.RecetaAlimento
+                                         where ra.FKReceta == idReceta
+                                         join a in dc.Alimento on ra.FKAlimento equals a.IdAlimento
+                                         select new { Nombre = a.Nombre, Cantidad = ra.Cantidad };
+
+                    receta.Alimento = alimentosQuery.ToList()
+                                        .Select(a => new Tuple<string, int>(a.Nombre, a.Cantidad))
+                                        .ToList();
                 }
-                catch (Exception ex)
-                {
-                    // Manejar errores
-                }
+            }
+            catch (Exception ex)
+            {
+                // Manejar errores
             }
 
             return receta;
         }
-
-        
     }
 }
