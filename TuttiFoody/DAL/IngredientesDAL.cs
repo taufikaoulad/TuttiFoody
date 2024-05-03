@@ -20,10 +20,10 @@ namespace TuttiFoody
             this.connectionString = connectionString;
         }
 
-        public List<string> ObtenerNombresAlimentos()
+        public List<(string Nombre, int Id)> ObtenerAlimentos()
         {
-            List<string> nombresAlimentos = new List<string>();
-            string query = "SELECT Nombre FROM Alimento";
+            List<(string Nombre, int Id)> alimentos = new List<(string Nombre, int Id)>();
+            string query = "SELECT IdAlimento, Nombre FROM Alimento";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -36,8 +36,9 @@ namespace TuttiFoody
 
                     while (reader.Read())
                     {
+                        int idAlimento = Convert.ToInt32(reader["IdAlimento"]);
                         string nombreAlimento = reader["Nombre"].ToString();
-                        nombresAlimentos.Add(nombreAlimento);
+                        alimentos.Add((nombreAlimento, idAlimento));
                     }
                     reader.Close();
                 }
@@ -47,7 +48,8 @@ namespace TuttiFoody
                 }
             }
 
-            return nombresAlimentos;
+            return alimentos;
         }
+
     }
 }
