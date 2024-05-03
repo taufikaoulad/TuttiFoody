@@ -50,12 +50,15 @@ namespace TuttiFoody.VISTA
                 string pasosASeguir = pasos_letra.Text;
                 string tiempo = Tiempo.Text;
 
+                // Obtener la ruta de la imagen subida por el usuario
+                string rutaImagen = GuardarImagenEnServidor();
+
                 // Crear una instancia de SubirRecetaDAL y llamar al método InsertarReceta
                 SubirRecetaDAL subirRecetaDAL = new SubirRecetaDAL();
-                subirRecetaDAL.InsertarReceta(nombreReceta, descripcion, pasosASeguir, tiempo);
+                subirRecetaDAL.InsertarReceta(nombreReceta, descripcion, pasosASeguir, tiempo, rutaImagen);
 
                 // Mostrar un mensaje de éxito
-                mensajeError.ForeColor = System.Drawing.Color.White;
+                mensajeError.ForeColor = System.Drawing.Color.Black;
                 mensajeError.Text = "¡La receta se ha subido correctamente!";
 
                 // Limpiar los TextBox después de subir la receta
@@ -72,7 +75,42 @@ namespace TuttiFoody.VISTA
             }
         }
 
+        private string GuardarImagenEnServidor()
+        {
+            // Verificar si se ha subido un archivo
+            if (imagen.HasFile)
+            {
+                try
+                {
+                    // Ruta base donde se guardarán las imágenes
+                    string rutaBase = "/CONTENT/Imagenes/";
 
+                    // Obtener la extensión del archivo
+                    string extension = Path.GetExtension(imagen.FileName);
+
+                    // Generar un nombre único para el archivo de imagen
+                    string nombreArchivo = Guid.NewGuid().ToString() + extension;
+
+                    // Construir la ruta completa donde se guardará la imagen en el servidor
+                    string rutaCompleta = Server.MapPath(rutaBase + nombreArchivo);
+
+                    // Guardar la imagen en el servidor
+                    imagen.SaveAs(rutaCompleta);
+
+                    // Devolver la ruta relativa de la imagen para almacenarla en la base de datos
+                    return rutaBase + nombreArchivo;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al guardar la imagen en el servidor: " + ex.Message);
+                }
+            }
+            else
+            {
+                // Si no se ha subido ninguna imagen, lanzar una excepción o manejar el caso según sea necesario
+                throw new Exception("No se ha seleccionado ninguna imagen para subir.");
+            }
+        }
 
 
     }

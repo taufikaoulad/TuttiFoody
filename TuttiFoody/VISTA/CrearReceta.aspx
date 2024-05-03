@@ -22,7 +22,8 @@
             <div id="apartado_doble">
                 <div id="ingresar_foto">
                     <div id="imagen-preview"></div>
-                    <input type="file" id="imagen" name="imagen" accept="image/*" onchange="previewImage(event)">
+                    <asp:FileUpload ID="imagen" runat="server" accept="image/*" onchange="previewImage(event)" />
+
                     <!--<ul id="listaAlimentos" runat="server"></ul>-->
 
                 </div>

@@ -15,7 +15,7 @@ namespace TuttiFoody.DAL
             dc = new DBConnectDataContext("Server=85.208.20.69,54321;Database=BaseDeDatosGrupoSWAT;User Id=sa;Password=Sql#123456789;");
         }
 
-        public void InsertarReceta(string nombreReceta, string descripcion, string pasosASeguir, string tiempo)
+        public void InsertarReceta(string nombreReceta, string descripcion, string pasosASeguir, string tiempo, string rutaImagen)
         {
             try
             {
@@ -25,6 +25,7 @@ namespace TuttiFoody.DAL
                 nuevaReceta.Descripcion = descripcion;
                 nuevaReceta.PasosASeguir = pasosASeguir;
                 nuevaReceta.Tiempo = tiempo;
+                nuevaReceta.ArchivoImagen = rutaImagen; // Asignar la ruta de la imagen a la receta
                 nuevaReceta.FKUsuario = 1; // Asignar la receta al usuario con IdUsuario igual a 1
 
                 // Agregar la nueva receta al contexto de datos y guardar los cambios

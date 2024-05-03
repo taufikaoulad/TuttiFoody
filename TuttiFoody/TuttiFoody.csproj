@@ -69,7 +69,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CONTENT\CSS\CrearReceta.css" />
+    <Content Include="CONTENT\Imagenes\AguacateRelleno.png" />
     <Content Include="CONTENT\Imagenes\fondo.png" />
+    <Content Include="CONTENT\Imagenes\gazpachuelo.png" />
     <Content Include="CONTENT\Imagenes\sopa.png" />
     <Content Include="CONTENT\Imagenes\sopaV2.png" />
     <Content Include="CONTENT\Imagenes\subirImagen.png" />
