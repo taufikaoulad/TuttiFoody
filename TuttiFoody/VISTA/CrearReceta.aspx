@@ -15,6 +15,8 @@
                 <div id="titulo_tiempo">
                     <asp:TextBox ID="NombreDeReceta" CssClass="controls" runat="server" Placeholder="Mi receta se llama..." />
                     <asp:TextBox ID="Tiempo"  CssClass="controls" runat="server" Placeholder="Tiempo receta" />
+                    <asp:Label ID="mensajeError" runat="server" ForeColor="Black"></asp:Label>
+
                 </div>
             </div>
             <div id="apartado_doble">

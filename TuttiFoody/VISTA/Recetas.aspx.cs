@@ -15,29 +15,6 @@ namespace TuttiFoody.VISTA
 {
     public partial class Receta : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!IsPostBack)
-            {
-                RecetaDB recetaDB = new RecetaDB();
 
-                // Obtener la receta con ID 1
-                DAL.Receta receta = recetaDB.ObtenerRecetaPorId(1);
-
-
-                if (receta != null)
-                {
-                    TituloReceta.Text = receta.Nombre;
-                    DescripcionReceta.Text = receta.Descripcion;
-                    PasosReceta.Text = receta.PasosASeguir;
-                    TiempoReceta.Text = receta.Tiempo;
-                    CaloriasReceta.Text = receta.CaloriasTotales.ToString();
-                }
-                else
-                {
-                    TituloReceta.Text = "Receta no encontrada";
-                }
-            }
-        }
     }
 }

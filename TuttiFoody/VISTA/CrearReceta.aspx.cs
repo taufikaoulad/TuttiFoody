@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data.Linq;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
@@ -38,11 +39,41 @@ namespace TuttiFoody.VISTA
                 }
             }
         }
+
         protected void boton_enviar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // Obtener los valores de los campos de la receta
+                string nombreReceta = NombreDeReceta.Text;
+                string descripcion = descripcion_letra.Text;
+                string pasosASeguir = pasos_letra.Text;
+                string tiempo = Tiempo.Text;
 
+                // Crear una instancia de SubirRecetaDAL y llamar al método InsertarReceta
+                SubirRecetaDAL subirRecetaDAL = new SubirRecetaDAL();
+                subirRecetaDAL.InsertarReceta(nombreReceta, descripcion, pasosASeguir, tiempo);
+
+                // Mostrar un mensaje de éxito
+                mensajeError.ForeColor = System.Drawing.Color.White;
+                mensajeError.Text = "¡La receta se ha subido correctamente!";
+
+                // Limpiar los TextBox después de subir la receta
+                NombreDeReceta.Text = "";
+                descripcion_letra.Text = "";
+                pasos_letra.Text = "";
+                Tiempo.Text = "";
+            }
+            catch (Exception ex)
+            {
+                // Manejar errores
+                mensajeError.ForeColor = System.Drawing.Color.Red;
+                mensajeError.Text = "Error al subir la receta: " + ex.Message;
+            }
         }
-    
+
+
+
 
     }
 
