@@ -31,6 +31,7 @@ namespace TuttiFoody.DAL
                        {
                            NombreAlimento = propiedadesPorAlimento.Key.Nombre,
                            CaloriasAlimento = propiedadesPorAlimento.Key.Calorias,
+                           ProteinasAlimento = propiedadesPorAlimento.Key.Proteinas,
                            DescripcionAlimento = propiedadesPorAlimento.Key.Descripcion,
                            Imagen = propiedadesPorAlimento.Key.ArchivoImagen != null && propiedadesPorAlimento.Key.ArchivoImagen != "" ? propiedadesPorAlimento.Key.ArchivoImagen : "/Content/Imagenes/imgNotFound.png",
                            Propiedades = propiedadesPorAlimento.Any() ? string.Join(" - ", propiedadesPorAlimento.Select(p => p.Nombre)) : null
@@ -71,6 +72,7 @@ namespace TuttiFoody.DAL
                            {
                                NombreAlimento = propiedadesPorAlimento.Key.Nombre,
                                CaloriasAlimento = propiedadesPorAlimento.Key.Calorias,
+                               ProteinasAlimento = propiedadesPorAlimento.Key.Proteinas,
                                DescripcionAlimento = propiedadesPorAlimento.Key.Descripcion,
                                Imagen = propiedadesPorAlimento.Key.ArchivoImagen != null && propiedadesPorAlimento.Key.ArchivoImagen != "" ? propiedadesPorAlimento.Key.ArchivoImagen : "/Content/Imagenes/imgNotFound.png",
                                Propiedades = propiedadesPorAlimento.Any() ? string.Join(" - ", propiedadesPorAlimento.Select(p => p.Nombre)) : null

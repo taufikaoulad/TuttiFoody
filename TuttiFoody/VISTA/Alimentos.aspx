@@ -38,7 +38,15 @@
                                 </div>
                             </div>
                             <div>
-                                <p class="txtPropiedad">Propiedades</p>
+                                <div class="proteinas">
+                                    <p class="txtPropiedad">Propiedades</p>
+                                    <div class="prote">
+                                        <p><%# Eval("ProteinasAlimento") %></p> 
+                                        <p>g/100g</p>
+                                        <p class="txtProteinas">Proteinas</p>
+                                    </div>
+                                </div>
+
                                 <div class="propiedad">
                                     <p><%# Eval("Propiedades") %></p>
                                 </div>
@@ -56,7 +64,8 @@
         <div class="sticky">
             <h2 id="verdurasHortalizas">Verduras y hortalizas</h2>
         </div>
-
+        <br />
+        <br />
         <asp:Repeater ID="repVerduras" runat="server">
             <ItemTemplate>
                 <div class="card">
@@ -90,6 +99,9 @@
             <h2 id="carnesPescados">Carnes, pescados y huevos</h2>
         </div>
 
+        <br />
+        <br />
+
         <asp:Repeater ID="repCarnes" runat="server">
             <ItemTemplate>
                 <div class="card">
@@ -121,6 +133,9 @@
         <div class="sticky">
             <h2 id="lacteos">Lácteos</h2>
         </div>
+
+        <br />
+        <br />
 
         <asp:Repeater ID="repLacteos" runat="server">
             <ItemTemplate>
@@ -155,6 +170,9 @@
             <h2 id="frutas">Frutas</h2>
         </div>
 
+        <br />
+        <br />
+
         <asp:Repeater ID="repFrutas" runat="server">
             <ItemTemplate>
                 <div class="card">
@@ -187,6 +205,9 @@
             <h2 id="cereales">Cereales</h2>
         </div>
 
+        <br />
+        <br />
+
         <asp:Repeater ID="repCereales" runat="server">
             <ItemTemplate>
                 <div class="card">
@@ -218,6 +239,9 @@
         <div class="sticky">
             <h2 id="aceitesGrasas">Aceites y grasas</h2>
         </div>
+
+        <br />
+        <br />
 
         <asp:Repeater ID="repAceites" runat="server">
             <ItemTemplate>

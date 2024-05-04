@@ -14,36 +14,48 @@ namespace TuttiFoody.VISTA
         {
             if (!IsPostBack)
             {
-                AlimentoBD alimentoBD = new AlimentoBD();
-
-                repLegumbres.DataSource = alimentoBD.Select(1);
-                repLegumbres.DataBind();
-
-                repVerduras.DataSource = alimentoBD.Select(2);
-                repVerduras.DataBind();
-
-                repCarnes.DataSource = alimentoBD.Select(3);
-                repCarnes.DataBind();
-
-                repLacteos.DataSource = alimentoBD.Select(4);
-                repLacteos.DataBind();
-
-                repFrutas.DataSource = alimentoBD.Select(5);
-                repFrutas.DataBind();
-
-                repCereales.DataSource = alimentoBD.Select(6);
-                repCereales.DataBind();
-
-                repAceites.DataSource = alimentoBD.Select(7);
-                repAceites.DataBind();
+                RefreshData();
             }
         }
 
+
+        private void RefreshData()
+        {
+            AlimentoBD alimentoBD = new AlimentoBD();
+
+            repLegumbres.DataSource = alimentoBD.Select(1);
+            repLegumbres.DataBind();
+
+            repVerduras.DataSource = alimentoBD.Select(2);
+            repVerduras.DataBind();
+
+            repCarnes.DataSource = alimentoBD.Select(3);
+            repCarnes.DataBind();
+
+            repLacteos.DataSource = alimentoBD.Select(4);
+            repLacteos.DataBind();
+
+            repFrutas.DataSource = alimentoBD.Select(5);
+            repFrutas.DataBind();
+
+            repCereales.DataSource = alimentoBD.Select(6);
+            repCereales.DataBind();
+
+            repAceites.DataSource = alimentoBD.Select(7);
+            repAceites.DataBind();
+        }
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
             string nombre = inputBusqueda.Text;
 
-            nombre = char.ToUpper(nombre[0]) + nombre.Substring(1);
+            if(nombre.Length == 0)
+            {
+                RefreshData();
+            }
+            else
+            {
+                nombre = char.ToUpper(nombre[0]) + nombre.Substring(1);
+            }
 
             AlimentoBD alimentoBD = new AlimentoBD();
             int tipoAlimento = alimentoBD.SelectTipoAlimento(nombre);

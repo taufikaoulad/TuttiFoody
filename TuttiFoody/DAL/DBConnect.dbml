@@ -6,7 +6,8 @@
       <Column Name="Descripcion" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
       <Column Name="ArchivoImagen" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
       <Column Name="FKTipoAlimento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Calorias" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Calorias" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Proteinas" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Alimento_AlimentoPropiedad" Member="AlimentoPropiedad" ThisKey="IdAlimento" OtherKey="FKAlimento" Type="AlimentoPropiedad" />
       <Association Name="Alimento_RecetaAlimento" Member="RecetaAlimento" ThisKey="IdAlimento" OtherKey="FKAlimento" Type="RecetaAlimento" />
       <Association Name="TipoAlimento_Alimento" Member="TipoAlimento" ThisKey="FKTipoAlimento" OtherKey="IdTipoAlimento" Type="TipoAlimento" IsForeignKey="true" />

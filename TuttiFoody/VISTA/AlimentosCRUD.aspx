@@ -30,6 +30,10 @@
                  <asp:TextBox ID="calorias" runat="server" CssClass="form-control"/>
              </div>
              <div class="grupo">
+                <label for="calorias">Proteínas:</label>
+                <asp:TextBox ID="proteinas" runat="server" CssClass="form-control"/>
+            </div>
+             <div class="grupo">
                  <div>
                      <label>Tipo Alimento:</label>
                      <p CssClass="obligatorio">*Obligatorio</p>

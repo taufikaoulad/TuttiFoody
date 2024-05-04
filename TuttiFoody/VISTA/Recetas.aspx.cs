@@ -26,6 +26,16 @@ namespace TuttiFoody.VISTA
         {
             string nombre = inputBusqueda.Text;
 
+            if (nombre.Length == 0)
+            {
+                repRecetas.DataSource = recetasBD.Select();
+                repRecetas.DataBind();
+            }
+            else
+            {
+                nombre = char.ToUpper(nombre[0]) + nombre.Substring(1);
+            }
+
             nombre = char.ToUpper(nombre[0]) + nombre.Substring(1);
 
             recetasBD = new RecetasBD();

@@ -43,7 +43,8 @@ namespace TuttiFoody.VISTA
             {
                 Nombre = txtNombre.Text,
                 Descripcion = txtDescripcion.InnerText.ToString(),
-                Calorias = Convert.ToDecimal(calorias.Text),
+                Calorias = Convert.ToInt32(calorias.Text),
+                Proteinas = Convert.ToInt32(proteinas.Text),
                 FKTipoAlimento = Convert.ToInt32(cbxTipoAlim.SelectedValue),
                 ArchivoImagen = rutaBase + Path.GetFileName(archivoImagen.FileName)
             };
@@ -92,6 +93,7 @@ namespace TuttiFoody.VISTA
             txtNombre.Text = alim.Nombre;
             txtDescripcion.InnerText = alim.Descripcion;
             calorias.Text = alim.Calorias.ToString();
+            proteinas.Text = alim.Proteinas.ToString();
             cbxTipoAlim.SelectedValue = alim.FKTipoAlimento.ToString();
             // Almacenamos la ruta de la imagen en una variable de sesion
             Session["RutaImagen"] = alim.ArchivoImagen;
@@ -108,7 +110,8 @@ namespace TuttiFoody.VISTA
 
             alim.Nombre = txtNombre.Text;
             alim.Descripcion = txtDescripcion.InnerText.ToString();
-            alim.Calorias = Convert.ToDecimal(calorias.Text);
+            alim.Calorias = Convert.ToInt32(calorias.Text);
+            alim.Proteinas = Convert.ToInt32(proteinas.Text);
             alim.FKTipoAlimento = Convert.ToInt32(cbxTipoAlim.SelectedValue);
 
             if (archivoImagen.HasFile)

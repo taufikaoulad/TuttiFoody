@@ -165,7 +165,9 @@ namespace TuttiFoody.DAL
 		
 		private int _FKTipoAlimento;
 		
-		private System.Nullable<decimal> _Calorias;
+		private System.Nullable<int> _Calorias;
+		
+		private System.Nullable<int> _Proteinas;
 		
 		private EntityRef<TipoAlimento> _TipoAlimento;
 		
@@ -183,8 +185,10 @@ namespace TuttiFoody.DAL
     partial void OnArchivoImagenChanged();
     partial void OnFKTipoAlimentoChanging(int value);
     partial void OnFKTipoAlimentoChanged();
-    partial void OnCaloriasChanging(System.Nullable<decimal> value);
+    partial void OnCaloriasChanging(System.Nullable<int> value);
     partial void OnCaloriasChanged();
+    partial void OnProteinasChanging(System.Nullable<int> value);
+    partial void OnProteinasChanged();
     #endregion
 		
 		public Alimento()
@@ -297,8 +301,8 @@ namespace TuttiFoody.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Calorias", DbType="Decimal(5,2)")]
-		public System.Nullable<decimal> Calorias
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Calorias", DbType="Int")]
+		public System.Nullable<int> Calorias
 		{
 			get
 			{
@@ -313,6 +317,26 @@ namespace TuttiFoody.DAL
 					this._Calorias = value;
 					this.SendPropertyChanged("Calorias");
 					this.OnCaloriasChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Proteinas", DbType="Int")]
+		public System.Nullable<int> Proteinas
+		{
+			get
+			{
+				return this._Proteinas;
+			}
+			set
+			{
+				if ((this._Proteinas != value))
+				{
+					this.OnProteinasChanging(value);
+					this.SendPropertyChanging();
+					this._Proteinas = value;
+					this.SendPropertyChanged("Proteinas");
+					this.OnProteinasChanged();
 				}
 			}
 		}
