@@ -34,16 +34,16 @@
                                 <h3><%# Eval("NombreAlimento") %></h3>
                                 <div class="calorias">
                                     <p><%# Eval("CaloriasAlimento") %></p>
-                                    <p>Kcal/100g</p>
+                                    <p>Kcal/100gr</p>
                                 </div>
                             </div>
                             <div>
                                 <div class="proteinas">
                                     <p class="txtPropiedad">Propiedades</p>
                                     <div class="prote">
-                                        <p><%# Eval("ProteinasAlimento") %></p> 
-                                        <p>g/100g</p>
-                                        <p class="txtProteinas">Proteinas</p>
+                                        <p><%# Eval("ProteinasAlimento") %> gr</p> 
+                                        <p class="txtProteinas">Proteína</p>
+                                        <p>/100gr</p>
                                     </div>
                                 </div>
 

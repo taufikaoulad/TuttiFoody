@@ -16,12 +16,12 @@
     <form id="form2" runat="server">
         <header>
             <nav>
-                <a id='logo' href="/VISTA/PantallaPrincipal.aspx">Tutti Foody</a>
+                <a id='logo' href="">Tutti Foody</a>
                 <a href="/VISTA/PantallaPrincipal.aspx">Principal</a>
                 <a href="/VISTA/Alimentos.aspx">Alimentos</a>
                 <a href="/VISTA/Recetas.aspx">Recetas</a>
+                <a href="/VISTA/AlimentosCRUD.aspx">Gestión</a>
                 <a href="">About us</a>
-                <a href="/VISTA/AlimentosCRUD.aspx">CRUD</a>
                 <div>
                     <asp:LinkButton runat="server" OnClick="Unnamed_Click"><img src="/CONTENT/Imagenes/usuario.png" alt="perfil" /></asp:LinkButton>
                 </div>

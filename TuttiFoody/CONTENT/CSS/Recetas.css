@@ -17,9 +17,6 @@
 }
 
 body {
-    /*display: flex;
-    align-items: center;
-    justify-content: center;*/
     min-height: 100vh;
     background-image: url("/CONTENT/Imagenes/fondo.jpg");
     background-repeat: no-repeat; 
@@ -153,10 +150,11 @@ i {
 
 .card .content .descripcion p {
     color: rgba(0, 0, 0, 0.6);
-    font-size: 13.2px;
-    font-weight: 700;
+    font-size: 15.5px;
+    font-weight: 750;
     line-height: 1.7;
-    margin-top: 12px;
+    margin-top: 10px;
+    color: #000;
 }
 
 p{
@@ -167,9 +165,9 @@ p{
     width: 100%;
     position: -webkit-sticky;
     position: sticky;
-    top: 50px; /* Ajustando la posición para que empiece después del menú */
+    top: 50px;
     padding: 10px;
-    z-index: 900; /* Asegurando que los títulos pegajosos estén por debajo del menú */
+    z-index: 900;
     background-image: url("/CONTENT/Imagenes/fondo.jpg");
     box-shadow: 0 5px 5px #595959;
 }
