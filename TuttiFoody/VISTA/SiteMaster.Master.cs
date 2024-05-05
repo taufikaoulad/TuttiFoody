@@ -13,5 +13,13 @@ namespace TuttiFoody.VISTA
         {
 
         }
+
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+            if (Session["usuarioObj"] != null)
+                Response.Redirect("Perfil.aspx");
+            else
+                Response.Redirect("IniciarSesion.aspx");
+        }
     }
 }

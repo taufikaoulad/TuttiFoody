@@ -55,6 +55,19 @@ namespace TuttiFoody.DAL
 		
 		public DBConnectDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
+
+		
+		public DBConnectDataContext(string connection) : base(connection, mappingSource)
+		{
+			OnCreated();
+		}
+
+        public DBConnectDataContext() : base(global::System.Configuration.ConfigurationManager.ConnectionStrings["BaseDeDatosGrupoSWATConnectionString"].ConnectionString, mappingSource)
+        {
+            OnCreated();
+        }
+
+        public DBConnectDataContext(System.Data.IDbConnection connection) : base(connection, mappingSource)
 		{
 			OnCreated();
 		}
@@ -156,13 +169,14 @@ namespace TuttiFoody.DAL
 		
 		private string _Descripcion;
 		
-		private System.Data.Linq.Binary _Imagen;
-		
 		private string _ArchivoImagen;
 		
 		private int _FKTipoAlimento;
 		
-		private System.Nullable<decimal> _Calorias;
+
+		private System.Nullable<int> _Calorias;
+		
+		private System.Nullable<int> _Proteinas;
 		
 		private EntityRef<TipoAlimento> _TipoAlimento;
 		
@@ -176,14 +190,15 @@ namespace TuttiFoody.DAL
     partial void OnNombreChanged();
     partial void OnDescripcionChanging(string value);
     partial void OnDescripcionChanged();
-    partial void OnImagenChanging(System.Data.Linq.Binary value);
-    partial void OnImagenChanged();
     partial void OnArchivoImagenChanging(string value);
     partial void OnArchivoImagenChanged();
     partial void OnFKTipoAlimentoChanging(int value);
     partial void OnFKTipoAlimentoChanged();
-    partial void OnCaloriasChanging(System.Nullable<decimal> value);
+
+    partial void OnCaloriasChanging(System.Nullable<int> value);
     partial void OnCaloriasChanged();
+    partial void OnProteinasChanging(System.Nullable<int> value);
+    partial void OnProteinasChanged();
     #endregion
 		
 		public Alimento()
@@ -252,26 +267,6 @@ namespace TuttiFoody.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Imagen", DbType="VarBinary(MAX)", UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary Imagen
-		{
-			get
-			{
-				return this._Imagen;
-			}
-			set
-			{
-				if ((this._Imagen != value))
-				{
-					this.OnImagenChanging(value);
-					this.SendPropertyChanging();
-					this._Imagen = value;
-					this.SendPropertyChanged("Imagen");
-					this.OnImagenChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ArchivoImagen", DbType="VarChar(200)")]
 		public string ArchivoImagen
 		{
@@ -316,8 +311,9 @@ namespace TuttiFoody.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Calorias", DbType="Decimal(5,2)")]
-		public System.Nullable<decimal> Calorias
+
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Calorias", DbType="Int")]
+		public System.Nullable<int> Calorias
 		{
 			get
 			{
@@ -332,6 +328,27 @@ namespace TuttiFoody.DAL
 					this._Calorias = value;
 					this.SendPropertyChanged("Calorias");
 					this.OnCaloriasChanged();
+				}
+			}
+		}
+		
+
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Proteinas", DbType="Int")]
+		public System.Nullable<int> Proteinas
+		{
+			get
+			{
+				return this._Proteinas;
+			}
+			set
+			{
+				if ((this._Proteinas != value))
+				{
+					this.OnProteinasChanging(value);
+					this.SendPropertyChanging();
+					this._Proteinas = value;
+					this.SendPropertyChanged("Proteinas");
+					this.OnProteinasChanged();
 				}
 			}
 		}
@@ -396,6 +413,7 @@ namespace TuttiFoody.DAL
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+
 		
 		private int _IdUsuario;
 		
@@ -598,6 +616,96 @@ namespace TuttiFoody.DAL
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.AlimentoPropiedad")]
+	public partial class AlimentoPropiedad
+	{
+		
+		private int _FKAlimento;
+		
+		private int _FKPropiedad;
+		
+		public AlimentoPropiedad()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FKAlimento", DbType="Int NOT NULL")]
+		public int FKAlimento
+		{
+			get
+			{
+				return this._FKAlimento;
+			}
+			set
+			{
+				if ((this._FKAlimento != value))
+				{
+					this._FKAlimento = value;
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Propiedad")]
+	public partial class Propiedad : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _IdPropiedad;
+		
+		private string _Nombre;
+		
+		private string _Descripcion;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdPropiedadChanging(int value);
+    partial void OnIdPropiedadChanged();
+    partial void OnNombreChanging(string value);
+    partial void OnNombreChanged();
+    partial void OnDescripcionChanging(string value);
+    partial void OnDescripcionChanged();
+    #endregion
+		
+		public Propiedad()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdPropiedad", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int IdPropiedad
+		{
+			get
+			{
+				return this._IdPropiedad;
+			}
+			set
+			{
+				if ((this._IdPropiedad != value))
+				{
+					this.OnIdPropiedadChanging(value);
+					this.SendPropertyChanging();
+					this._IdPropiedad = value;
+					this.SendPropertyChanged("IdPropiedad");
+					this.OnIdPropiedadChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FKPropiedad", DbType="Int NOT NULL")]
+		public int FKPropiedad
+		{
+			get
+			{
+				return this._FKPropiedad;
+			}
+			set
+			{
+				if ((this._FKPropiedad != value))
+				{
+					this._FKPropiedad = value;
+				}
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Propiedad")]
 	public partial class Propiedad : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -666,6 +774,7 @@ namespace TuttiFoody.DAL
 				}
 			}
 		}
+
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="VarChar(300)")]
 		public string Descripcion
@@ -1246,4 +1355,4 @@ namespace TuttiFoody.DAL
 		}
 	}
 }
-#pragma warning restore 1591
+#endregion
