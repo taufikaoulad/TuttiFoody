@@ -80,7 +80,15 @@
                             </div>
                         </div>
                         <div>
-                            <p class="txtPropiedad">Propiedades</p>
+                            <div class="proteinas">
+                                <p class="txtPropiedad">Propiedades</p>
+                                <div class="prote">
+                                    <p><%# Eval("ProteinasAlimento") %> gr</p> 
+                                    <p class="txtProteinas">Proteína</p>
+                                    <p>/100gr</p>
+                                </div>
+                            </div>
+
                             <div class="propiedad">
                                 <p><%# Eval("Propiedades") %></p>
                             </div>
@@ -116,7 +124,14 @@
                             </div>
                         </div>
                         <div>
-                            <p class="txtPropiedad">Propiedades</p>
+                            <div class="proteinas">
+                                <p class="txtPropiedad">Propiedades</p>
+                                <div class="prote">
+                                    <p><%# Eval("ProteinasAlimento") %> gr</p> 
+                                    <p class="txtProteinas">Proteína</p>
+                                    <p>/100gr</p>
+                                </div>
+                            </div>
                             <div class="propiedad">
                                 <p><%# Eval("Propiedades") %></p>
                             </div>
@@ -151,7 +166,14 @@
                             </div>
                         </div>
                         <div>
-                            <p class="txtPropiedad">Propiedades</p>
+                            <div class="proteinas">
+                                <p class="txtPropiedad">Propiedades</p>
+                                <div class="prote">
+                                    <p><%# Eval("ProteinasAlimento") %> gr</p> 
+                                    <p class="txtProteinas">Proteína</p>
+                                    <p>/100gr</p>
+                                </div>
+                            </div>
                             <div class="propiedad">
                                 <p><%# Eval("Propiedades") %></p>
                             </div>
@@ -187,7 +209,15 @@
                             </div>
                         </div>
                         <div>
-                            <p class="txtPropiedad">Propiedades</p>
+                            <div class="proteinas">
+                                <p class="txtPropiedad">Propiedades</p>
+                                <div class="prote">
+                                    <p><%# Eval("ProteinasAlimento") %> gr</p> 
+                                    <p class="txtProteinas">Proteína</p>
+                                    <p>/100gr</p>
+                                </div>
+                            </div>
+
                             <div class="propiedad">
                                 <p><%# Eval("Propiedades") %></p>
                             </div>
@@ -222,7 +252,15 @@
                             </div>
                         </div>
                         <div>
-                            <p class="txtPropiedad">Propiedades</p>
+                            <div class="proteinas">
+                                <p class="txtPropiedad">Propiedades</p>
+                                <div class="prote">
+                                    <p><%# Eval("ProteinasAlimento") %> gr</p> 
+                                    <p class="txtProteinas">Proteína</p>
+                                    <p>/100gr</p>
+                                </div>
+                            </div>
+
                             <div class="propiedad">
                                 <p><%# Eval("Propiedades") %></p>
                             </div>
@@ -257,7 +295,15 @@
                             </div>
                         </div>
                         <div>
-                            <p class="txtPropiedad">Propiedades</p>
+                            <div class="proteinas">
+                                <p class="txtPropiedad">Propiedades</p>
+                                <div class="prote">
+                                    <p><%# Eval("ProteinasAlimento") %> gr</p> 
+                                    <p class="txtProteinas">Proteína</p>
+                                    <p>/100gr</p>
+                                </div>
+                            </div>
+
                             <div class="propiedad">
                                 <p><%# Eval("Propiedades") %></p>
                             </div>

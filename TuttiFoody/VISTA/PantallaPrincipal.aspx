@@ -11,7 +11,7 @@
 <body>  
     <header>
         <nav>
-            <a id='logo' href="">Tutti Foody</a>
+            <a id='logo' href="/VISTA/PantallaPrincipal.aspx">Tutti Foody</a>
             <a href="/VISTA/PantallaPrincipal.aspx">Principal</a>
             <a href="/VISTA/Alimentos.aspx">Alimentos</a>
             <a href="/VISTA/Recetas.aspx">Recetas</a>
