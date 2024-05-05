@@ -192,8 +192,8 @@
       <DependentUpon>SobreNosotros.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="VISTA\SobreNosotros.aspx.designer.cs">
-      <DependentUpon>SobreNosotros.aspx</DependentUpon>
+    <!--<Compile Include="VISTA\SobreNosotros.aspx.designer.cs">
+      <DependentUpon>SobreNosotros.aspx</DependentUpon>-->
 
     <Compile Include="VISTA\PantallaPrincipal.aspx.cs">
       <DependentUpon>PantallaPrincipal.aspx</DependentUpon>
