@@ -55,7 +55,7 @@ namespace TuttiFoody.VISTA
 
                 int idReceta = subirRecetaDAL.InsertarReceta(nombreReceta, descripcion, pasosASeguir, tiempo, rutaImagen);
 
-                GuardarIngredientes(idReceta);
+                //GuardarIngredientes(idReceta);
 
                 // Mostrar un mensaje de éxito
                 mensajeError.ForeColor = System.Drawing.Color.Black;
@@ -85,7 +85,7 @@ namespace TuttiFoody.VISTA
                     if (ddlIngrediente != null && txtCantidad != null)
                     {
                         // Obtener el ID del alimento y la cantidad
-                        int idAlimento = Convert.ToInt32(ddlIngrediente.SelectedValue);
+                        //int idAlimento = Convert.ToInt32(ddlIngrediente.SelectedValue);
 
                         // Validar y convertir la cantidad
                         int cantidad;
@@ -96,7 +96,7 @@ namespace TuttiFoody.VISTA
 
                         // Guardar la relación en la tabla RecetaAlimento
                         SubirRecetaDAL subirRecetaDAL = new SubirRecetaDAL();
-                        subirRecetaDAL.InsertarRecetaAlimento(idReceta, idAlimento, cantidad);
+                        //subirRecetaDAL.InsertarRecetaAlimento(idReceta, idAlimento, cantidad);
 
                     }
                 }

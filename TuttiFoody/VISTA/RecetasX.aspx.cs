@@ -13,7 +13,7 @@ using TuttiFoody.DAL;
 
 namespace TuttiFoody.VISTA
 {
-    public partial class Receta : System.Web.UI.Page
+    public partial class RecetaX : System.Web.UI.Page
     {
 
     }

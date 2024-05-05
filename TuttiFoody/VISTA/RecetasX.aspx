@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Recetas.aspx.cs" Inherits="TuttiFoody.VISTA.Receta" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RecetasX.aspx.cs" Inherits="TuttiFoody.VISTA.Receta" %>
 
 <!DOCTYPE html>
 

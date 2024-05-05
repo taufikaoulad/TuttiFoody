@@ -77,7 +77,7 @@
     <Content Include="CONTENT\Imagenes\subirImagen.png" />
     <Content Include="CONTENT\JS\JSCrearReceta.js" />
     <Content Include="VISTA\CrearReceta.aspx" />
-    <Content Include="VISTA\Recetas.aspx" />
+    <Content Include="VISTA\RecetasX.aspx" />
     <Content Include="VISTA\WebForm1.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -101,12 +101,12 @@
     <Compile Include="VISTA\CrearReceta.aspx.designer.cs">
       <DependentUpon>CrearReceta.aspx</DependentUpon>
     </Compile>
-    <Compile Include="VISTA\Recetas.aspx.cs">
-      <DependentUpon>Recetas.aspx</DependentUpon>
+    <Compile Include="VISTA\RecetasX.aspx.cs">
+      <DependentUpon>RecetasX.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="VISTA\Recetas.aspx.designer.cs">
-      <DependentUpon>Recetas.aspx</DependentUpon>
+    <Compile Include="VISTA\RecetasX.aspx.designer.cs">
+      <DependentUpon>RecetasX.aspx</DependentUpon>
     </Compile>
     <Compile Include="VISTA\SiteMaster.Master.cs">
       <DependentUpon>SiteMaster.Master</DependentUpon>
