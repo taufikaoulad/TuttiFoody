@@ -68,6 +68,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+
+    <Content Include="CONTENT\Imagenes\Grupo.png" />
+    <Content Include="VISTA\SobreNosotros.aspx" />
+
     <Content Include="CONTENT\CSS\PantallaPrincip.css" />
     <Content Include="CONTENT\CSS\Alimento.css" />
     <Content Include="CONTENT\CSS\Recetas.css" />
@@ -106,6 +110,7 @@
     <Content Include="VISTA\WebForm1.aspx" />
     <Content Include="VISTA\PantallaPrincipal.aspx" />
     <Content Include="VISTA\Recetas.aspx" />
+
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +187,14 @@
     <Compile Include="VISTA\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
+
+    <Compile Include="VISTA\SobreNosotros.aspx.cs">
+      <DependentUpon>SobreNosotros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VISTA\SobreNosotros.aspx.designer.cs">
+      <DependentUpon>SobreNosotros.aspx</DependentUpon>
+
     <Compile Include="VISTA\PantallaPrincipal.aspx.cs">
       <DependentUpon>PantallaPrincipal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -195,6 +208,7 @@
     </Compile>
     <Compile Include="VISTA\Recetas.aspx.designer.cs">
       <DependentUpon>Recetas.aspx</DependentUpon>
+
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -220,6 +234,7 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="CONTENT\JS\" />
     <Folder Include="MODEL\" />
   </ItemGroup>
   <PropertyGroup>
