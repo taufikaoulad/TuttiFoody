@@ -168,6 +168,29 @@
                 color: #fff;
                 background-color: #EE4266;
             }
+
+            .button-container .btnContinuar {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #f1683a, #f1683a);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-container .btnContinuar:hover {
+    background-image: linear-gradient(to right,#f1683a, #f1683a);
+}
+
+
+    .codeBtn-container .btnCode:hover {
+        background-image: linear-gradient(to right,#4CCD99, #007F73);
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
