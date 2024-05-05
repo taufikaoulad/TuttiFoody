@@ -12,37 +12,6 @@ function previewImage(event) {
     reader.readAsDataURL(input.files[0]);
 }
 
-
-//--- AÑADIR NUEVO INGREDIENTE ---
-// Obtener referencia al botón "Añadir nuevo ingrediente"
-const botonAgregarIngrediente = document.getElementById("agregar_ingrediente");
-
-botonAgregarIngrediente.addEventListener("click", function ()
-{
-    agregarCuadroIngrediente(); // Llamar a la función para agregar un nuevo cuadro de ingredientes
-});
-
-function agregarCuadroIngrediente()
-{
-    const nuevoCuadro = document.createElement("div");
-    nuevoCuadro.classList.add("cuadro_ingredientes"); // Agregar la clase correspondiente
-    nuevoCuadro.innerHTML = `
-        <div id="cuadro_ingrdientes" class="cuadro_ingrediente">
-            <select class="controls" id="objetos">
-                <option value="objeto1">Objeto 1</option>
-                <option value="objeto2">Objeto 2</option>
-                <option value="objeto3">Objeto 3</option>
-            </select>
-            <h2 id="X_text" class="X_text"> X </h2>
-            <textarea class="controls" id="cantidad_objetos" placeholder="Cantidad"></textarea>
-        </div>
-    `;
-
-    // Agregar el nuevo cuadro de ingredientes al recuadro de ingredientes
-    const recuadroIngredientes = document.getElementById("recuadro");
-    recuadroIngredientes.appendChild(nuevoCuadro);
-}
-
 //--- VERIFICAR CAMPOS INTRODUCIDOS/ VACIOS ---
 
 const nombresInput = document.getElementById("nombres");
@@ -63,8 +32,6 @@ function verificarCampo()
     }
     return true;
 }
-
-// Ejemplo de cómo usar la función verificarCampo() en un formulario
 const formulario = document.getElementById("miFormulario");
 formulario.addEventListener("submit", function (event)
 {
@@ -74,3 +41,4 @@ formulario.addEventListener("submit", function (event)
         event.preventDefault(); // Evitar el envío del formulario
     }
 });
+
