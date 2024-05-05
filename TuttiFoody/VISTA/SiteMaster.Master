@@ -4,18 +4,36 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <%--<link rel="stylesheet" href="../CONTENT/CSS/registrar.css" />--%>
+    <link rel="stylesheet" href="~/CONTENT/CSS/menu.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
+    <form id="form2" runat="server">
+        <header>
+            <nav>
+                <a id='logo' href="/VISTA/PantallaPrincipal.aspx">Tutti Foody</a>
+                <a href="/VISTA/PantallaPrincipal.aspx">Principal</a>
+                <a href="/VISTA/Alimentos.aspx">Alimentos</a>
+                <a href="/VISTA/Recetas.aspx">Recetas</a>
+                <a href="/VISTA/AlimentosCRUD.aspx">Gestión</a>
+                <a href="">About us</a>
+                <div>
+                    <asp:LinkButton runat="server" OnClick="Unnamed_Click"><img src="/CONTENT/Imagenes/usuario.png" alt="perfil" /></asp:LinkButton>
+                </div>
+            </nav>
+        </header>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <%-- contenido paginas --%>
+        </asp:ContentPlaceHolder>
     </form>
+
+    <%--</form>--%>
 </body>
 </html>

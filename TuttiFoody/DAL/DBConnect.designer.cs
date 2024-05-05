@@ -45,19 +45,19 @@ namespace TuttiFoody.DAL
     partial void InsertTipoAlimento(TipoAlimento instance);
     partial void UpdateTipoAlimento(TipoAlimento instance);
     partial void DeleteTipoAlimento(TipoAlimento instance);
-        #endregion
+
+		
+		public DBConnectDataContext(string connection) : base(connection, mappingSource)
+		{
+			OnCreated();
+		}
+
         public DBConnectDataContext() : base(global::System.Configuration.ConfigurationManager.ConnectionStrings["BaseDeDatosGrupoSWATConnectionString"].ConnectionString, mappingSource)
         {
             OnCreated();
         }
-        public DBConnectDataContext(string connection) : 
-				base(connection, mappingSource)
-		{
-			OnCreated();
-		}
-		
-		public DBConnectDataContext(System.Data.IDbConnection connection) : 
-				base(connection, mappingSource)
+
+        public DBConnectDataContext(System.Data.IDbConnection connection) : base(connection, mappingSource)
 		{
 			OnCreated();
 		}

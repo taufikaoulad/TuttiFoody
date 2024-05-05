@@ -1,0 +1,223 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Bukhari+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+body {
+    /*    display: flex;
+    align-items: center;
+    justify-content: center;*/
+    min-height: 100vh;
+    background-image: url("/CONTENT/Imagenes/fondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #000;
+}
+
+/*btn buscador*/
+.buscador {
+    position: absolute;
+    left: 98%;
+    top: 12.5%;
+    transform: translate(-100%, -50%);
+    z-index: 1001;
+    position: fixed;
+}
+
+.input {
+    outline: none;
+    box-sizing: border-box;
+    height: 35px;
+    width: 0px;
+    padding: 0 17px;
+    color: #000;
+    border-radius: 50px;
+    font-size: 20px;
+    border: 1px solid #f1683a;
+    transition: all .7s ease;
+}
+
+::placeholder {
+    color: #000000;
+}
+
+.btn {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 37px;
+    height: 37px;
+    background: #f1683a;
+    line-height: 38px;
+    border-radius: 100%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+    border-color: #00000000;
+}
+
+    .btn i {
+        font-size: 15px;
+        color: white;
+        transition: all .7s ease;
+    }
+
+i {
+    font-size: 15px;
+    color: white;
+    transition: all .7s ease;
+}
+
+.buscador:hover .input {
+    width: 250px;
+}
+
+.buscador:hover i {
+    transform: rotate(-360deg);
+}
+
+.btn:hover {
+    background: #cc0000;
+}
+
+
+
+
+/*Carta*/
+
+.separador {
+    margin-top: 85px;
+}
+
+.card {
+    width: 836px;
+    height: 272.8px;
+    display: flex;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 5px 10px #595959;
+    border-radius: 10px;
+    transition: 0.1s;
+    transform: scale(0.8);
+    margin-top: -25px;
+    background-color: fff;
+}
+
+    .card:hover {
+        transform: scale(0.98);
+        box-shadow: 0 5px 20px #595959;
+    }
+
+    .card .img-card {
+        width: 35.2%;
+        height: 100%;
+        background-size: cover;
+    }
+
+    .card .content {
+        width: 74.8%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 60px;
+        padding: 15px 20px;
+    }
+
+        .card .content .title {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .card .content .title .calorias {
+                display: flex;
+                gap: 8px;
+                margin-top: 8px;
+            }
+
+            .card .content .title h3 {
+                font-size: 40px;
+                color: #f1683a;
+            }
+
+            .card .content .title p {
+                font-size: 17.6px;
+                font-weight: bolder;
+            }
+
+.txtPropiedad {
+    font-size: 19.5px;
+    font-weight: bolder;
+}
+
+.card .content .propiedad {
+    font-size: 15.08px;
+    margin-top: 15px;
+    line-height: 2;
+    font-weight: 800;
+}
+
+.card .content .descripcion p {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 13.7px;
+    font-weight: 750;
+    line-height: 1.7;
+    margin-top: 12px;
+}
+
+.sticky {
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px;
+    padding: 10px;
+    z-index: 900;
+    background-image: url("/CONTENT/Imagenes/fondo.jpg");
+    box-shadow: 0 5px 5px #595959;
+}
+
+h2 {
+    font-family: Poppins;
+    font-size: 40px;
+    color: #f1683a;
+    margin: 0 auto;
+    width: 60%;
+}
+
+p {
+    color: #000000;
+}
+
+.proteinas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.prote {
+    display: flex;
+    gap: 5px;
+    margin-top: -15px;
+}
+
+.txtProteinas {
+    font-size: 16.5px;
+    font-weight: bolder;
+}
+
+
+.prote p {
+    font-size: 17.6px;
+    font-weight: bolder;
+}
