@@ -158,5 +158,10 @@ namespace TuttiFoody.VISTA
             Session["usuarioObj"] = "";
             Response.Redirect("IniciarSesion.aspx");
         }
+
+        protected void btnCrearReceta_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CrearReceta.aspx");
+        }
     }
 }

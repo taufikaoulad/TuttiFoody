@@ -9,7 +9,7 @@ using TuttiFoody.DAL;
 
 namespace TuttiFoody
 {
-    
+
     internal class IngredientesDAL
     {
 
@@ -20,10 +20,10 @@ namespace TuttiFoody
             this.connectionString = connectionString;
         }
 
-        public List<(string Nombre, int Id)> ObtenerAlimentos()
+        public List<string> ObtenerNombresAlimentos()
         {
-            List<(string Nombre, int Id)> alimentos = new List<(string Nombre, int Id)>();
-            string query = "SELECT IdAlimento, Nombre FROM Alimento";
+            List<string> nombresAlimentos = new List<string>();
+            string query = "SELECT Nombre FROM Alimento";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -36,9 +36,8 @@ namespace TuttiFoody
 
                     while (reader.Read())
                     {
-                        int idAlimento = Convert.ToInt32(reader["IdAlimento"]);
                         string nombreAlimento = reader["Nombre"].ToString();
-                        alimentos.Add((nombreAlimento, idAlimento));
+                        nombresAlimentos.Add(nombreAlimento);
                     }
                     reader.Close();
                 }
@@ -48,8 +47,7 @@ namespace TuttiFoody
                 }
             }
 
-            return alimentos;
+            return nombresAlimentos;
         }
-
     }
 }

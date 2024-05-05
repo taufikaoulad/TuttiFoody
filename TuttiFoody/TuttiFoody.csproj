@@ -95,6 +95,7 @@
     <Content Include="CONTENT\CSS\registrar.css" />
     <Content Include="VISTA\AlimentosCRUD.aspx" />
     <Content Include="VISTA\Alimentos.aspx" />
+    <Content Include="VISTA\CrearReceta.aspx" />
     <Content Include="VISTA\IniciarSesion.aspx" />
     <Content Include="VISTA\Perfil.aspx" />
     <Content Include="VISTA\RecuperarContrasenya.aspx" />
@@ -106,7 +107,6 @@
     <Content Include="CONTENT\Imagenes\sopaV2.png" />
     <Content Include="CONTENT\Imagenes\subirImagen.png" />
     <Content Include="CONTENT\JS\JSCrearReceta.js" />
-    <Content Include="VISTA\CrearReceta.aspx" />
     <Content Include="VISTA\RecetasX.aspx" />
     <Content Include="VISTA\Registrar.aspx" />
     <Content Include="VISTA\SobreNosotros.aspx" />
@@ -116,9 +116,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\DBConnect.cs">
-      <DependentUpon>DBConnect.dbml</DependentUpon>
-    </Compile>
     <Compile Include="DAL\AlimentoBD.cs" />
     <Compile Include="DAL\DBConnect.designer.cs">
       <AutoGen>True</AutoGen>
@@ -146,6 +143,13 @@
     <Compile Include="VISTA\Alimentos.aspx.designer.cs">
       <DependentUpon>Alimentos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="VISTA\CrearReceta.aspx.cs">
+      <DependentUpon>CrearReceta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VISTA\CrearReceta.aspx.designer.cs">
+      <DependentUpon>CrearReceta.aspx</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\IniciarSesion.aspx.cs">
       <DependentUpon>IniciarSesion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -167,19 +171,10 @@
     <Compile Include="VISTA\RecuperarContrasenya.aspx.designer.cs">
       <DependentUpon>RecuperarContrasenya.aspx</DependentUpon>
     </Compile>
-    <Compile Include="VISTA\CrearReceta.aspx.cs">
-      <DependentUpon>CrearReceta.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="VISTA\CrearReceta.aspx.designer.cs">
-      <DependentUpon>CrearReceta.aspx</DependentUpon>
-    </Compile>
     <Compile Include="VISTA\RecetasX.aspx.cs">
       <DependentUpon>RecetasX.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="VISTA\RecetasX.aspx.designer.cs">
-      <DependentUpon>RecetasX.aspx</DependentUpon>
     <Compile Include="VISTA\Registrar.aspx.cs">
       <DependentUpon>Registrar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -208,10 +203,6 @@
     <Compile Include="VISTA\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <!--<Compile Include="VISTA\SobreNosotros.aspx.designer.cs">
-      <DependentUpon>SobreNosotros.aspx</DependentUpon>-->
     <Compile Include="VISTA\PantallaPrincipal.aspx.cs">
       <DependentUpon>PantallaPrincipal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

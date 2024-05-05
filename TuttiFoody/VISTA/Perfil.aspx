@@ -173,6 +173,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div class="card">
             <div class="sidebar">
+                <asp:LinkButton CssClass="a" ID="btnCrearReceta" runat="server" OnClick="btnCrearReceta_Click">Crear receta</asp:LinkButton>
                 <asp:LinkButton CssClass="a" ID="lnkEditarPerfil" runat="server" OnClick="ShowContent">Editar perfil</asp:LinkButton>
                 <asp:LinkButton CssClass="a" ID="lnkSeguridad" runat="server" OnClick="ShowContent">Seguridad</asp:LinkButton>
                 <asp:LinkButton CssClass="a" ID="lnkAjustesCuenta" runat="server" OnClick="ShowContent">Ajustes de cuenta</asp:LinkButton>

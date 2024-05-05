@@ -5,33 +5,37 @@
     font-style: bold;
 }
 
-* {
+body {
+    background: #121820;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'calibri', sans-serif;
+    color: white;
+    text-align: center;
 }
 
-body {
-    background-image: url('../../CONTENT/Imagenes/fondo.png');
+header {
+    margin-bottom: 60px;
 }
 
 .form-register {
-    width: 75%;
-    background: #121820;
-    padding: 30px;
+    width: 80%;
     margin: auto;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    border-radius: 4px;
-    font-family: 'calibri';
-    color: white;
-    box-shadow: 7px 13px 37px #000;
 }
 
     .form-register h4 {
-        font-size: 22px;
+        font-size: 24px;
         margin-bottom: 20px;
     }
+
+.contenedor-separar {
+    border-radius: 10px;
+    background: #121820;
+    color: white;
+    padding: 30px;
+    padding-top:70px;
+}
 
 .controls {
     width: 100%;
@@ -40,15 +44,11 @@ body {
     border-radius: 4px;
     margin-bottom: 16px;
     border: 1px solid #f1683a;
-    font-family: 'calibri';
-    font-size: 18px;
-    color: white;
-    resize: none;
+    color:#fff;
 }
 
 .form-register p {
     height: 40px;
-    text-align: center;
     font-size: 18px;
     line-height: 40px;
 }
@@ -59,7 +59,6 @@ body {
 }
 
     .form-register a:hover {
-        color: white;
         text-decoration: underline;
     }
 
@@ -73,9 +72,9 @@ body {
     font-size: 16px;
 }
 
-
 #apartado_doble {
     display: flex;
+    justify-content: center;
     gap: 5%;
 }
 
@@ -83,15 +82,13 @@ body {
     background: #24303c;
     border-radius: 10px;
     height: 190px;
+    width: 45%;
     overflow-y: auto;
 }
-
 
 #ingresar_foto {
     text-align: center;
     width: 55%;
-    height: 100%;
-    /*background: #24303c;*/
     border-radius: 10px;
 }
 
@@ -104,98 +101,62 @@ body {
     margin-bottom: 10px;
 }
 
-
 #añadir_ingrediente {
     text-align: left;
-    text-size-adjust: 10px;
 }
 
-h1 {
-    font-family: 'Bukhari Script';
-    color:white;
+h1, h3 {
+    font-family: 'Bukhari Script', cursive;
 }
 
-h3 {
-    font-family: 'Bukhari Script';
-}
-
-#descripcion_letra {
-    height: 200px;
-}
-
+#descripcion_letra,
 #pasos_letra {
     height: 200px;
 }
 
 #imagen::-webkit-file-upload-button {
-    background-color: #f1683a; /* Cambia el color de fondo del botón */
-    color: white; /* Cambia el color del texto del botón */
-    padding: 10px 15px; /* Ajusta el relleno del botón según sea necesario */
-    border: none; /* Quita el borde del botón */
-    border-radius: 4px; /* Agrega bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    background-color: #f1683a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-    /* Estilos adicionales para la apariencia del botón */
     #imagen::-webkit-file-upload-button:hover {
-        background-color: #1a4177; /* Cambia el color de fondo del botón al pasar el cursor sobre él */
+        background-color: #1a4177;
     }
 
-#ingresar_descripcion 
-{
-    margin-top: 20px;
-}
-
-    #ingresar_descripcion h4 {
-        font-weight: lighter;
-        word-wrap: break-word; /* Permite que el texto se divida en múltiples líneas */
-    }
-
+#ingresar_descripcion,
 #ingresar_pasos {
     margin-top: 20px;
 }
-    #ingresar_pasos h4 {
-        word-wrap: break-word;
-        font-weight: lighter; 
-    }
 
-#agregar_ingrediente {
-    background-color: #f1683a; /* Cambia el color de fondo del botón */
-    color: white; /* Cambia el color del texto del botón */
-    padding: 10px 15px; /* Ajusta el relleno del botón según sea necesario */
-    border: none; /* Quita el borde del botón */
-    border-radius: 4px; /* Agrega bordes redondeados */
+#agregar_ingrediente,
+#boton_enviar {
+    background-color: #f1683a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
     width: 100%;
     margin-top: 5px;
 }
 
-#boton_enviar 
-{
-    background-color: #f1683a;
-}
-
-.imagen-fija 
-{
+.imagen-fija {
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 520px;
-    height: 300px;
+    max-width: 100%;
     height: auto;
-    border-radius:10px;
+    border-radius: 10px;
 }
 
-div[name="cuadroIngredientes"] 
-{
-    margin-top:20px;
+div[name="cuadroIngredientes"] {
+    margin-top: 20px;
     display: flex;
-    height: 50px;
-    margin-left: 10px;
-    margin-right: 10px;
-    /* background: #0080ff; */
-
-    align-items: center; /* Alinear verticalmente los elementos */
-    gap: 10px; /* Espacio entre los elementos */
+    align-items: center;
+    gap: 10px;
     padding: 20px;
 }
 
@@ -204,33 +165,25 @@ h2[name="X_text"] {
     margin-bottom: 10px;
 }
 
-#titulo_tiempo
-{
-    display:flex;
-    gap:10px;
-}
-
-#Tiempo
-{
-    width:20%;
-}
-
+#titulo_tiempo,
 #ingresar_titulo {
     display: flex;
+    justify-content: center;
     gap: 10px;
 }
 
 #recuadroIng {
-    margin-top:10px;
+    margin-top: 10px;
     background: #24303c;
     border-radius: 10px;
     height: 190px;
-    width: 400px;
+    width: 45%;
     overflow-y: auto;
 }
 
 #apartado_dobleB {
     display: flex;
+    justify-content: center;
     gap: 10px;
 }
 
