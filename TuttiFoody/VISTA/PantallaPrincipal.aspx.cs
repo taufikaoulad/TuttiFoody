@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace TuttiFoody.VISTA
 {
-    public partial class WebForm2 : System.Web.UI.Page
+    public partial class PantallaPrincipal : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

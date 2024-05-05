@@ -68,10 +68,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-
     <Content Include="CONTENT\Imagenes\Grupo.png" />
-    <Content Include="VISTA\SobreNosotros.aspx" />
-
     <Content Include="CONTENT\CSS\PantallaPrincip.css" />
     <Content Include="CONTENT\CSS\Alimento.css" />
     <Content Include="CONTENT\CSS\Recetas.css" />
@@ -107,10 +104,10 @@
     <Content Include="CONTENT\JS\JSCrearReceta.js" />
     <Content Include="VISTA\CrearReceta.aspx" />
     <Content Include="VISTA\Registrar.aspx" />
+    <Content Include="VISTA\SobreNosotros.aspx" />
     <Content Include="VISTA\WebForm1.aspx" />
     <Content Include="VISTA\PantallaPrincipal.aspx" />
     <Content Include="VISTA\Recetas.aspx" />
-
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -180,6 +177,13 @@
     <Compile Include="VISTA\SiteMaster.Master.designer.cs">
       <DependentUpon>SiteMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="VISTA\SobreNosotros.aspx.cs">
+      <DependentUpon>SobreNosotros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VISTA\SobreNosotros.aspx.designer.cs">
+      <DependentUpon>SobreNosotros.aspx</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -187,14 +191,8 @@
     <Compile Include="VISTA\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
-
-    <Compile Include="VISTA\SobreNosotros.aspx.cs">
-      <DependentUpon>SobreNosotros.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <!--<Compile Include="VISTA\SobreNosotros.aspx.designer.cs">
       <DependentUpon>SobreNosotros.aspx</DependentUpon>-->
-
     <Compile Include="VISTA\PantallaPrincipal.aspx.cs">
       <DependentUpon>PantallaPrincipal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -208,10 +206,9 @@
     </Compile>
     <Compile Include="VISTA\Recetas.aspx.designer.cs">
       <DependentUpon>Recetas.aspx</DependentUpon>
-
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
+    <!--</ItemGroup>
+  <ItemGroup>-->
     <Content Include="CONTENT\CSS\Bukhari Script.ttf" />
     <Content Include="DAL\DBConnect.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
@@ -234,7 +231,6 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CONTENT\JS\" />
     <Folder Include="MODEL\" />
   </ItemGroup>
   <PropertyGroup>

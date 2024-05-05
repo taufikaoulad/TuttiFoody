@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Net;
-using System.Net.Mail;
-using System.Web.UI;
-using System.Web.Services.Description;
 
 namespace TuttiFoody.VISTA
 {
-    public partial class WebForm2 : System.Web.UI.Page
+    public partial class SobreNosotrosM : System.Web.UI.Page
     {
         //Cuenta tuttiFoody
         string fromMail = "tuttifoodydepartment@gmail.com";

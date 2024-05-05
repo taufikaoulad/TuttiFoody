@@ -11,7 +11,7 @@ namespace TuttiFoody.VISTA
 {
 
 
-    public partial class WebForm2
+    public partial class PantallaPrincipal
     {
 
         /// <summary>

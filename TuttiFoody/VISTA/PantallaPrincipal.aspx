@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PantallaPrincipal.aspx.cs" Inherits="TuttiFoody.VISTA.WebForm2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PantallaPrincipal.aspx.cs" Inherits="TuttiFoody.VISTA.PantallaPrincipal" %>
 
 <!DOCTYPE html>
 
@@ -16,7 +16,7 @@
             <a href="/VISTA/Alimentos.aspx">Alimentos</a>
             <a href="/VISTA/Recetas.aspx">Recetas</a>
             <a href="/VISTA/AlimentosCRUD.aspx">Gestión</a>
-            <a href="">About us</a>
+            <a href="/VISTA/SobreNosotros.aspx">About us</a>
             <form id="form1" runat="server">
                 <div>
                     <asp:LinkButton runat="server" OnClick="Unnamed_Click"><img src="/CONTENT/Imagenes/usuario.png" alt="perfil" /></asp:LinkButton>

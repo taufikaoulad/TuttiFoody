@@ -11,17 +11,8 @@ namespace TuttiFoody.VISTA
 {
 
 
-    public partial class WebForm2
+    public partial class SobreNosotrosM
     {
-
-        /// <summary>
-        /// Control form1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// Control cuadroNombre.
