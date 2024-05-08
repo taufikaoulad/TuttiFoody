@@ -106,7 +106,7 @@ namespace TuttiFoody.VISTA
                         "function(){ window.location.href = '/VISTA/Alimentos.aspx#aceitesGrasas'; };", true);
                     break;
                 default:
-                    //hacer el default 
+                    //Recordar hacer el default 
                     break;
             }
         }

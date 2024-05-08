@@ -17,9 +17,7 @@ namespace TuttiFoody.VISTA
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-            {
                 RefreshList();
-            }
         }
 
         private void RefreshList()
@@ -58,9 +56,11 @@ namespace TuttiFoody.VISTA
 
             alimentoBD.Insertar(InsertAlim());
 
-            // Guardar la imagen solo si la insercion fue exitosa
             string rutaCompleta = Server.MapPath(alim.ArchivoImagen);
+            // Guardamos la imagen solo si la insercion fue exitosa
             archivoImagen.SaveAs(rutaCompleta);
+
+            RefreshList();
         }
 
         protected void eliminar_Click(object sender, EventArgs e)

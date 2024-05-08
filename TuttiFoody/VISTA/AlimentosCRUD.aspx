@@ -22,7 +22,7 @@
                  <textarea ID="txtDescripcion" runat="server" class="form-control"></textarea>
              </div>
              <div class="grupo">
-                 <label for="archivoImagen">Archivo de Imagen:</label>
+                 <label for="archivoImagen">Imagen:</label>
                  <asp:FileUpload ID="archivoImagen" runat="server" CssClass="form-control" Accept="image/*"/>
              </div>
              <div class="grupo">
